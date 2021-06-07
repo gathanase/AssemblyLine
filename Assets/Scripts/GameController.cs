@@ -24,15 +24,15 @@ public class GameController : MonoBehaviour
     void Start()
     {
         StarterMachine starterMachine = Instantiate(starterMachineModel);
-        starterMachine.init(new Vector2Int(3, 0), Direction.SOUTH, ArtifactType.GOLD, 1);
+        starterMachine.Init(new Vector2Int(3, 0), Direction.SOUTH, ArtifactType.GOLD, 2);
         Add(starterMachine);
 
         RollerMachine rollerMachine = Instantiate(rollerMachineModel);
-        rollerMachine.init(new Vector2Int(3, -1), Direction.SOUTH);
+        rollerMachine.Init(new Vector2Int(3, -1), Direction.SOUTH);
         Add(rollerMachine);
 
         CutterMachine cutterMachine = Instantiate(cutterMachineModel);
-        cutterMachine.init(new Vector2Int(3, -2), Direction.EAST);
+        cutterMachine.Init(new Vector2Int(3, -2), Direction.EAST);
         Add(cutterMachine);
 
         InvokeRepeating("OnTick", 1, 1);
@@ -86,7 +86,7 @@ public class GameController : MonoBehaviour
 
     public void Add(ArtifactType type, Vector2Int position, Direction direction) {
         Artifact artifact = Instantiate(artifactModel);
-        artifact.init(position, direction, type);
+        artifact.Init(position, direction, type);
         artifactsToCreate.Add(artifact);
     }
 

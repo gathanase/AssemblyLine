@@ -7,9 +7,9 @@ public class StarterMachine : Machine
     public ArtifactType artifactType;
     public int quantity;
 
-    public void init(Vector2Int position, Direction direction, ArtifactType artifactType, int quantity = 0)
+    public void Init(Vector2Int position, Direction direction, ArtifactType artifactType, int quantity = 0)
     {
-        init(position, direction);
+        Init(position, direction);
         this.artifactType = artifactType;
         this.quantity = quantity;
     }

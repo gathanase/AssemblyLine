@@ -14,7 +14,7 @@ public abstract class Machine : MonoBehaviour
         }
     }
 
-    public void init(Vector2Int position, Direction direction)
+    public void Init(Vector2Int position, Direction direction)
     {
         transform.position = new Vector3(position.x, position.y, 0);
         transform.rotation = Quaternion.Euler(0, 0, ((int)direction) * 90);

@@ -15,7 +15,7 @@ public class Artifact : MonoBehaviour
         }
     }
 
-    public void init(Vector2Int position, Direction direction, ArtifactType type)
+    public void Init(Vector2Int position, Direction direction, ArtifactType type)
     {
         this.position = position;
         this.type = type;
