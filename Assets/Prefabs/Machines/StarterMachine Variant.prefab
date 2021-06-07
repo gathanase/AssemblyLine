@@ -16,6 +16,7 @@ MonoBehaviour:
   direction: 0
   artifactType: 0
   quantity: 0
+  infoWindowModel: {fileID: 1966333128601748213, guid: 1de00ac98531643298778a5891a668c4, type: 3}
 --- !u!1001 &554172337429889636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954432509555594735, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}
       propertyPath: m_Name
-      value: StarterMachine
+      value: StarterMachine Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}

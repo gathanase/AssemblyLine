@@ -22,8 +22,10 @@ public abstract class Machine : MonoBehaviour
         this.direction = direction;
     }
 
+    public virtual void ShowInfo() {}
     public abstract void Feed(Artifact artifact);
     public abstract void OnTick();
+
     public void Rotate(int count) {
         direction = direction.Rotate(count);
         transform.rotation = Quaternion.Euler(0, 0, ((int)direction) * 90);

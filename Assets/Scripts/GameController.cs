@@ -50,11 +50,12 @@ public class GameController : MonoBehaviour
     void OnClick(Vector2Int pos) {
         Machine machine;
         if (machines.TryGetValue(pos, out machine)) {
-            machine.Rotate(1);
+            machine.ShowInfo();
+            //machine.Rotate(1);
         } else {
-            RollerMachine rollerMachine = Instantiate(rollerMachineModel);
-            rollerMachine.init(pos, Direction.SOUTH);
-            Add(rollerMachine);
+            // RollerMachine rollerMachine = Instantiate(rollerMachineModel);
+            // rollerMachine.init(pos, Direction.SOUTH);
+            // Add(rollerMachine);
         }
     }
 
