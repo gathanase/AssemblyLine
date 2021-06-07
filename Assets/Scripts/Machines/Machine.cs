@@ -22,7 +22,7 @@ public abstract class Machine : MonoBehaviour
         this.direction = direction;
     }
 
-    public virtual void ShowInfo() {}
+    public virtual void ToggleInfo() {}
     public abstract void Feed(Artifact artifact);
     public abstract void OnTick();
 

@@ -23,6 +23,10 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        StarterMachine starterMachineA = Instantiate(starterMachineModel);
+        starterMachineA.Init(new Vector2Int(0, 0), Direction.NORTH, ArtifactType.GOLD, 1);
+        Add(starterMachineA);
+
         StarterMachine starterMachine = Instantiate(starterMachineModel);
         starterMachine.Init(new Vector2Int(3, 0), Direction.SOUTH, ArtifactType.GOLD, 2);
         Add(starterMachine);
@@ -50,7 +54,7 @@ public class GameController : MonoBehaviour
     void OnClick(Vector2Int pos) {
         Machine machine;
         if (machines.TryGetValue(pos, out machine)) {
-            machine.ShowInfo();
+            machine.ToggleInfo();
             //machine.Rotate(1);
         } else {
             // RollerMachine rollerMachine = Instantiate(rollerMachineModel);

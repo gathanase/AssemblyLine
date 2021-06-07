@@ -1,7 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement>
-        <ui:Label text="Starter Machine" display-tooltip-when-elided="true" name="title" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 16px; margin-left: 12px; margin-right: 12px; margin-top: 12px; margin-bottom: 18px;" />
-        <ui:DropdownField label="Output" choices="IRON,GOLD, PLATINUM, DIAMOND, COPPER" name="type" />
-        <ui:DropdownField label="Quantity" name="quantity" choices="None, 1, 2, 3" />
-    </ui:VisualElement>
+    <ui:DropdownField label="Quantity" name="quantity" choices="None, 1, 2, 3" />
+    <ui:DropdownField label="Output" choices="IRON,GOLD, PLATINUM, DIAMOND, COPPER" name="type" />
+    <ui:Label text="Starter Machine" display-tooltip-when-elided="true" name="title" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 16px; margin-left: 12px; margin-right: 12px; margin-top: 12px; margin-bottom: 18px;" />
 </ui:UXML>
