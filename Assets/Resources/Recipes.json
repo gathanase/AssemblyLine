@@ -1,0 +1,328 @@
+[
+  {
+    "output": "ENGINE",
+    "inputs": {
+      "IRON_GEAR": 2,
+      "GOLD_GEAR": 1
+    }
+  },
+  {
+    "output": "CIRCUIT",
+    "inputs": {
+      "COPPER_WIRE": 2,
+      "GOLD": 1
+    }
+  },
+  {
+    "output": "PROCESSOR",
+    "inputs": {
+      "CIRCUIT": 2,
+      "ALUMINUM": 2
+    }
+  },
+  {
+    "output": "COMPUTER",
+    "inputs": {
+      "PROCESSOR": 1,
+      "ALUMINUM": 6,
+      "POWER_SUPPLY": 1
+    }
+  },
+  {
+    "output": "CLOCK",
+    "inputs": {
+      "IRON": 2,
+      "GOLD": 2,
+      "COPPER_GEAR": 1
+    }
+  },
+  {
+    "output": "DRILL",
+    "inputs": {
+      "DIAMOND": 2,
+      "COPPER_GEAR": 2,
+      "ENGINE": 1
+    }
+  },
+  {
+    "output": "WASHING_MACHINE",
+    "inputs": {
+      "ENGINE": 1,
+      "ALUMINUM": 2,
+      "COPPER": 2
+    }
+  },
+  {
+    "output": "HEATER_PLATE",
+    "inputs": {
+      "DIAMOND": 1,
+      "COPPER_WIRE": 1
+    }
+  },
+  {
+    "output": "COOLER_PLATE",
+    "inputs": {
+      "DIAMOND": 1,
+      "GOLD_WIRE": 1
+    }
+  },
+  {
+    "output": "TOASTER",
+    "inputs": {
+      "HEATER_PLATE": 1,
+      "ALUMINUM": 1,
+      "COPPER": 1
+    }
+  },
+  {
+    "output": "GRILL",
+    "inputs": {
+      "HEATER_PLATE": 1,
+      "IRON": 4
+    }
+  },
+  {
+    "output": "FRIDGE",
+    "inputs": {
+      "COOLER_PLATE": 1,
+      "ALUMINUM": 6,
+      "POWER_SUPPLY": 1
+    }
+  },
+  {
+    "output": "AIR_CONDITIONER",
+    "inputs": {
+      "COOLER_PLATE": 1,
+      "GOLD": 1,
+      "ALUMINUM": 1
+    }
+  },
+  {
+    "output": "LIGHT_BULB",
+    "inputs": {
+      "IRON": 2,
+      "COPPER_WIRE": 2
+    }
+  },
+  {
+    "output": "SOLAR_PANEL",
+    "inputs": {
+      "CIRCUIT": 1,
+      "GOLD": 2,
+      "DIAMOND": 1
+    }
+  },
+  {
+    "output": "BATTERY",
+    "inputs": {
+      "CIRCUIT": 1,
+      "ALUMINUM": 1,
+      "ALUMINUM_LIQUID": 1
+    }
+  },
+  {
+    "output": "SMARTPHONE",
+    "inputs": {
+      "PROCESSOR": 1,
+      "BATTERY": 1,
+      "ALUMINUM": 1
+    }
+  },
+  {
+    "output": "TABLET",
+    "inputs": {
+      "PROCESSOR": 1,
+      "BATTERY": 1,
+      "ALUMINUM": 4
+    }
+  },
+  {
+    "output": "ANTENNA",
+    "inputs": {
+      "DIAMOND_WIRE": 4,
+      "IRON": 1
+    }
+  },
+  {
+    "output": "RADIO",
+    "inputs": {
+      "CIRCUIT": 1,
+      "ANTENNA": 1,
+      "BATTERY": 1
+    }
+  },
+  {
+    "output": "TV",
+    "inputs": {
+      "POWER_SUPPLY": 1,
+      "CIRCUIT": 1,
+      "ALUMINUM": 4
+    }
+  },
+  {
+    "output": "POWER_SUPPLY",
+    "inputs": {
+      "CIRCUIT": 1,
+      "COPPER_WIRE": 3,
+      "IRON_WIRE": 3
+    }
+  },
+  {
+    "output": "HEADPHONES",
+    "inputs": {
+      "CIRCUIT": 1,
+      "GOLD_WIRE": 1,
+      "DIAMOND_WIRE": 1
+    }
+  },
+  {
+    "output": "SPEAKERS",
+    "inputs": {
+      "CIRCUIT": 2,
+      "GOLD_WIRE": 4,
+      "DIAMOND_WIRE": 4
+    }
+  },
+  {
+    "output": "DRONE",
+    "inputs": {
+      "BATTERY": 2,
+      "PROCESSOR": 2,
+      "ALUMINUM_PLATE": 4
+    }
+  },
+  {
+    "output": "SMARTWATCH",
+    "inputs": {
+      "PROCESSOR": 2,
+      "IRON_PLATE": 1,
+      "ALUMINUM_PLATE": 2
+    }
+  },
+  {
+    "output": "MICROWAVE",
+    "inputs": {
+      "HEATER_PLATE": 5,
+      "DIAMOND_PLATE": 5,
+      "ALUMINUM_PLATE": 5
+    }
+  },
+  {
+    "output": "OVEN",
+    "inputs": {
+      "HEATER_PLATE": 10,
+      "IRON_PLATE": 10,
+      "IRON": 10
+    }
+  },
+  {
+    "output": "WATER_HEATER",
+    "inputs": {
+      "HEATER_PLATE": 5,
+      "DIAMOND_PLATE": 5,
+      "ALUMINUM_PLATE": 5
+    }
+  },
+  {
+    "output": "GENERATOR",
+    "inputs": {
+      "GOLD_PLATE": 5,
+      "COPPER_PLATE": 5
+    }
+  },
+  {
+    "output": "JACKHAMMER",
+    "inputs": {
+      "CIRCUIT": 4,
+      "DIAMOND": 4,
+      "IRON_PLATE": 4
+    }
+  },
+  {
+    "output": "ELECTRIC_BOARD",
+    "inputs": {
+      "CIRCUIT": 20,
+      "COPPER_PLATE": 6
+    }
+  },
+  {
+    "output": "RAILWAY",
+    "inputs": {
+      "IRON": 10,
+      "IRON_PLATE": 10
+    }
+  },
+  {
+    "output": "LAZER",
+    "inputs": {
+      "BATTERY": 6,
+      "DIAMOND_PLATE": 10,
+      "CIRCUIT": 6
+    }
+  },
+  {
+    "output": "SERVER_RACK",
+    "inputs": {
+      "ALUMINUM_PLATE": 20,
+      "ALUMINUM": 10
+    }
+  },
+  {
+    "output": "SUPER_COMPUTER",
+    "inputs": {
+      "COMPUTER": 30,
+      "SERVER_RACK": 10
+    }
+  },
+  {
+    "output": "ADVANCED_ENGINE",
+    "inputs": {
+      "ENGINE": 50,
+      "CIRCUIT": 50
+    }
+  },
+  {
+    "output": "ELECTRIC_ENGINE",
+    "inputs": {
+      "ADVANCED_ENGINE": 10,
+      "BATTERY": 40
+    }
+  },
+  {
+    "output": "ELECTRIC_GENERATOR",
+    "inputs": {
+      "GENERATOR": 15,
+      "CIRCUIT": 50,
+      "BATTERY": 40
+    }
+  },
+  {
+    "output": "AI_PROCESSOR",
+    "inputs": {
+      "SUPER_COMPUTER": 4,
+      "CIRCUIT": 40
+    }
+  },
+  {
+    "output": "AI_ROBOT_HEAD",
+    "inputs": {
+      "AI_PROCESSOR": 1,
+      "ALUMINUM": 200
+    }
+  },
+  {
+    "output": "AI_ROBOT_BODY",
+    "inputs": {
+      "ELECTRIC_ENGINE": 1,
+      "ELECTRIC_GENERATOR": 1,
+      "ALUMINUM": 400
+    }
+  },
+  {
+    "output": "AI_ROBOT",
+    "inputs": {
+      "AI_ROBOT_HEAD": 1,
+      "AI_ROBOT_BODY": 1
+    }
+  }
+]
