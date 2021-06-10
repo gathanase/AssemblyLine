@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.EventSystems;
 
-public class StarterMachineInfo : MonoBehaviour
+public class StarterMachineWindow : Window
 {
     private Label label;
     private DropdownField quantity;
     private DropdownField type;
     private StarterMachine starterMachine;
+    private GameController gameController;
 
-    public void Init(StarterMachine starterMachine) {
+    public void Init(StarterMachine starterMachine, GameController gameController) {
         this.starterMachine = starterMachine;
+        this.gameController = gameController;
         quantity.SetValueWithoutNotify(starterMachine.quantity.ToString());
         type.SetValueWithoutNotify(starterMachine.artifactType.ToString());
 
@@ -25,7 +28,7 @@ public class StarterMachineInfo : MonoBehaviour
         }});
 
         type.RegisterValueChangedCallback(ev =>
-            starterMachine.artifactType = (ArtifactType) Enum.Parse(typeof(ArtifactType), ev.newValue, true)
+            starterMachine.artifactType = ArtifactTypeExtensions.Parse(ev.newValue)
         );
     }
 

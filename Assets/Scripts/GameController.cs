@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public RollerMachine rollerMachineModel;
     public Artifact artifactModel;
 
+    public Window infoWindow;
     private Dictionary<Vector2Int, Machine> machines;
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
@@ -46,7 +47,7 @@ public class GameController : MonoBehaviour
         Vector3 pos3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2Int mousePos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && infoWindow == null) {
             OnClick(mousePos);
         }
     }
@@ -54,8 +55,7 @@ public class GameController : MonoBehaviour
     void OnClick(Vector2Int pos) {
         Machine machine;
         if (machines.TryGetValue(pos, out machine)) {
-            machine.ToggleInfo();
-            //machine.Rotate(1);
+            infoWindow = machine.CreateInfoWindow();
         } else {
             // RollerMachine rollerMachine = Instantiate(rollerMachineModel);
             // rollerMachine.init(pos, Direction.SOUTH);
@@ -101,9 +101,5 @@ public class GameController : MonoBehaviour
 
     public void Sell(Artifact artifact) {
         Debug.Log("Sell artifact " + artifact.type);
-    }
-
-    public void OnButton() {
-        Debug.Log("GREG BUTTON");
     }
 }
