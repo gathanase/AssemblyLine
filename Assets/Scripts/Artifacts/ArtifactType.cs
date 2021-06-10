@@ -1,3 +1,5 @@
+using System;
+
 public enum ArtifactType
 {
     IRON, ALUMINUM, GOLD, COPPER, DIAMOND,
@@ -11,10 +13,17 @@ public enum ArtifactType
     ENGINE, ELECTRIC_ENGINE, ADVANCED_ENGINE,
     GENERATOR, ELECTRIC_GENERATOR,
     AIR_CONDITIONER, SOLAR_PANEL,
-    WASHING_MACHINE, GRILL, TOASTER, FRIDGE, MICROWAVE, WATER_HEATER, STOVE,
-    HEADPHONES, SPEAKER, RADIO,
+    WASHING_MACHINE, GRILL, TOASTER, FRIDGE, MICROWAVE, WATER_HEATER, OVEN,
+    HEADPHONES, SPEAKERS, RADIO,
     DRILL, JACKHAMMER, RAILWAY,
     TV, SMARTPHONE, TABLET, SMARTWATCH, DRONE, LAZER,
-    AI_ROBOT_BODY, AI_ROBOT_HEAD, AI_ROBOT,
-    NONE  // TODO: remove it
+    AI_ROBOT_BODY, AI_ROBOT_HEAD, AI_ROBOT
+}
+
+public static class ArtifactTypeExtensions
+{
+    public static ArtifactType Parse(string name)
+    {
+        return (ArtifactType) Enum.Parse(typeof(ArtifactType), name, true);
+    }
 }

@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public CutterMachine cutterMachineModel;
     public RollerMachine rollerMachineModel;
     public Artifact artifactModel;
+    public RecipeDatabase recipeDatabase;
 
     public Window infoWindow;
     private Dictionary<Vector2Int, Machine> machines;
@@ -20,6 +21,8 @@ public class GameController : MonoBehaviour
         artifacts = new HashSet<Artifact>();
         artifactsToCreate = new HashSet<Artifact>();
         artifactsToRemove = new HashSet<Artifact>();
+        recipeDatabase = new RecipeDatabase();
+        recipeDatabase.Load();
     }
 
     void Start()

@@ -8,13 +8,13 @@ def rename(artifactType):
     return artifactType.upper().replace(' ', '_')
 
 recipes = []
-for output, pocketRecipe in pocketData["Recipe"].items():
-    if output == "(None)": continue
-    inputs = {rename(req["name"]): req["quantity"] for req in pocketRecipe["Requirements"]}
-    recipe = {"output": rename(output), "inputs": inputs}
+for outputType, pocketRecipe in pocketData["Recipe"].items():
+    if outputType == "(None)": continue
+    inputs = [{"type": rename(req["name"]), "quantity": req["quantity"]} for req in pocketRecipe["Requirements"]]
+    recipe = {"output": rename(outputType), "inputs": inputs}
     recipes.append(recipe)
 
 with open("Recipes.json", "w") as f:
-    json.dump(recipes, f, indent=2)
+    json.dump({"recipes": recipes}, f, indent=2)
 
 

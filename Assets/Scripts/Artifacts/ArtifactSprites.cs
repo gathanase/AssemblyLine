@@ -43,7 +43,7 @@ public class ArtifactSprites : MonoBehaviour
         Register(ArtifactType.SOLAR_PANEL, 27);
         Register(ArtifactType.HEADPHONES, 28);
         Register(ArtifactType.DRILL, 29);
-        Register(ArtifactType.SPEAKER, 30);
+        Register(ArtifactType.SPEAKERS, 30);
         Register(ArtifactType.RADIO, 31);
         Register(ArtifactType.JACKHAMMER, 32);
         Register(ArtifactType.TV, 33);
@@ -76,7 +76,7 @@ public class ArtifactSprites : MonoBehaviour
         Register(ArtifactType.DIAMOND_LIQUID, 60);
         Register(ArtifactType.DRONE, 61);
         Register(ArtifactType.ELECTRIC_BOARD, 62);
-        Register(ArtifactType.STOVE, 63);
+        Register(ArtifactType.OVEN, 63);
         Register(ArtifactType.LAZER, 64);
         Register(ArtifactType.AI_ROBOT_BODY, 65);
         Register(ArtifactType.AI_ROBOT_HEAD, 66);
