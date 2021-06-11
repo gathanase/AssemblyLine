@@ -7,19 +7,18 @@ using UnityEngine.EventSystems;
 
 public class StarterMachineWindow : Window
 {
-    private Label label;
-    private DropdownField quantity;
-    private DropdownField type;
+    private DropdownField quantityField;
+    private DropdownField typeField;
+    private Button closeButton;
     private StarterMachine starterMachine;
-    private GameController gameController;
 
     public void Init(StarterMachine starterMachine, GameController gameController) {
+        Init(gameController);
         this.starterMachine = starterMachine;
-        this.gameController = gameController;
-        quantity.SetValueWithoutNotify(starterMachine.quantity.ToString());
-        type.SetValueWithoutNotify(starterMachine.artifactType.ToString());
+        quantityField.SetValueWithoutNotify(starterMachine.quantity.ToString());
+        typeField.SetValueWithoutNotify(starterMachine.artifactType.ToString());
 
-        quantity.RegisterValueChangedCallback(ev => {
+        quantityField.RegisterValueChangedCallback(ev => {
             switch (ev.newValue) {
                 case "1": starterMachine.quantity = 1; break;
                 case "2": starterMachine.quantity = 2; break;
@@ -27,7 +26,7 @@ public class StarterMachineWindow : Window
                 default: starterMachine.quantity = 0; break;
         }});
 
-        type.RegisterValueChangedCallback(ev =>
+        typeField.RegisterValueChangedCallback(ev =>
             starterMachine.artifactType = ArtifactTypeExtensions.Parse(ev.newValue)
         );
     }
@@ -42,10 +41,13 @@ public class StarterMachineWindow : Window
         List<String> typeChoices = new List<ArtifactType>() {
             ArtifactType.IRON, ArtifactType.ALUMINUM, ArtifactType.GOLD, ArtifactType.COPPER, ArtifactType.DIAMOND }
             .ConvertAll<String>(type => type.ToString());
-        type = new DropdownField("type", typeChoices, 0);
-        root.Add(type);
+        typeField = new DropdownField("type", typeChoices, 0);
+        root.Add(typeField);
         List<String> quantityChoices = new List<String>() { "None", "1", "2", "3" };
-        quantity = new DropdownField("quantity", quantityChoices, 0);
-        root.Add(quantity);
+        quantityField = new DropdownField("quantity", quantityChoices, 0);
+        root.Add(quantityField);
+        closeButton = new Button(Close);
+        closeButton.text = "close";
+        root.Add(closeButton);
     }
 }
