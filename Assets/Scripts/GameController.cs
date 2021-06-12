@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
         artifactsToRemove = new HashSet<Artifact>();
         recipeDatabase = new RecipeDatabase();
         recipeDatabase.Load();
+        infoWindow = null;
     }
 
     void Start()
@@ -50,8 +51,10 @@ public class GameController : MonoBehaviour
         Vector3 pos3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2Int mousePos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
 
-        if (Input.GetMouseButtonDown(0) && infoWindow == null) {
-            OnClick(mousePos);
+        if (Input.GetMouseButtonDown(0)) {
+            if (infoWindow == null) {
+                OnClick(mousePos);
+            }
         }
     }
 

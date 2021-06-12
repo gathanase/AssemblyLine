@@ -16,10 +16,7 @@ MonoBehaviour:
   direction: 0
   artifactType: 0
   quantity: 0
-  infoWindowModel: {fileID: 5300135578881774891, guid: 0f35778d3cc03426ba293e023911def5, type: 3}
-  other: {fileID: 0}
-  thing: {fileID: 0}
-  something: {fileID: 0}
+  infoWindowModel: {fileID: 6457227800195893229, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
 --- !u!1001 &554172337429889636
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,10 +8,11 @@ public class Window : MonoBehaviour
 
     public void Init(GameController gameController) {
         this.gameController = gameController;
+        gameObject.SetActive(true);
     }
 
-    protected void Close() {
-        Destroy(gameObject);
+    public void Close() {
+        gameObject.SetActive(false);
         gameController.infoWindow = null;
     }
 }

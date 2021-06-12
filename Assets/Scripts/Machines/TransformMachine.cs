@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class TransformMachine : Machine
 {
@@ -25,5 +26,12 @@ public abstract class TransformMachine : Machine
                 Add(newType, direction);
             }
         }
+    }
+
+    public override Window CreateInfoWindow() {
+        return null;
+        //Window infoWindow = Instantiate(infoWindowModel, Vector3.zero, Quaternion.identity);
+        //infoWindow.Init(this, gameController);
+        //return infoWindow;
     }
 }
