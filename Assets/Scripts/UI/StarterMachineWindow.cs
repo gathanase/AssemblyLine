@@ -7,8 +7,7 @@ public class StarterMachineWindow : Window
 {
     public Dropdown typeField;
     public Slider quantityField;
-    public Button closeButton;
-    public List<ArtifactType> artifactTypes;
+    private List<ArtifactType> artifactTypes;
     private StarterMachine starterMachine;
 
     public void Init(StarterMachine starterMachine, GameController gameController) {

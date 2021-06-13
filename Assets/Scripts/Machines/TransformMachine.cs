@@ -14,6 +14,12 @@ public abstract class TransformMachine : Machine
 
     protected abstract Dictionary<ArtifactType, ArtifactType> BuildMapping();
 
+    public override Window CreateInfoWindow() {
+        TransformMachineWindow infoWindow = FindObjectOfType<TransformMachineWindow>(true);
+        infoWindow.Init(this, gameController);
+        return infoWindow;
+    }
+
     public override void Feed(Artifact artifact) {
         queue.Enqueue(artifact.type);
         Remove(artifact);
@@ -26,12 +32,5 @@ public abstract class TransformMachine : Machine
                 Add(newType, direction);
             }
         }
-    }
-
-    public override Window CreateInfoWindow() {
-        return null;
-        //Window infoWindow = Instantiate(infoWindowModel, Vector3.zero, Quaternion.identity);
-        //infoWindow.Init(this, gameController);
-        //return infoWindow;
     }
 }

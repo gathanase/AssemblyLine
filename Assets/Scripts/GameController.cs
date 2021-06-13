@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public StarterMachine starterMachineModel;
     public CutterMachine cutterMachineModel;
     public RollerMachine rollerMachineModel;
+    public BuilderMachine builderMachineModel;
     public Artifact artifactModel;
     public RecipeDatabase recipeDatabase;
 
@@ -44,6 +45,10 @@ public class GameController : MonoBehaviour
         cutterMachine.Init(new Vector2Int(3, -2), Direction.EAST);
         Add(cutterMachine);
 
+        BuilderMachine builderMachine = Instantiate(builderMachineModel);
+        builderMachine.Init(new Vector2Int(4, -2), Direction.SOUTH);
+        Add(builderMachine);
+
         InvokeRepeating("OnTick", 1, 1);
     }
 
@@ -61,7 +66,7 @@ public class GameController : MonoBehaviour
     void OnClick(Vector2Int pos) {
         Machine machine;
         if (machines.TryGetValue(pos, out machine)) {
-            infoWindow = machine.CreateInfoWindow();
+            machine.CreateInfoWindow();
         } else {
             // RollerMachine rollerMachine = Instantiate(rollerMachineModel);
             // rollerMachine.init(pos, Direction.SOUTH);

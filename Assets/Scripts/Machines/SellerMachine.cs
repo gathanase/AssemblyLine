@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SellerMachine : Machine
 {
+    public override Window CreateInfoWindow() {
+        return null;
+    }
     public override void Feed(Artifact artifact)
     {
         gameController.Sell(artifact);
