@@ -9,12 +9,12 @@ public class BuilderMachine : Machine
 
     void Start() {
         stock = new ArtifactStock();
-        recipe = null;
+        recipe = gameController.recipeDatabase.recipes[0];
     }
 
     public override Window CreateInfoWindow() {
         BuilderMachineWindow infoWindow = FindObjectOfType<BuilderMachineWindow>(true);
-        infoWindow.Init(this, gameController);
+        infoWindow.Init(this);
         return infoWindow;
     }
 
@@ -24,8 +24,11 @@ public class BuilderMachine : Machine
     }
 
     public override void OnTick() {
+        Debug.Log("Builder OnTick");
         if (recipe != null) {
+            Debug.Log("Builder Check Recipe");
             if (stock.Contains(recipe.inputs)) {
+                Debug.Log("Builder Build");
                 stock.RemoveAll(recipe.inputs);
                 Add(recipe.output, this.direction);
             }

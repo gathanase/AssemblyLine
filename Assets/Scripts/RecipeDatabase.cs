@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RecipeDatabase
 {
-    List<Recipe> recipes;
+    public List<Recipe> recipes;
 
     [System.Serializable]
     private class InputJson {

@@ -551,6 +551,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1889071208, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2280405634308673720, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -569,6 +573,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2280405634308673720, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280405634308673723, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2280405634667654524, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2280405634667654525, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
@@ -802,6 +814,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3156946040456074050, guid: 2244808f40636409f8116aae3e23ffbc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156946040755826976, guid: 2244808f40636409f8116aae3e23ffbc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156946041129906883, guid: 2244808f40636409f8116aae3e23ffbc, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3156946041281298140, guid: 2244808f40636409f8116aae3e23ffbc, type: 3}

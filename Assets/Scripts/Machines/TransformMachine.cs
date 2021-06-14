@@ -16,7 +16,7 @@ public abstract class TransformMachine : Machine
 
     public override Window CreateInfoWindow() {
         TransformMachineWindow infoWindow = FindObjectOfType<TransformMachineWindow>(true);
-        infoWindow.Init(this, gameController);
+        infoWindow.Init(this);
         return infoWindow;
     }
 

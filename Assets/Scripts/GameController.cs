@@ -30,11 +30,11 @@ public class GameController : MonoBehaviour
     void Start()
     {
         StarterMachine starterMachineA = Instantiate(starterMachineModel);
-        starterMachineA.Init(new Vector2Int(0, 0), Direction.NORTH, ArtifactType.GOLD, 1);
+        starterMachineA.Init(new Vector2Int(0, 0), Direction.NORTH, ArtifactType.GOLD, 0);
         Add(starterMachineA);
 
         StarterMachine starterMachine = Instantiate(starterMachineModel);
-        starterMachine.Init(new Vector2Int(3, 0), Direction.SOUTH, ArtifactType.GOLD, 2);
+        starterMachine.Init(new Vector2Int(3, 0), Direction.SOUTH, ArtifactType.GOLD, 1);
         Add(starterMachine);
 
         RollerMachine rollerMachine = Instantiate(rollerMachineModel);

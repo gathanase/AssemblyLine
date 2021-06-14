@@ -5,24 +5,23 @@ using UnityEngine.UI;
 
 public class BuilderMachineWindow : Window
 {
-    // public Dropdown typeField;
-    // public Slider quantityField;
-    // public List<ArtifactType> artifactTypes;
+    public Dropdown typeField;
+    public Button closeButton;
+    private List<Recipe> recipes;
+    private List<ArtifactType> artifactTypes;
     private BuilderMachine builderMachine;
 
-    public void Init(BuilderMachine builderMachine, GameController gameController) {
-        Init(gameController);
+    public void Init(BuilderMachine builderMachine) {
+        Init();
         this.builderMachine = builderMachine;
+        this.recipes = gameController.recipeDatabase.recipes;
 
-        // artifactTypes = new List<ArtifactType>()
-        //         { ArtifactType.IRON, ArtifactType.ALUMINUM, ArtifactType.GOLD, ArtifactType.COPPER, ArtifactType.DIAMOND };
-        // typeField.options = artifactTypes.ConvertAll<Dropdown.OptionData>(type => new Dropdown.OptionData(type.ToString()));
-        // typeField.SetValueWithoutNotify(artifactTypes.IndexOf(starterMachine.artifactType));
-        // quantityField.SetValueWithoutNotify(starterMachine.quantity);
-    }
-
-    public void OnChange() {
-        // starterMachine.artifactType = artifactTypes[typeField.value];
-        // starterMachine.quantity = (int) quantityField.value;
+        typeField.options = recipes.ConvertAll<Dropdown.OptionData>(recipe => {
+            ArtifactType type = recipe.output;
+            return new Dropdown.OptionData(type.ToString(), artifactSprites.GetSprite(type));
+        });
+        typeField.SetValueWithoutNotify(gameController.recipeDatabase.recipes.IndexOf(builderMachine.recipe));
+        typeField.onValueChanged.AddListener(ev => builderMachine.recipe = recipes[typeField.value]);
+        closeButton.onClick.AddListener(Close);
     }
 }

@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Window : MonoBehaviour
 {
-    protected GameController gameController;
+    protected static GameController gameController = null;
+    protected static ArtifactSprites artifactSprites = null;
 
-    public void Init(GameController gameController) {
-        this.gameController = gameController;
+    public void Init() {
+        if (artifactSprites == null) {
+            artifactSprites = FindObjectOfType<ArtifactSprites>();
+        }
+        if (gameController == null) {
+            gameController = FindObjectOfType<GameController>();
+        }
         gameController.infoWindow = this;
         gameObject.SetActive(true);
     }

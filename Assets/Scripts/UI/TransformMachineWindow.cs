@@ -8,10 +8,11 @@ public class TransformMachineWindow : Window
     // public Dropdown typeField;
     // public Slider quantityField;
     // public List<ArtifactType> artifactTypes;
+    public Button closeButton;
     private TransformMachine transformMachine;
 
-    public void Init(TransformMachine transformMachine, GameController gameController) {
-        Init(gameController);
+    public void Init(TransformMachine transformMachine) {
+        Init();
         this.transformMachine = transformMachine;
 
         // artifactTypes = new List<ArtifactType>()
@@ -19,5 +20,6 @@ public class TransformMachineWindow : Window
         // typeField.options = artifactTypes.ConvertAll<Dropdown.OptionData>(type => new Dropdown.OptionData(type.ToString()));
         // typeField.SetValueWithoutNotify(artifactTypes.IndexOf(starterMachine.artifactType));
         // quantityField.SetValueWithoutNotify(starterMachine.quantity);
+        closeButton.onClick.AddListener(Close);
     }
 }

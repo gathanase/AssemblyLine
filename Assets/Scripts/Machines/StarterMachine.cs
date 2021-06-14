@@ -17,7 +17,7 @@ public class StarterMachine : Machine
 
     public override Window CreateInfoWindow() {
         StarterMachineWindow infoWindow = FindObjectOfType<StarterMachineWindow>(true);
-        infoWindow.Init(this, gameController);
+        infoWindow.Init(this);
         return infoWindow;
     }
 

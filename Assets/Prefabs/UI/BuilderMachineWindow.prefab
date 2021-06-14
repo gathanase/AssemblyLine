@@ -1473,7 +1473,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3156946041281298141}
+        m_TargetAssemblyTypeName: BuilderMachineWindow, Assembly-CSharp
+        m_MethodName: OnChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   m_AlphaFadeSpeed: 0.15
 --- !u!1 &3156946041139811612
 GameObject:
@@ -1940,6 +1952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea5eea24a6ad46c79610c04bc9e85b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeField: {fileID: 3156946041129906883}
+  closeButton: {fileID: 3156946040755826976}
 --- !u!1 &3156946041326102226
 GameObject:
   m_ObjectHideFlags: 0
