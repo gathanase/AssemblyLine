@@ -12,7 +12,6 @@ public class GameController : MonoBehaviour, IPointerDownHandler
     public Artifact artifactModel;
     public RecipeDatabase recipeDatabase;
 
-    public Window infoWindow;
     private Dictionary<Vector2Int, Machine> machines;
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
@@ -26,7 +25,6 @@ public class GameController : MonoBehaviour, IPointerDownHandler
         artifactsToRemove = new HashSet<Artifact>();
         recipeDatabase = new RecipeDatabase();
         recipeDatabase.Load();
-        infoWindow = null;
         gameTool = GameTool.INFO;
     }
 
@@ -55,24 +53,16 @@ public class GameController : MonoBehaviour, IPointerDownHandler
         InvokeRepeating("OnTick", 1, 1);
     }
 
-    public void OnPointerDown(PointerEventData eventData) {
-        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), gameTool);
-        Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
-        Vector2Int mousePos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
-        OnClick(mousePos);
-        // if (infoWindow == null) {
-        //     OnClick(mousePos);
-        // }
-    }
-
     public void SetTool(GameTool gameTool) {
         Debug.Log("Select tool " + gameTool);
         this.gameTool = gameTool;
     }
 
-    void OnClick(Vector2Int pos) {
+    public void OnPointerDown(PointerEventData eventData) {
+        Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
+        Vector2Int pos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
+        Debug.LogFormat("{0} at {1}", gameTool, pos);
         Machine machine;
-        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), gameTool);
         switch (gameTool) {
             case GameTool.INFO:
                 if (machines.TryGetValue(pos, out machine)) {
@@ -86,12 +76,17 @@ public class GameController : MonoBehaviour, IPointerDownHandler
                     Add(rollerMachine);
                 }
                 break;
+            case GameTool.DELETE:
+                if (machines.TryGetValue(pos, out machine)) {
+                    Remove(machine);
+                }
+                break;
             case GameTool.ROTATE:
                 if (machines.TryGetValue(pos, out machine)) {
                     machine.Rotate(1);
                 }
                 break;
-        }
+            }
     }
 
     void OnTick() {
@@ -115,19 +110,24 @@ public class GameController : MonoBehaviour, IPointerDownHandler
         artifactsToCreate.Clear();
     }
 
-    public void Remove(Artifact artifact) {
-        artifactsToRemove.Add(artifact);
-        Destroy(artifact.gameObject);
-    }
-
     public void Add(ArtifactType type, Vector2Int position, Direction direction) {
         Artifact artifact = Instantiate(artifactModel);
         artifact.Init(position, direction, type);
         artifactsToCreate.Add(artifact);
     }
 
+    public void Remove(Artifact artifact) {
+        artifactsToRemove.Add(artifact);
+        Destroy(artifact.gameObject);
+    }
+
     public void Add(Machine machine) {
         machines.Add(machine.position, machine);
+    }
+
+    public void Remove(Machine machine) {
+        machines.Remove(machine.position);
+        Destroy(machine.gameObject);
     }
 
     public void Sell(Artifact artifact) {
