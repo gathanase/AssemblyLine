@@ -24,11 +24,8 @@ public class BuilderMachine : Machine
     }
 
     public override void OnTick() {
-        Debug.Log("Builder OnTick");
         if (recipe != null) {
-            Debug.Log("Builder Check Recipe");
             if (stock.Contains(recipe.inputs)) {
-                Debug.Log("Builder Build");
                 stock.RemoveAll(recipe.inputs);
                 Add(recipe.output, this.direction);
             }

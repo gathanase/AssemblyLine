@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class GameController : MonoBehaviour
+public class GameController : MonoBehaviour, IPointerDownHandler
 {
     public StarterMachine starterMachineModel;
     public CutterMachine cutterMachineModel;
@@ -16,6 +17,8 @@ public class GameController : MonoBehaviour
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
     private HashSet<Artifact> artifactsToRemove;
+
+    private bool buildMode = false;
 
     void Awake() {
         machines = new Dictionary<Vector2Int, Machine>();
@@ -52,25 +55,37 @@ public class GameController : MonoBehaviour
         InvokeRepeating("OnTick", 1, 1);
     }
 
-    void Update() {
-        Vector3 pos3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    public void OnPointerDown(PointerEventData eventData) {
+        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), buildMode);
+        Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
         Vector2Int mousePos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
-
-        if (Input.GetMouseButtonDown(0)) {
-            if (infoWindow == null) {
-                OnClick(mousePos);
-            }
+        if (infoWindow == null) {
+            OnClick(mousePos);
         }
+    }
+
+    public void SetTool(bool mode) {
+        Debug.LogFormat("Write {0} {1}", this.GetInstanceID(), mode);
+        buildMode = mode;
     }
 
     void OnClick(Vector2Int pos) {
         Machine machine;
-        if (machines.TryGetValue(pos, out machine)) {
-            machine.CreateInfoWindow();
+        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), buildMode);
+        if (buildMode) {
+            // Build roller
+            if (machines.TryGetValue(pos, out machine)) {
+                return;
+            } else {
+                RollerMachine rollerMachine = Instantiate(rollerMachineModel);
+                rollerMachine.Init(pos, Direction.SOUTH);
+                Add(rollerMachine);
+            }
         } else {
-            // RollerMachine rollerMachine = Instantiate(rollerMachineModel);
-            // rollerMachine.init(pos, Direction.SOUTH);
-            // Add(rollerMachine);
+            // Rotate
+            if (machines.TryGetValue(pos, out machine)) {
+                machine.Rotate(1);
+            }
         }
     }
 
