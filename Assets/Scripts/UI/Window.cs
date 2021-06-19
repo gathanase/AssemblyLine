@@ -14,12 +14,10 @@ public class Window : MonoBehaviour
         if (gameController == null) {
             gameController = FindObjectOfType<GameController>();
         }
-        gameController.infoWindow = this;
         gameObject.SetActive(true);
     }
 
     public void Close() {
-        gameController.infoWindow = null;
         gameObject.SetActive(false);
     }
 }

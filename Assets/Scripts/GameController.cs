@@ -17,8 +17,7 @@ public class GameController : MonoBehaviour, IPointerDownHandler
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
     private HashSet<Artifact> artifactsToRemove;
-
-    private bool buildMode = false;
+    private GameTool gameTool;
 
     void Awake() {
         machines = new Dictionary<Vector2Int, Machine>();
@@ -28,6 +27,7 @@ public class GameController : MonoBehaviour, IPointerDownHandler
         recipeDatabase = new RecipeDatabase();
         recipeDatabase.Load();
         infoWindow = null;
+        gameTool = GameTool.INFO;
     }
 
     void Start()
@@ -56,36 +56,41 @@ public class GameController : MonoBehaviour, IPointerDownHandler
     }
 
     public void OnPointerDown(PointerEventData eventData) {
-        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), buildMode);
+        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), gameTool);
         Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
         Vector2Int mousePos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
-        if (infoWindow == null) {
-            OnClick(mousePos);
-        }
+        OnClick(mousePos);
+        // if (infoWindow == null) {
+        //     OnClick(mousePos);
+        // }
     }
 
-    public void SetTool(bool mode) {
-        Debug.LogFormat("Write {0} {1}", this.GetInstanceID(), mode);
-        buildMode = mode;
+    public void SetTool(GameTool gameTool) {
+        Debug.Log("Select tool " + gameTool);
+        this.gameTool = gameTool;
     }
 
     void OnClick(Vector2Int pos) {
         Machine machine;
-        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), buildMode);
-        if (buildMode) {
-            // Build roller
-            if (machines.TryGetValue(pos, out machine)) {
-                return;
-            } else {
-                RollerMachine rollerMachine = Instantiate(rollerMachineModel);
-                rollerMachine.Init(pos, Direction.SOUTH);
-                Add(rollerMachine);
-            }
-        } else {
-            // Rotate
-            if (machines.TryGetValue(pos, out machine)) {
-                machine.Rotate(1);
-            }
+        Debug.LogFormat("Read {0} {1}", this.GetInstanceID(), gameTool);
+        switch (gameTool) {
+            case GameTool.INFO:
+                if (machines.TryGetValue(pos, out machine)) {
+                    machine.CreateInfoWindow();
+                }
+                break;
+            case GameTool.BUILD:
+                if (! machines.TryGetValue(pos, out machine)) {
+                    RollerMachine rollerMachine = Instantiate(rollerMachineModel);
+                    rollerMachine.Init(pos, Direction.SOUTH);
+                    Add(rollerMachine);
+                }
+                break;
+            case GameTool.ROTATE:
+                if (machines.TryGetValue(pos, out machine)) {
+                    machine.Rotate(1);
+                }
+                break;
         }
     }
 
