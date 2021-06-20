@@ -9,6 +9,7 @@ public class Toolbar : MonoBehaviour
     public Toggle buildButton;
     public Toggle deleteButton;
     public Toggle rotateButton;
+    public Toggle moveButton;
     public GameController gameController;
 
     void Awake() {
@@ -17,6 +18,7 @@ public class Toolbar : MonoBehaviour
         buildButton.onValueChanged.AddListener(value => SetTool(value, GameTool.BUILD));
         deleteButton.onValueChanged.AddListener(value => SetTool(value, GameTool.DELETE));
         rotateButton.onValueChanged.AddListener(value => SetTool(value, GameTool.ROTATE));
+        moveButton.onValueChanged.AddListener(value => SetTool(value, GameTool.MOVE));
     }
 
     private void SetTool(bool active, GameTool gameTool) {

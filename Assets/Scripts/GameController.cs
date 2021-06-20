@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class GameController : MonoBehaviour, IPointerDownHandler
+public class GameController : MonoBehaviour
 {
     public StarterMachine starterMachineModel;
     public CutterMachine cutterMachineModel;
@@ -12,11 +12,15 @@ public class GameController : MonoBehaviour, IPointerDownHandler
     public Artifact artifactModel;
     public RecipeDatabase recipeDatabase;
 
-    private Dictionary<Vector2Int, Machine> machines;
+    private InfoTool infoTool;
+    private RotateTool rotateTool;
+    private BuildTool buildTool;
+    private DeleteTool deleteTool;
+
+    public Dictionary<Vector2Int, Machine> machines;
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
     private HashSet<Artifact> artifactsToRemove;
-    private GameTool gameTool;
 
     void Awake() {
         machines = new Dictionary<Vector2Int, Machine>();
@@ -25,7 +29,11 @@ public class GameController : MonoBehaviour, IPointerDownHandler
         artifactsToRemove = new HashSet<Artifact>();
         recipeDatabase = new RecipeDatabase();
         recipeDatabase.Load();
-        gameTool = GameTool.INFO;
+        infoTool = FindObjectOfType<InfoTool>();
+        rotateTool = FindObjectOfType<RotateTool>();
+        buildTool = FindObjectOfType<BuildTool>();
+        deleteTool = FindObjectOfType<DeleteTool>();
+        SetTool(GameTool.INFO);
     }
 
     void Start()
@@ -55,38 +63,24 @@ public class GameController : MonoBehaviour, IPointerDownHandler
 
     public void SetTool(GameTool gameTool) {
         Debug.Log("Select tool " + gameTool);
-        this.gameTool = gameTool;
-    }
-
-    public void OnPointerDown(PointerEventData eventData) {
-        Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
-        Vector2Int pos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
-        Debug.LogFormat("{0} at {1}", gameTool, pos);
-        Machine machine;
+        infoTool.gameObject.SetActive(false);
+        rotateTool.gameObject.SetActive(false);
+        buildTool.gameObject.SetActive(false);
+        deleteTool.gameObject.SetActive(false);
         switch (gameTool) {
             case GameTool.INFO:
-                if (machines.TryGetValue(pos, out machine)) {
-                    machine.CreateInfoWindow();
-                }
-                break;
-            case GameTool.BUILD:
-                if (! machines.TryGetValue(pos, out machine)) {
-                    RollerMachine rollerMachine = Instantiate(rollerMachineModel);
-                    rollerMachine.Init(pos, Direction.SOUTH);
-                    Add(rollerMachine);
-                }
-                break;
-            case GameTool.DELETE:
-                if (machines.TryGetValue(pos, out machine)) {
-                    Remove(machine);
-                }
+                infoTool.gameObject.SetActive(true);
                 break;
             case GameTool.ROTATE:
-                if (machines.TryGetValue(pos, out machine)) {
-                    machine.Rotate(1);
-                }
+                rotateTool.gameObject.SetActive(true);
                 break;
-            }
+            case GameTool.BUILD:
+                buildTool.gameObject.SetActive(true);
+                break;
+            case GameTool.DELETE:
+                deleteTool.gameObject.SetActive(true);
+                break;
+        }
     }
 
     void OnTick() {
