@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Toolbar : MonoBehaviour
 {
+    public Toggle exitButton;
     public Toggle infoButton;
     public Toggle buildButton;
     public Toggle deleteButton;
@@ -11,6 +12,7 @@ public class Toolbar : MonoBehaviour
     public GameController gameController;
 
     void Awake() {
+        exitButton.onValueChanged.AddListener(value => Application.Quit());
         infoButton.onValueChanged.AddListener(value => SetTool(value, GameTool.INFO));
         buildButton.onValueChanged.AddListener(value => SetTool(value, GameTool.BUILD));
         deleteButton.onValueChanged.AddListener(value => SetTool(value, GameTool.DELETE));

@@ -3,5 +3,5 @@ using System.Collections.Generic;
 
 public enum GameTool
 {
-    INFO, BUILD, DELETE, ROTATE
+    INFO, BUILD, DELETE, ROTATE, MOVE
 }
