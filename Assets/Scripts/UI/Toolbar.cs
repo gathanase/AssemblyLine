@@ -4,16 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Toolbar : MonoBehaviour
 {
-    public Button infoButton;
-    public Button buildButton;
-    public Button deleteButton;
-    public Button rotateButton;
+    public Toggle infoButton;
+    public Toggle buildButton;
+    public Toggle deleteButton;
+    public Toggle rotateButton;
     public GameController gameController;
 
     void Awake() {
-        infoButton.onClick.AddListener(() => gameController.SetTool(GameTool.INFO));
-        buildButton.onClick.AddListener(() => gameController.SetTool(GameTool.BUILD));
-        deleteButton.onClick.AddListener(() => gameController.SetTool(GameTool.DELETE));
-        rotateButton.onClick.AddListener(() => gameController.SetTool(GameTool.ROTATE));
+        infoButton.onValueChanged.AddListener(value => SetTool(value, GameTool.INFO));
+        buildButton.onValueChanged.AddListener(value => SetTool(value, GameTool.BUILD));
+        deleteButton.onValueChanged.AddListener(value => SetTool(value, GameTool.DELETE));
+        rotateButton.onValueChanged.AddListener(value => SetTool(value, GameTool.ROTATE));
+    }
+
+    private void SetTool(bool active, GameTool gameTool) {
+        if (active) {
+            gameController.SetTool(gameTool);
+        }
     }
 }
