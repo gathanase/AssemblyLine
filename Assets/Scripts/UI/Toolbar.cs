@@ -14,14 +14,14 @@ public class Toolbar : MonoBehaviour
 
     void Awake() {
         exitButton.onValueChanged.AddListener(value => Application.Quit());
-        infoButton.onValueChanged.AddListener(value => SetTool(value, GameTool.INFO));
-        buildButton.onValueChanged.AddListener(value => SetTool(value, GameTool.BUILD));
-        deleteButton.onValueChanged.AddListener(value => SetTool(value, GameTool.DELETE));
-        rotateButton.onValueChanged.AddListener(value => SetTool(value, GameTool.ROTATE));
-        moveButton.onValueChanged.AddListener(value => SetTool(value, GameTool.MOVE));
+        infoButton.onValueChanged.AddListener(value => SetTool(value, ToolType.INFO));
+        buildButton.onValueChanged.AddListener(value => SetTool(value, ToolType.BUILD));
+        deleteButton.onValueChanged.AddListener(value => SetTool(value, ToolType.DELETE));
+        rotateButton.onValueChanged.AddListener(value => SetTool(value, ToolType.ROTATE));
+        moveButton.onValueChanged.AddListener(value => SetTool(value, ToolType.MOVE));
     }
 
-    private void SetTool(bool active, GameTool gameTool) {
+    private void SetTool(bool active, ToolType gameTool) {
         if (active) {
             gameController.SetTool(gameTool);
         }

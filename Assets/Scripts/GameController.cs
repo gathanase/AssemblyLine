@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
         rotateTool = FindObjectOfType<RotateTool>();
         buildTool = FindObjectOfType<BuildTool>();
         deleteTool = FindObjectOfType<DeleteTool>();
-        SetTool(GameTool.INFO);
+        SetTool(ToolType.INFO);
     }
 
     void Start()
@@ -61,23 +61,23 @@ public class GameController : MonoBehaviour
         InvokeRepeating("OnTick", 1, 1);
     }
 
-    public void SetTool(GameTool gameTool) {
+    public void SetTool(ToolType gameTool) {
         Debug.Log("Select tool " + gameTool);
         infoTool.gameObject.SetActive(false);
         rotateTool.gameObject.SetActive(false);
         buildTool.gameObject.SetActive(false);
         deleteTool.gameObject.SetActive(false);
         switch (gameTool) {
-            case GameTool.INFO:
+            case ToolType.INFO:
                 infoTool.gameObject.SetActive(true);
                 break;
-            case GameTool.ROTATE:
+            case ToolType.ROTATE:
                 rotateTool.gameObject.SetActive(true);
                 break;
-            case GameTool.BUILD:
+            case ToolType.BUILD:
                 buildTool.gameObject.SetActive(true);
                 break;
-            case GameTool.DELETE:
+            case ToolType.DELETE:
                 deleteTool.gameObject.SetActive(true);
                 break;
         }
