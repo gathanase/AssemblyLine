@@ -20,6 +20,7 @@ public class TransformMachineWindow : Window
         // typeField.options = artifactTypes.ConvertAll<Dropdown.OptionData>(type => new Dropdown.OptionData(type.ToString()));
         // typeField.SetValueWithoutNotify(artifactTypes.IndexOf(starterMachine.artifactType));
         // quantityField.SetValueWithoutNotify(starterMachine.quantity);
+        closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }
 }

@@ -20,8 +20,11 @@ public class StarterMachineWindow : Window
         typeField.options = artifactTypes.ConvertAll<Dropdown.OptionData>(type => new Dropdown.OptionData(type.ToString(), artifactSprites.GetSprite(type)));
         typeField.SetValueWithoutNotify(artifactTypes.IndexOf(starterMachine.artifactType));
         quantityField.SetValueWithoutNotify(starterMachine.quantity);
+        typeField.onValueChanged.RemoveAllListeners();
         typeField.onValueChanged.AddListener(ev => starterMachine.artifactType = artifactTypes[typeField.value]);
+        quantityField.onValueChanged.RemoveAllListeners();
         quantityField.onValueChanged.AddListener(ev => starterMachine.quantity = (int) quantityField.value);
+        closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }
 }

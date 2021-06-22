@@ -21,7 +21,9 @@ public class BuilderMachineWindow : Window
             return new Dropdown.OptionData(type.ToString(), artifactSprites.GetSprite(type));
         });
         typeField.SetValueWithoutNotify(gameController.recipeDatabase.recipes.IndexOf(builderMachine.recipe));
+        typeField.onValueChanged.RemoveAllListeners();
         typeField.onValueChanged.AddListener(ev => builderMachine.recipe = recipes[typeField.value]);
+        closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }
 }
