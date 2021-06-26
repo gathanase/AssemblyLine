@@ -21,7 +21,9 @@ public abstract class TransformMachine : Machine
     }
 
     public override void Feed(Artifact artifact) {
-        queue.Enqueue(artifact.type);
+        if (queue.Count < 5) {
+            queue.Enqueue(artifact.type);
+        }
         Remove(artifact);
     }
 
