@@ -5,12 +5,9 @@ using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour
 {
-    public StarterMachine starterMachineModel;
-    public CutterMachine cutterMachineModel;
-    public RollerMachine rollerMachineModel;
-    public CrafterMachine crafterMachineModel;
     public Artifact artifactModel;
     public RecipeDatabase recipeDatabase;
+    public MachineDatabase machineDatabase;
 
     private InfoTool infoTool;
     private RotateTool rotateTool;
@@ -38,23 +35,23 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        StarterMachine starterMachineA = Instantiate(starterMachineModel);
-        starterMachineA.Init(new Vector2Int(0, 0), Direction.NORTH, ArtifactType.GOLD, 0);
+        Machine starterMachineA = Instantiate(machineDatabase.GetModel(MachineType.STARTER));
+        starterMachineA.Init(new Vector2Int(0, 0), Direction.SOUTH);
         Add(starterMachineA);
 
-        StarterMachine starterMachine = Instantiate(starterMachineModel);
-        starterMachine.Init(new Vector2Int(3, 0), Direction.SOUTH, ArtifactType.GOLD, 1);
-        Add(starterMachine);
+        Machine starterMachineB = Instantiate(machineDatabase.GetModel(MachineType.STARTER));
+        starterMachineB.Init(new Vector2Int(3, 0), Direction.SOUTH);
+        Add(starterMachineB);
 
-        RollerMachine rollerMachine = Instantiate(rollerMachineModel);
+        Machine rollerMachine = Instantiate(machineDatabase.GetModel(MachineType.ROLLER));
         rollerMachine.Init(new Vector2Int(3, -1), Direction.SOUTH);
         Add(rollerMachine);
 
-        CutterMachine cutterMachine = Instantiate(cutterMachineModel);
+        Machine cutterMachine = Instantiate(machineDatabase.GetModel(MachineType.CUTTER));
         cutterMachine.Init(new Vector2Int(3, -2), Direction.EAST);
         Add(cutterMachine);
 
-        CrafterMachine crafterMachine = Instantiate(crafterMachineModel);
+        Machine crafterMachine = Instantiate(machineDatabase.GetModel(MachineType.CRAFTER));
         crafterMachine.Init(new Vector2Int(4, -2), Direction.SOUTH);
         Add(crafterMachine);
 

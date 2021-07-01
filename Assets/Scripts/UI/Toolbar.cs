@@ -11,11 +11,14 @@ public class Toolbar : MonoBehaviour
     public Toggle rotateButton;
     public Toggle moveButton;
     public GameController gameController;
+    private BuildWindow buildWindow;
 
     void Awake() {
+        buildWindow = FindObjectOfType<BuildWindow>(true);
+
         exitButton.onValueChanged.AddListener(value => Application.Quit());
         infoButton.onValueChanged.AddListener(value => SetTool(value, ToolType.INFO));
-        buildButton.onValueChanged.AddListener(value => SetTool(value, ToolType.BUILD));
+        buildButton.onValueChanged.AddListener(value => buildWindow.Init());
         deleteButton.onValueChanged.AddListener(value => SetTool(value, ToolType.DELETE));
         rotateButton.onValueChanged.AddListener(value => SetTool(value, ToolType.ROTATE));
         moveButton.onValueChanged.AddListener(value => SetTool(value, ToolType.MOVE));
