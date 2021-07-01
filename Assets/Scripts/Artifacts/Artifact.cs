@@ -8,10 +8,14 @@ public class Artifact : MonoBehaviour
     public Vector2Int position;
     public Direction direction;
     private static ArtifactSprites artifactSprites = null;
+    private static ArtifactDatabase artifactDatabase = null;
 
     void Awake() {
         if (artifactSprites == null) {
             artifactSprites = FindObjectOfType<ArtifactSprites>();
+        }
+        if (artifactDatabase == null) {
+            artifactDatabase = FindObjectOfType<ArtifactDatabase>();
         }
     }
 

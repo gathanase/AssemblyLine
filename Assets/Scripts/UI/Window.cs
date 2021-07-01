@@ -7,7 +7,7 @@ public class Window : MonoBehaviour
     protected static GameController gameController = null;
     protected static ArtifactSprites artifactSprites = null;
 
-    public void Init() {
+    public virtual void Init() {
         if (artifactSprites == null) {
             artifactSprites = FindObjectOfType<ArtifactSprites>();
         }

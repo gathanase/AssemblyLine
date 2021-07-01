@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuilderMachine : Machine
+public class CrafterMachine : Machine
 {
     public Recipe recipe;
     private ArtifactStock stock;
@@ -12,8 +12,13 @@ public class BuilderMachine : Machine
         recipe = gameController.recipeDatabase.recipes[0];
     }
 
+    public override MachineType GetMachineType()
+    {
+        return MachineType.CRAFTER;
+    }
+    
     public override Window CreateInfoWindow() {
-        BuilderMachineWindow infoWindow = FindObjectOfType<BuilderMachineWindow>(true);
+        CrafterMachineWindow infoWindow = FindObjectOfType<CrafterMachineWindow>(true);
         infoWindow.Init(this);
         return infoWindow;
     }

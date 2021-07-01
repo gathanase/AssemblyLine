@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 3959148201362370494}
   - component: {fileID: 503762455244081573}
   m_Layer: 5
-  m_Name: BuilderMachineWindow
+  m_Name: CrafterMachineWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2601561145783167118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea5eea24a6ad46c79610c04bc9e85b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bacd649e16764d41ade0c62304305e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   typeField: {fileID: 7739276578523394932}

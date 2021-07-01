@@ -47,7 +47,7 @@ MonoBehaviour:
   starterMachineModel: {fileID: 3931710875602738588, guid: e0256e33c8281472597d8190b624bdc8, type: 3}
   cutterMachineModel: {fileID: 1846762126668642712, guid: c889da8c9bee74bb9a22aae892522222, type: 3}
   rollerMachineModel: {fileID: 4000355555794620676, guid: 06fca78a511d44fe1a6b0442be4f2b49, type: 3}
-  builderMachineModel: {fileID: 8201023734035383599, guid: bcd982582ef554b96a8caf33c1cbf853, type: 3}
+  crafterMachineModel: {fileID: 8201023734035383599, guid: bcd982582ef554b96a8caf33c1cbf853, type: 3}
   artifactModel: {fileID: 3232427426457604143, guid: 19cffe76463d341389d4fd1cf69c724d, type: 3}
 --- !u!61 &1972917507
 BoxCollider2D:

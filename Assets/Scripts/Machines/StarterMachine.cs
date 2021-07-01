@@ -15,6 +15,11 @@ public class StarterMachine : Machine
         this.quantity = quantity;
     }
 
+    public override MachineType GetMachineType()
+    {
+        return MachineType.STARTER;
+    }
+    
     public override Window CreateInfoWindow() {
         StarterMachineWindow infoWindow = FindObjectOfType<StarterMachineWindow>(true);
         infoWindow.Init(this);

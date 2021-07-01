@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CutterMachine : TransformMachine
 {
+    public override MachineType GetMachineType()
+    {
+        return MachineType.CUTTER;
+    }
+    
     protected override Dictionary<ArtifactType, ArtifactType> BuildMapping() {
         Dictionary<ArtifactType, ArtifactType> mapping = new Dictionary<ArtifactType, ArtifactType>();
         mapping.Add(ArtifactType.IRON, ArtifactType.IRON_GEAR);

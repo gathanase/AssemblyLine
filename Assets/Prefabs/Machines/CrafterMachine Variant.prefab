@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9002696244088401817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e18098a4a3f0043d4a039a663c2ecf98, type: 3}
+  m_Script: {fileID: 11500000, guid: 362c3b986fe9a46159d8f2f0312bcb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  position: {x: 0, y: 0}
+  direction: 0
 --- !u!1001 &1338645168559012470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954432509555594735, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}
       propertyPath: m_Name
-      value: BuilderMachine
+      value: CrafterMachine Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}

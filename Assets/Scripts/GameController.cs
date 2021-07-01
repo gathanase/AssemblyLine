@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public StarterMachine starterMachineModel;
     public CutterMachine cutterMachineModel;
     public RollerMachine rollerMachineModel;
-    public BuilderMachine builderMachineModel;
+    public CrafterMachine crafterMachineModel;
     public Artifact artifactModel;
     public RecipeDatabase recipeDatabase;
 
@@ -54,15 +54,14 @@ public class GameController : MonoBehaviour
         cutterMachine.Init(new Vector2Int(3, -2), Direction.EAST);
         Add(cutterMachine);
 
-        BuilderMachine builderMachine = Instantiate(builderMachineModel);
-        builderMachine.Init(new Vector2Int(4, -2), Direction.SOUTH);
-        Add(builderMachine);
+        CrafterMachine crafterMachine = Instantiate(crafterMachineModel);
+        crafterMachine.Init(new Vector2Int(4, -2), Direction.SOUTH);
+        Add(crafterMachine);
 
         InvokeRepeating("OnTick", 1, 1);
     }
 
     public void SetTool(ToolType gameTool) {
-        Debug.Log("Select tool " + gameTool);
         infoTool.gameObject.SetActive(false);
         rotateTool.gameObject.SetActive(false);
         buildTool.gameObject.SetActive(false);

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class RollerMachine : Machine
 {
+    public override MachineType GetMachineType()
+    {
+        return MachineType.ROLLER;
+    }
+    
     public override Window CreateInfoWindow() {
         return null;
     }

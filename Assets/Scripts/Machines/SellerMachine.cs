@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SellerMachine : Machine
 {
+    public override MachineType GetMachineType()
+    {
+        return MachineType.SELLER;
+    }
+    
     public override Window CreateInfoWindow() {
         return null;
     }

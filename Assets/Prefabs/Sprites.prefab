@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8082845697514220253
+--- !u!1 &9093220218071879623
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8082845697514220251}
-  - component: {fileID: 8082845697514220250}
+  - component: {fileID: 4279416802905853909}
+  - component: {fileID: 6707281322683063681}
+  - component: {fileID: 2355720463805473955}
   m_Layer: 0
-  m_Name: ArtifactSprites
+  m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8082845697514220251
+--- !u!4 &4279416802905853909
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8082845697514220253}
+  m_GameObject: {fileID: 9093220218071879623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8082845697514220250
+--- !u!114 &6707281322683063681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8082845697514220253}
+  m_GameObject: {fileID: 9093220218071879623}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 850b9faeb9cd242c6b4807e8b14e93b2, type: 3}
@@ -112,3 +113,38 @@ MonoBehaviour:
   - {fileID: -6693488959756697949, guid: 4112676a3a66d4297908ad47884b4e6c, type: 3}
   - {fileID: -1569759253204913121, guid: 4112676a3a66d4297908ad47884b4e6c, type: 3}
   - {fileID: 5303600006453446777, guid: 4112676a3a66d4297908ad47884b4e6c, type: 3}
+--- !u!114 &2355720463805473955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9093220218071879623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a3d9fa52d214367b1bd7948254df34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritesArray:
+  - {fileID: 2997685718008322273, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -2307537358525506117, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 2119667229320797799, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 7177975038632830318, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 828266602273431565, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -9066336348952289405, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 1544028433443415502, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -6764264276604333441, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 6404252871082991133, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 8792075471333691342, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 3686732122362435849, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 862575208450157242, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -1524337687146159826, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 7474819825240296679, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 6647929333808752064, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 4251162594028702690, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -3546154359679551986, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -5819750510695338541, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -7563131150562918538, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: 2147125325159096066, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -4079573152650623196, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}
+  - {fileID: -6158716215199150935, guid: 92cb25629d69b4c0eb62f4b2cb6413da, type: 3}

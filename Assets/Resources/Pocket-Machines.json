@@ -1,0 +1,192 @@
+{
+    "Crafter": {
+        "ActionTime": 3,
+        "BuildCost": 20000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 6,
+        "MachineName": "Crafter",
+        "UnlockCost": 80000
+    },
+    "Cutter": {
+        "ActionTime": 3,
+        "BuildCost": 10000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 4,
+        "MachineName": "Cutter",
+        "UnlockCost": 30000
+    },
+    "Filtered Robotic Arm": {
+        "ActionTime": 200,
+        "BuildCost": 50000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 10,
+        "MachineName": "Filtered Robotic Arm",
+        "UnlockCost": 500000
+    },
+    "Furnace": {
+        "ActionTime": 3,
+        "BuildCost": 10000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 3,
+        "MachineName": "Furnace",
+        "UnlockCost": 20000
+    },
+    "Hydraulic Press": {
+        "ActionTime": 3,
+        "BuildCost": 30000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 9,
+        "MachineName": "Hydraulic Press",
+        "UnlockCost": 300000
+    },
+    "Left Selector": {
+        "ActionTime": 0,
+        "BuildCost": 50000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 16,
+        "MachineName": "Left Selector",
+        "UnlockCost": 100000
+    },
+    "Left Splitter": {
+        "ActionTime": 0,
+        "BuildCost": 100000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 14,
+        "MachineName": "Left Splitter",
+        "UnlockCost": 600000
+    },
+    "Multi Selector": {
+        "ActionTime": 0,
+        "BuildCost": 150000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 16,
+        "MachineName": "Multi Selector",
+        "UnlockCost": 230000
+    },
+    "Right Selector": {
+        "ActionTime": 0,
+        "BuildCost": 50000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 16,
+        "MachineName": "Right Selector",
+        "UnlockCost": 100000
+    },
+    "Right Splitter": {
+        "ActionTime": 0,
+        "BuildCost": 100000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 15,
+        "MachineName": "Right Splitter",
+        "UnlockCost": 600000
+    },
+    "Robotic Arm": {
+        "ActionTime": 200,
+        "BuildCost": 15000,
+        "CanRotate": true,
+        "ElectricityCost": 1,
+        "IsUnlocked": false,
+        "MachineID": 7,
+        "MachineName": "Robotic Arm",
+        "UnlockCost": 90000
+    },
+    "Roller": {
+        "ActionTime": 0,
+        "BuildCost": 300,
+        "CanRotate": true,
+        "ElectricityCost": 1,
+        "IsUnlocked": true,
+        "MachineID": 2,
+        "MachineName": "Roller",
+        "UnlockCost": 5000
+    },
+    "Selector": {
+        "ActionTime": 3,
+        "BuildCost": 50000,
+        "CanRotate": false,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 8,
+        "MachineName": "Selector",
+        "UnlockCost": 100000
+    },
+    "Seller": {
+        "ActionTime": 0,
+        "BuildCost": 5000,
+        "CanRotate": false,
+        "ElectricityCost": 5,
+        "IsUnlocked": true,
+        "MachineID": 1,
+        "MachineName": "Seller",
+        "UnlockCost": 1000
+    },
+    "Splitter": {
+        "ActionTime": 3,
+        "BuildCost": 100000,
+        "CanRotate": false,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 11,
+        "MachineName": "Splitter",
+        "UnlockCost": 600000
+    },
+    "Starter": {
+        "ActionTime": 3,
+        "BuildCost": 1000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": true,
+        "MachineID": 0,
+        "MachineName": "Starter",
+        "UnlockCost": 1000
+    },
+    "Transporter Input": {
+        "ActionTime": 0,
+        "BuildCost": 1000000,
+        "CanRotate": false,
+        "ElectricityCost": 100,
+        "IsUnlocked": false,
+        "MachineID": 12,
+        "MachineName": "Transporter Input",
+        "UnlockCost": 250000000
+    },
+    "Transporter Output": {
+        "ActionTime": 0,
+        "BuildCost": 1000000,
+        "CanRotate": false,
+        "ElectricityCost": 100,
+        "IsUnlocked": false,
+        "MachineID": 13,
+        "MachineName": "Transporter Output",
+        "UnlockCost": 250000000
+    },
+    "Wire Drawer": {
+        "ActionTime": 3,
+        "BuildCost": 10000,
+        "CanRotate": true,
+        "ElectricityCost": 5,
+        "IsUnlocked": false,
+        "MachineID": 5,
+        "MachineName": "Wire Drawer",
+        "UnlockCost": 40000
+    }
+}

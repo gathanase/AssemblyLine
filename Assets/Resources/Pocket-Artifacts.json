@@ -1,0 +1,554 @@
+{
+    "(None)": {
+        "cost": 0,
+        "id": 70,
+        "isUnlocked": true,
+        "name": "(None)",
+        "quantity": 1,
+        "value": 0
+    },
+    "AI Processor": {
+        "cost": 0,
+        "id": 64,
+        "isUnlocked": true,
+        "name": "AI Processor",
+        "quantity": 1,
+        "value": 2500000
+    },
+    "AI Robot": {
+        "cost": 0,
+        "id": 67,
+        "isUnlocked": true,
+        "name": "AI Robot",
+        "quantity": 1,
+        "value": 15000000
+    },
+    "AI Robot Body": {
+        "cost": 0,
+        "id": 66,
+        "isUnlocked": true,
+        "name": "AI Robot Body",
+        "quantity": 1,
+        "value": 2800000
+    },
+    "AI Robot Head": {
+        "cost": 0,
+        "id": 65,
+        "isUnlocked": true,
+        "name": "AI Robot Head",
+        "quantity": 1,
+        "value": 5000000
+    },
+    "Advanced Engine": {
+        "cost": 0,
+        "id": 61,
+        "isUnlocked": true,
+        "name": "Advanced Engine",
+        "quantity": 1,
+        "value": 70000
+    },
+    "Air Conditioner": {
+        "cost": 0,
+        "id": 37,
+        "isUnlocked": true,
+        "name": "Air Conditioner",
+        "quantity": 1,
+        "value": 900
+    },
+    "Aluminum": {
+        "cost": 5,
+        "id": 0,
+        "isUnlocked": true,
+        "name": "Aluminum",
+        "quantity": 1,
+        "value": 80
+    },
+    "Aluminum Gear": {
+        "cost": 0,
+        "id": 1,
+        "isUnlocked": true,
+        "name": "Aluminum Gear",
+        "quantity": 1,
+        "value": 100
+    },
+    "Aluminum Liquid": {
+        "cost": 0,
+        "id": 2,
+        "isUnlocked": true,
+        "name": "Aluminum Liquid",
+        "quantity": 1,
+        "value": 100
+    },
+    "Aluminum Plate": {
+        "cost": 0,
+        "id": 4,
+        "isUnlocked": true,
+        "name": "Aluminum Plate",
+        "quantity": 1,
+        "value": 250
+    },
+    "Aluminum Wire": {
+        "cost": 0,
+        "id": 3,
+        "isUnlocked": true,
+        "name": "Aluminum Wire",
+        "quantity": 1,
+        "value": 100
+    },
+    "Antenna": {
+        "cost": 0,
+        "id": 43,
+        "isUnlocked": true,
+        "name": "Antenna",
+        "quantity": 1,
+        "value": 540
+    },
+    "Battery": {
+        "cost": 0,
+        "id": 40,
+        "isUnlocked": true,
+        "name": "Battery",
+        "quantity": 1,
+        "value": 1050
+    },
+    "Circuit": {
+        "cost": 0,
+        "id": 26,
+        "isUnlocked": true,
+        "name": "Circuit",
+        "quantity": 1,
+        "value": 300
+    },
+    "Clock": {
+        "cost": 0,
+        "id": 29,
+        "isUnlocked": true,
+        "name": "Clock",
+        "quantity": 1,
+        "value": 540
+    },
+    "Computer": {
+        "cost": 0,
+        "id": 28,
+        "isUnlocked": true,
+        "name": "Computer",
+        "quantity": 1,
+        "value": 11000
+    },
+    "Cooler Plate": {
+        "cost": 0,
+        "id": 32,
+        "isUnlocked": true,
+        "name": "Cooler Plate",
+        "quantity": 1,
+        "value": 360
+    },
+    "Copper": {
+        "cost": 5,
+        "id": 5,
+        "isUnlocked": true,
+        "name": "Copper",
+        "quantity": 1,
+        "value": 80
+    },
+    "Copper Gear": {
+        "cost": 0,
+        "id": 6,
+        "isUnlocked": true,
+        "name": "Copper Gear",
+        "quantity": 1,
+        "value": 100
+    },
+    "Copper Liquid": {
+        "cost": 0,
+        "id": 7,
+        "isUnlocked": true,
+        "name": "Copper Liquid",
+        "quantity": 1,
+        "value": 100
+    },
+    "Copper Plate": {
+        "cost": 0,
+        "id": 9,
+        "isUnlocked": true,
+        "name": "Copper Plate",
+        "quantity": 1,
+        "value": 250
+    },
+    "Copper Wire": {
+        "cost": 0,
+        "id": 8,
+        "isUnlocked": true,
+        "name": "Copper Wire",
+        "quantity": 1,
+        "value": 100
+    },
+    "Diamond": {
+        "cost": 5,
+        "id": 10,
+        "isUnlocked": true,
+        "name": "Diamond",
+        "quantity": 1,
+        "value": 80
+    },
+    "Diamond Gear": {
+        "cost": 0,
+        "id": 11,
+        "isUnlocked": true,
+        "name": "Diamond Gear",
+        "quantity": 1,
+        "value": 100
+    },
+    "Diamond Liquid": {
+        "cost": 0,
+        "id": 12,
+        "isUnlocked": true,
+        "name": "Diamond Liquid",
+        "quantity": 1,
+        "value": 100
+    },
+    "Diamond Plate": {
+        "cost": 0,
+        "id": 14,
+        "isUnlocked": true,
+        "name": "Diamond Plate",
+        "quantity": 1,
+        "value": 250
+    },
+    "Diamond Wire": {
+        "cost": 0,
+        "id": 13,
+        "isUnlocked": true,
+        "name": "Diamond Wire",
+        "quantity": 1,
+        "value": 100
+    },
+    "Drill": {
+        "cost": 0,
+        "id": 30,
+        "isUnlocked": true,
+        "name": "Drill",
+        "quantity": 1,
+        "value": 1500
+    },
+    "Drone": {
+        "cost": 0,
+        "id": 49,
+        "isUnlocked": true,
+        "name": "Drone",
+        "quantity": 1,
+        "value": 17220
+    },
+    "Electric Board": {
+        "cost": 0,
+        "id": 56,
+        "isUnlocked": true,
+        "name": "Electric Board",
+        "quantity": 1,
+        "value": 27000
+    },
+    "Electric Engine": {
+        "cost": 0,
+        "id": 62,
+        "isUnlocked": true,
+        "name": "Electric Engine",
+        "quantity": 1,
+        "value": 900000
+    },
+    "Electric Generator": {
+        "cost": 0,
+        "id": 63,
+        "isUnlocked": true,
+        "name": "Electric Generator",
+        "quantity": 1,
+        "value": 470000
+    },
+    "Engine": {
+        "cost": 0,
+        "id": 25,
+        "isUnlocked": true,
+        "name": "Engine",
+        "quantity": 1,
+        "value": 360
+    },
+    "Fridge": {
+        "cost": 0,
+        "id": 36,
+        "isUnlocked": true,
+        "name": "Fridge",
+        "quantity": 1,
+        "value": 7400
+    },
+    "Generator": {
+        "cost": 0,
+        "id": 54,
+        "isUnlocked": true,
+        "name": "Generator",
+        "quantity": 1,
+        "value": 11820
+    },
+    "Gold": {
+        "cost": 5,
+        "id": 15,
+        "isUnlocked": true,
+        "name": "Gold",
+        "quantity": 1,
+        "value": 80
+    },
+    "Gold Gear": {
+        "cost": 0,
+        "id": 16,
+        "isUnlocked": true,
+        "name": "Gold Gear",
+        "quantity": 1,
+        "value": 100
+    },
+    "Gold Liquid": {
+        "cost": 0,
+        "id": 17,
+        "isUnlocked": true,
+        "name": "Gold Liquid",
+        "quantity": 1,
+        "value": 100
+    },
+    "Gold Plate": {
+        "cost": 0,
+        "id": 19,
+        "isUnlocked": true,
+        "name": "Gold Plate",
+        "quantity": 1,
+        "value": 250
+    },
+    "Gold Wire": {
+        "cost": 0,
+        "id": 18,
+        "isUnlocked": true,
+        "name": "Gold Wire",
+        "quantity": 1,
+        "value": 100
+    },
+    "Grill": {
+        "cost": 0,
+        "id": 35,
+        "isUnlocked": true,
+        "name": "Grill",
+        "quantity": 1,
+        "value": 600
+    },
+    "Headphones": {
+        "cost": 0,
+        "id": 47,
+        "isUnlocked": true,
+        "name": "Headphones",
+        "quantity": 1,
+        "value": 1300
+    },
+    "Heater Plate": {
+        "cost": 0,
+        "id": 33,
+        "isUnlocked": true,
+        "name": "Heater Plate",
+        "quantity": 1,
+        "value": 360
+    },
+    "Iron": {
+        "cost": 5,
+        "id": 20,
+        "isUnlocked": true,
+        "name": "Iron",
+        "quantity": 1,
+        "value": 80
+    },
+    "Iron Gear": {
+        "cost": 0,
+        "id": 21,
+        "isUnlocked": true,
+        "name": "Iron Gear",
+        "quantity": 1,
+        "value": 100
+    },
+    "Iron Liquid": {
+        "cost": 0,
+        "id": 22,
+        "isUnlocked": true,
+        "name": "Iron Liquid",
+        "quantity": 1,
+        "value": 100
+    },
+    "Iron Plate": {
+        "cost": 0,
+        "id": 24,
+        "isUnlocked": true,
+        "name": "Iron Plate",
+        "quantity": 1,
+        "value": 250
+    },
+    "Iron Wire": {
+        "cost": 0,
+        "id": 23,
+        "isUnlocked": true,
+        "name": "Iron Wire",
+        "quantity": 1,
+        "value": 100
+    },
+    "Jackhammer": {
+        "cost": 0,
+        "id": 55,
+        "isUnlocked": true,
+        "name": "Jackhammer",
+        "quantity": 1,
+        "value": 6920
+    },
+    "Lazer": {
+        "cost": 0,
+        "id": 58,
+        "isUnlocked": true,
+        "name": "Lazer",
+        "quantity": 1,
+        "value": 31800
+    },
+    "Light Bulb": {
+        "cost": 0,
+        "id": 38,
+        "isUnlocked": true,
+        "name": "Light Bulb",
+        "quantity": 1,
+        "value": 360
+    },
+    "Microwave": {
+        "cost": 0,
+        "id": 51,
+        "isUnlocked": true,
+        "name": "Microwave",
+        "quantity": 1,
+        "value": 8070
+    },
+    "Oven": {
+        "cost": 0,
+        "id": 52,
+        "isUnlocked": true,
+        "name": "Oven",
+        "quantity": 1,
+        "value": 27300
+    },
+    "Power Supply": {
+        "cost": 0,
+        "id": 46,
+        "isUnlocked": true,
+        "name": "Power Supply",
+        "quantity": 1,
+        "value": 1920
+    },
+    "Processor": {
+        "cost": 0,
+        "id": 27,
+        "isUnlocked": true,
+        "name": "Processor",
+        "quantity": 1,
+        "value": 1320
+    },
+    "Radio": {
+        "cost": 0,
+        "id": 44,
+        "isUnlocked": true,
+        "name": "Radio",
+        "quantity": 1,
+        "value": 5670
+    },
+    "Railway": {
+        "cost": 0,
+        "id": 57,
+        "isUnlocked": true,
+        "name": "Railway",
+        "quantity": 1,
+        "value": 8400
+    },
+    "Server Rack": {
+        "cost": 0,
+        "id": 59,
+        "isUnlocked": true,
+        "name": "Server Rack",
+        "quantity": 1,
+        "value": 10600
+    },
+    "Smartphone": {
+        "cost": 0,
+        "id": 41,
+        "isUnlocked": true,
+        "name": "Smartphone",
+        "quantity": 1,
+        "value": 7300
+    },
+    "Smartwatch": {
+        "cost": 0,
+        "id": 50,
+        "isUnlocked": true,
+        "name": "Smartwatch",
+        "quantity": 1,
+        "value": 10170
+    },
+    "Solar Panel": {
+        "cost": 0,
+        "id": 39,
+        "isUnlocked": true,
+        "name": "Solar Panel",
+        "quantity": 1,
+        "value": 1170
+    },
+    "Speakers": {
+        "cost": 0,
+        "id": 48,
+        "isUnlocked": true,
+        "name": "Speakers",
+        "quantity": 1,
+        "value": 3300
+    },
+    "Super Computer": {
+        "cost": 0,
+        "id": 60,
+        "isUnlocked": true,
+        "name": "Super Computer",
+        "quantity": 1,
+        "value": 550000
+    },
+    "TV": {
+        "cost": 0,
+        "id": 45,
+        "isUnlocked": true,
+        "name": "TV",
+        "quantity": 1,
+        "value": 7100
+    },
+    "Tablet": {
+        "cost": 0,
+        "id": 42,
+        "isUnlocked": true,
+        "name": "Tablet",
+        "quantity": 1,
+        "value": 7600
+    },
+    "Toaster": {
+        "cost": 0,
+        "id": 34,
+        "isUnlocked": true,
+        "name": "Toaster",
+        "quantity": 1,
+        "value": 900
+    },
+    "Washing Machine": {
+        "cost": 0,
+        "id": 31,
+        "isUnlocked": true,
+        "name": "Washing Machine",
+        "quantity": 1,
+        "value": 1100
+    },
+    "Water Heater": {
+        "cost": 0,
+        "id": 53,
+        "isUnlocked": true,
+        "name": "Water Heater",
+        "quantity": 1,
+        "value": 12900
+    }
+}

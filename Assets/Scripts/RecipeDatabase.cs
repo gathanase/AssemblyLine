@@ -25,10 +25,10 @@ public class RecipeDatabase
     }
 
     public void Load() {
-        Debug.Log("Loading recipes");
         TextAsset file = Resources.Load<TextAsset>("Recipes");
         RecipesJson recipesJson = JsonUtility.FromJson<RecipesJson>(file.text);
         recipes = recipesJson.recipes.ConvertAll(recipeJson => ToModel(recipeJson));
+        Debug.LogFormat("Loaded {0} recipes", recipes.Count);
     }
 
     private Recipe ToModel(RecipeJson recipeJson) {
