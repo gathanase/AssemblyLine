@@ -12,6 +12,10 @@ public class ArtifactStock
         maxCount = 100;
     }
 
+    public List<ArtifactType> GetArtifactTypes() {
+        return new List<ArtifactType>(stock.Keys);
+    }
+
     public int GetCount(ArtifactType artifactType) {
         int count = 0;
         stock.TryGetValue(artifactType, out count);
