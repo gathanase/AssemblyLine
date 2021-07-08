@@ -18,7 +18,13 @@ public class BuildWindow : Window
         machineDatabase = FindObjectOfType<MachineDatabase>(true);
         buildTool = FindObjectOfType<BuildTool>(true);
         Add(MachineType.STARTER);
+        Add(MachineType.SELLER);
         Add(MachineType.ROLLER);
+        Add(MachineType.CRAFTER);
+        Add(MachineType.CUTTER);
+        Add(MachineType.FURNACE);
+        Add(MachineType.HYDRAULIC_PRESS);
+        Add(MachineType.WIRE_DRAWER);
         closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }

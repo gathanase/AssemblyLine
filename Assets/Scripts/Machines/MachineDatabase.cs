@@ -7,11 +7,8 @@ using UnityEngine;
 public class MachineDatabase : MonoBehaviour
 {
     public Dictionary<MachineType, MachineInfo> machines;
-    public StarterMachine starterMachineModel;
-    public CutterMachine cutterMachineModel;
-    public RollerMachine rollerMachineModel;
-    public CrafterMachine crafterMachineModel;
-    private Dictionary<MachineType, Machine> machineModels;
+    public List<Machine> machineModelList;
+    private Dictionary<MachineType, Machine> machineModelByType;
 
     public class MachineInfo {
         public MachineType type;
@@ -37,12 +34,11 @@ public class MachineDatabase : MonoBehaviour
         machines = json.machines.ConvertAll(ToModel).ToDictionary(model => model.type);
         Debug.LogFormat("Loaded {0} machines", machines.Count);
 
-        machineModels = new Dictionary<MachineType, Machine>();
-        machineModels.Add(MachineType.STARTER, starterMachineModel);
-        machineModels.Add(MachineType.CUTTER, cutterMachineModel);
-        machineModels.Add(MachineType.ROLLER, rollerMachineModel);
-        machineModels.Add(MachineType.CRAFTER, crafterMachineModel);
-        Debug.LogFormat("Loaded {0} machine models", machineModels.Count);
+        machineModelByType = new Dictionary<MachineType, Machine>();
+        foreach (Machine machine in machineModelList) {
+            machineModelByType.Add(machine.GetMachineType(), machine);
+        }
+        Debug.LogFormat("Loaded {0} machine models", machineModelByType.Count);
     }
 
     private MachineInfo ToModel(MachineJson json) {
@@ -58,6 +54,6 @@ public class MachineDatabase : MonoBehaviour
     }
 
     public Machine GetModel(MachineType type) {
-        return machineModels[type];
+        return machineModelByType[type];
     }
 }

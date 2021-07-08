@@ -12,12 +12,11 @@ public class SellerMachine : Machine
     public override Window CreateInfoWindow() {
         return null;
     }
+
     public override void Feed(Artifact artifact)
     {
         gameController.Sell(artifact);
     }
-    public override void OnTick()
-    {
-        throw new System.NotImplementedException();
-    }
+
+    public override void OnTick() {}
 }
