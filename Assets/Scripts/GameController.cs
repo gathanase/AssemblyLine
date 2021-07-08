@@ -12,12 +12,7 @@ public class GameController : MonoBehaviour
 
     public Text moneyText;
     private long money = 0;
-
-    private InfoTool infoTool;
-    private RotateTool rotateTool;
-    private BuildTool buildTool;
-    private DeleteTool deleteTool;
-
+    private Dictionary<ToolType, GameTool> gameTools;
     public Dictionary<Vector2Int, Machine> machines;
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
@@ -30,10 +25,12 @@ public class GameController : MonoBehaviour
         artifactsToRemove = new HashSet<Artifact>();
         recipeDatabase = new RecipeDatabase();
         recipeDatabase.Load();
-        infoTool = FindObjectOfType<InfoTool>();
-        rotateTool = FindObjectOfType<RotateTool>();
-        buildTool = FindObjectOfType<BuildTool>();
-        deleteTool = FindObjectOfType<DeleteTool>();
+        gameTools = new Dictionary<ToolType, GameTool>();
+        gameTools.Add(ToolType.INFO, FindObjectOfType<InfoTool>());
+        gameTools.Add(ToolType.BUILD, FindObjectOfType<BuildTool>());
+        gameTools.Add(ToolType.DELETE, FindObjectOfType<DeleteTool>());
+        gameTools.Add(ToolType.ROTATE, FindObjectOfType<RotateTool>());
+        gameTools.Add(ToolType.MOVE, FindObjectOfType<MoveTool>());
         SetTool(ToolType.INFO);
     }
 
@@ -62,24 +59,15 @@ public class GameController : MonoBehaviour
         InvokeRepeating("OnTick", 1, 1);
     }
 
-    public void SetTool(ToolType gameTool) {
-        infoTool.gameObject.SetActive(false);
-        rotateTool.gameObject.SetActive(false);
-        buildTool.gameObject.SetActive(false);
-        deleteTool.gameObject.SetActive(false);
-        switch (gameTool) {
-            case ToolType.INFO:
-                infoTool.gameObject.SetActive(true);
-                break;
-            case ToolType.ROTATE:
-                rotateTool.gameObject.SetActive(true);
-                break;
-            case ToolType.BUILD:
-                buildTool.gameObject.SetActive(true);
-                break;
-            case ToolType.DELETE:
-                deleteTool.gameObject.SetActive(true);
-                break;
+    public void SetTool(ToolType toolType) {
+        foreach (var item in gameTools) {
+            GameTool gameTool = item.Value;
+            if (item.Key == toolType) {
+                gameTool.OnActivate();
+                gameTool.gameObject.SetActive(true);
+            } else {
+                gameTool.gameObject.SetActive(false);
+            }
         }
     }
 
