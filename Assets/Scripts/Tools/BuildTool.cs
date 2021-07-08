@@ -21,6 +21,7 @@ public class BuildTool : GameTool
         Debug.Log("Build " + machineType);
         Machine machine = Instantiate(machineDatabase.GetModel(machineType));
         machine.Init(pos, Direction.SOUTH);
+        gameController.RemoveMoney(machine.GetInfo().cost);
         gameController.Add(machine);
     }
 }

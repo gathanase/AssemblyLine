@@ -37,4 +37,8 @@ public class Artifact : MonoBehaviour
         position += direction.ToVector2Int();
         transform.position = new Vector3(position.x, position.y, 0);
     }
+    
+    public ArtifactDatabase.ArtifactInfo GetInfo() {
+        return artifactDatabase.GetInfo(type);
+    }
 }

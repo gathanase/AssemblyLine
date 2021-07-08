@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public Artifact artifactModel;
     public RecipeDatabase recipeDatabase;
     public MachineDatabase machineDatabase;
+
+    public Text moneyText;
+    private long money = 0;
 
     private InfoTool infoTool;
     private RotateTool rotateTool;
@@ -35,6 +39,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        AddMoney(10000);
         Machine starterMachineA = Instantiate(machineDatabase.GetModel(MachineType.STARTER));
         starterMachineA.Init(new Vector2Int(0, 0), Direction.SOUTH);
         Add(starterMachineA);
@@ -54,7 +59,6 @@ public class GameController : MonoBehaviour
         Machine crafterMachine = Instantiate(machineDatabase.GetModel(MachineType.CRAFTER));
         crafterMachine.Init(new Vector2Int(4, -2), Direction.SOUTH);
         Add(crafterMachine);
-
         InvokeRepeating("OnTick", 1, 1);
     }
 
@@ -120,7 +124,17 @@ public class GameController : MonoBehaviour
         Destroy(machine.gameObject);
     }
 
-    public void Sell(Artifact artifact) {
-        Debug.Log("Sell artifact " + artifact.type);
+    public void AddMoney(long amount) {
+        money += amount;
+        RefreshMoney();
+    }
+
+    public void RemoveMoney(long amount) {
+        money -= amount;
+        RefreshMoney();
+    }
+
+    private void RefreshMoney() {
+        moneyText.text = money.ToString("C0");
     }
 }
