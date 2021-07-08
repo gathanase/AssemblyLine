@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 public class Toolbar : MonoBehaviour
 {
     public Toggle exitButton;
@@ -16,17 +18,15 @@ public class Toolbar : MonoBehaviour
     void Awake() {
         buildWindow = FindObjectOfType<BuildWindow>(true);
 
-        exitButton.onValueChanged.AddListener(value => Application.Quit());
-        infoButton.onValueChanged.AddListener(value => SetTool(value, ToolType.INFO));
-        buildButton.onValueChanged.AddListener(value => buildWindow.Init());
-        deleteButton.onValueChanged.AddListener(value => SetTool(value, ToolType.DELETE));
-        rotateButton.onValueChanged.AddListener(value => SetTool(value, ToolType.ROTATE));
-        moveButton.onValueChanged.AddListener(value => SetTool(value, ToolType.MOVE));
+        AddClickListener(exitButton, () => Application.Quit());
+        AddClickListener(infoButton, () => gameController.SetTool(ToolType.INFO));
+        AddClickListener(buildButton, () => buildWindow.Init());
+        AddClickListener(deleteButton, () => gameController.SetTool(ToolType.DELETE));
+        AddClickListener(rotateButton, () => gameController.SetTool(ToolType.ROTATE));
+        AddClickListener(moveButton, () => gameController.SetTool(ToolType.MOVE));
     }
 
-    private void SetTool(bool active, ToolType gameTool) {
-        if (active) {
-            gameController.SetTool(gameTool);
-        }
+    private void AddClickListener(Toggle button, UnityAction action) {
+        button.onValueChanged.AddListener(value => { if (value) action.Invoke(); });
     }
 }

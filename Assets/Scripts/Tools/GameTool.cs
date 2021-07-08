@@ -15,8 +15,6 @@ public abstract class GameTool : MonoBehaviour, IPointerDownHandler
         Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
         Vector2Int pos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
         Machine machine;
-        Debug.Log(gameController);
-        Debug.Log(gameController.machines);
         if (gameController.machines.TryGetValue(pos, out machine)) {
             OnClickMachine(machine);
         } else {
