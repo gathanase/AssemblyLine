@@ -15,8 +15,8 @@ public class SellerMachine : Machine
 
     public override void Feed(Artifact artifact)
     {
-        Remove(artifact);
         gameController.AddMoney(artifact.GetInfo().cost);
+        Remove(artifact);
     }
 
     public override void OnTick() {}

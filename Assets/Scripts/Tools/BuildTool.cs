@@ -19,7 +19,6 @@ public class BuildTool : GameTool
     }
 
     override protected void OnClickEmpty(Vector2Int pos) {
-        Debug.Log("Build " + machineType);
         Machine machine = Instantiate(machineDatabase.GetModel(machineType));
         machine.Init(pos, Direction.SOUTH);
         gameController.RemoveMoney(machine.GetInfo().cost);
