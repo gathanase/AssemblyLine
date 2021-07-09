@@ -11,8 +11,7 @@ public abstract class GameTool : MonoBehaviour, IPointerDownHandler
         gameController = FindObjectOfType<GameController>();
     }
 
-    public virtual void OnActivate() {
-    }
+    public virtual void OnActivate() {}
 
     public void OnPointerDown(PointerEventData eventData) {
         Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
