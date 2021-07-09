@@ -2,6 +2,10 @@ public class DeleteTool : GameTool
 {
     private MachineDatabase machineDatabase;
 
+    public override ToolType GetToolType() {
+        return ToolType.DELETE;
+    }
+
     public new void Awake() {
         base.Awake();
         machineDatabase = FindObjectOfType<MachineDatabase>(true);

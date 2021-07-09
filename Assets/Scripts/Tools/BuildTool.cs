@@ -5,6 +5,10 @@ public class BuildTool : GameTool
     private MachineDatabase machineDatabase;
     private MachineType machineType;
 
+    public override ToolType GetToolType() {
+        return ToolType.BUILD;
+    }
+
     public new void Awake() {
         base.Awake();
         machineDatabase = FindObjectOfType<MachineDatabase>(true);

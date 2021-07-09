@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public Artifact artifactModel;
-    public RecipeDatabase recipeDatabase;
-    public MachineDatabase machineDatabase;
-
+    public GameDatabase gameDatabase;
     public Text moneyText;
     private long money = 0;
-    private Dictionary<ToolType, GameTool> gameTools;
     public Dictionary<Vector2Int, Machine> machines;
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
@@ -23,46 +18,37 @@ public class GameController : MonoBehaviour
         artifacts = new HashSet<Artifact>();
         artifactsToCreate = new HashSet<Artifact>();
         artifactsToRemove = new HashSet<Artifact>();
-        recipeDatabase = new RecipeDatabase();
-        recipeDatabase.Load();
-        gameTools = new Dictionary<ToolType, GameTool>();
-        gameTools.Add(ToolType.INFO, FindObjectOfType<InfoTool>());
-        gameTools.Add(ToolType.BUILD, FindObjectOfType<BuildTool>());
-        gameTools.Add(ToolType.DELETE, FindObjectOfType<DeleteTool>());
-        gameTools.Add(ToolType.ROTATE, FindObjectOfType<RotateTool>());
-        gameTools.Add(ToolType.MOVE, FindObjectOfType<MoveTool>());
         SetTool(ToolType.INFO);
     }
 
     void Start()
     {
         AddMoney(10000);
-        Machine starterMachineA = Instantiate(machineDatabase.GetModel(MachineType.STARTER));
+        Machine starterMachineA = Instantiate(gameDatabase.GetModel(MachineType.STARTER));
         starterMachineA.Init(new Vector2Int(0, 0), Direction.SOUTH);
         Add(starterMachineA);
 
-        Machine starterMachineB = Instantiate(machineDatabase.GetModel(MachineType.STARTER));
+        Machine starterMachineB = Instantiate(gameDatabase.GetModel(MachineType.STARTER));
         starterMachineB.Init(new Vector2Int(3, 0), Direction.SOUTH);
         Add(starterMachineB);
 
-        Machine rollerMachine = Instantiate(machineDatabase.GetModel(MachineType.ROLLER));
+        Machine rollerMachine = Instantiate(gameDatabase.GetModel(MachineType.ROLLER));
         rollerMachine.Init(new Vector2Int(3, -1), Direction.SOUTH);
         Add(rollerMachine);
 
-        Machine cutterMachine = Instantiate(machineDatabase.GetModel(MachineType.CUTTER));
+        Machine cutterMachine = Instantiate(gameDatabase.GetModel(MachineType.CUTTER));
         cutterMachine.Init(new Vector2Int(3, -2), Direction.EAST);
         Add(cutterMachine);
 
-        Machine crafterMachine = Instantiate(machineDatabase.GetModel(MachineType.CRAFTER));
+        Machine crafterMachine = Instantiate(gameDatabase.GetModel(MachineType.CRAFTER));
         crafterMachine.Init(new Vector2Int(4, -2), Direction.SOUTH);
         Add(crafterMachine);
         InvokeRepeating("OnTick", 1, 1);
     }
 
     public void SetTool(ToolType toolType) {
-        foreach (var item in gameTools) {
-            GameTool gameTool = item.Value;
-            if (item.Key == toolType) {
+        foreach (var gameTool in gameDatabase.GetTools()) {
+            if (gameTool.GetToolType() == toolType) {
                 gameTool.OnActivate();
                 gameTool.gameObject.SetActive(true);
             } else {
@@ -93,7 +79,7 @@ public class GameController : MonoBehaviour
     }
 
     public void Add(ArtifactType type, Vector2Int position, Direction direction) {
-        Artifact artifact = Instantiate(artifactModel);
+        Artifact artifact = Instantiate(gameDatabase.GetModel(type));
         artifact.Init(position, direction, type);
         artifactsToCreate.Add(artifact);
     }

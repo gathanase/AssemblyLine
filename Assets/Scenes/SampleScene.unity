@@ -1308,6 +1308,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 960755728}
     - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
+      propertyPath: gameDatabase
+      value: 
+      objectReference: {fileID: 1239157403}
+    - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
       propertyPath: machineDatabase
       value: 
       objectReference: {fileID: 1572662797}
@@ -1317,6 +1321,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
+--- !u!114 &1239157403 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5145064785851995216, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
+  m_PrefabInstance: {fileID: 8295449325025595303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a04fef995f2d4443a4cf4efbc264bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1258618454
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,6 +2417,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e427dcb25dca34e8a8ab2cb234ab3a7e, type: 3}
+--- !u!114 &1120631656941190943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6707281322683063681, guid: e427dcb25dca34e8a8ab2cb234ab3a7e, type: 3}
+  m_PrefabInstance: {fileID: 1120631656941190942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850b9faeb9cd242c6b4807e8b14e93b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1120631656941190944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2355720463805473955, guid: e427dcb25dca34e8a8ab2cb234ab3a7e, type: 3}
+  m_PrefabInstance: {fileID: 1120631656941190942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a3d9fa52d214367b1bd7948254df34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1479665224873677490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2853,58 +2890,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: cutterMachineModel
+    - target: {fileID: 5145064785851995216, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
+      propertyPath: machineSprites
       value: 
-      objectReference: {fileID: 1846762126668642712, guid: c889da8c9bee74bb9a22aae892522222, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: rollerMachineModel
+      objectReference: {fileID: 1120631656941190944}
+    - target: {fileID: 5145064785851995216, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
+      propertyPath: artifactSprites
       value: 
-      objectReference: {fileID: 4000355555794620676, guid: 06fca78a511d44fe1a6b0442be4f2b49, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: crafterMachineModel
-      value: 
-      objectReference: {fileID: 8201023734035383599, guid: bcd982582ef554b96a8caf33c1cbf853, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: starterMachineModel
-      value: 
-      objectReference: {fileID: 3931710875602738588, guid: e0256e33c8281472597d8190b624bdc8, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[0]
-      value: 
-      objectReference: {fileID: 8201023734035383599, guid: bcd982582ef554b96a8caf33c1cbf853, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[1]
-      value: 
-      objectReference: {fileID: 1846762126668642712, guid: c889da8c9bee74bb9a22aae892522222, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[2]
-      value: 
-      objectReference: {fileID: 7522793315553420009, guid: 825f81fb4ca004e88a251d33ce658d05, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[3]
-      value: 
-      objectReference: {fileID: 1128476635476815592, guid: e5c602d3c95e84c909f0777197078707, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[4]
-      value: 
-      objectReference: {fileID: 4000355555794620676, guid: 06fca78a511d44fe1a6b0442be4f2b49, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[5]
-      value: 
-      objectReference: {fileID: 8884542493812785594, guid: c58fc13d656c74b1e91321fa01578e4d, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[6]
-      value: 
-      objectReference: {fileID: 3931710875602738588, guid: e0256e33c8281472597d8190b624bdc8, type: 3}
-    - target: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-      propertyPath: machineModelList.Array.data[7]
-      value: 
-      objectReference: {fileID: 5620883512137055915, guid: fdc04db970a58409fae1447bc13a60ae, type: 3}
+      objectReference: {fileID: 1120631656941190943}
     - target: {fileID: 8005820162564500213, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
       propertyPath: m_Name
       value: Database

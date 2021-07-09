@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class TransformMachineWindow : Window
 {
-    // public Dropdown typeField;
-    // public Slider quantityField;
-    // public List<ArtifactType> artifactTypes;
     public Button closeButton;
     public GameObject stockPanel;
     public GameObject template;
@@ -37,7 +34,7 @@ public class TransformMachineWindow : Window
         // add new sprites
         foreach (ArtifactType type in stock) {
             GameObject image = Instantiate(template, Vector3.zero, Quaternion.identity, stockPanel.transform);
-            image.GetComponent<Image>().sprite = artifactSprites.GetSprite(type);
+            image.GetComponent<Image>().sprite = gameDatabase.GetSprite(type);
             image.SetActive(true);
         }
     }

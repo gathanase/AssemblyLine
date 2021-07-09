@@ -4,6 +4,10 @@ public class MoveTool : GameTool
 {
     Machine machine = null;
     
+    public override ToolType GetToolType() {
+        return ToolType.MOVE;
+    }
+
     public override void OnActivate() {
         machine = null;
     }

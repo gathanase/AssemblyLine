@@ -6,21 +6,20 @@ public abstract class Machine : MonoBehaviour
 {
     public Vector2Int position;
     public Direction direction;
-    //public MachineType type;
     protected static GameController gameController = null;
-    private static MachineDatabase machineDatabase = null;
+    protected static GameDatabase gameDatabase = null;
 
     void Awake() {
         if (gameController == null) {
             gameController = FindObjectOfType<GameController>();
         }
-        if (machineDatabase == null) {
-            machineDatabase = FindObjectOfType<MachineDatabase>();
+        if (gameDatabase == null) {
+            gameDatabase = FindObjectOfType<GameDatabase>();
         }
     }
 
     public MachineDatabase.MachineInfo GetInfo() {
-        return machineDatabase.GetInfo(MachineType.STARTER);
+        return gameDatabase.GetInfo(GetMachineType());
     }
 
     public void Init(Vector2Int position, Direction direction)

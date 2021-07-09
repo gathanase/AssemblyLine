@@ -9,7 +9,7 @@ public class CrafterMachine : Machine
 
     void Start() {
         stock = new ArtifactStock();
-        recipe = gameController.recipeDatabase.recipes[0];
+        recipe = gameDatabase.GetRecipes()[0];
     }
 
     public override MachineType GetMachineType()

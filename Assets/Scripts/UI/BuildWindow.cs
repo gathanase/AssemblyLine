@@ -8,14 +8,10 @@ public class BuildWindow : Window
     public GameObject content;
     public Button closeButton;
     public Button templateButton;
-    private MachineSprites machineSprites;
-    private MachineDatabase machineDatabase;
     private BuildTool buildTool;
 
     public override void Init() {
         base.Init();        
-        machineSprites = FindObjectOfType<MachineSprites>(true);
-        machineDatabase = FindObjectOfType<MachineDatabase>(true);
         buildTool = FindObjectOfType<BuildTool>(true);
         Add(MachineType.STARTER);
         Add(MachineType.SELLER);
@@ -30,9 +26,9 @@ public class BuildWindow : Window
     }
 
     private void Add(MachineType machineType) {
-        MachineDatabase.MachineInfo machineInfo = machineDatabase.GetInfo(machineType);
+        MachineDatabase.MachineInfo machineInfo = gameDatabase.GetInfo(machineType);
         Button button = Instantiate(templateButton, content.transform);
-        button.transform.Find("Image").GetComponent<Image>().sprite = machineSprites.GetSprite(machineType);
+        button.transform.Find("Image").GetComponent<Image>().sprite = gameDatabase.GetSprite(machineType);
         button.transform.Find("Label").GetComponent<Text>().text = machineInfo.name;
         button.onClick.AddListener(() => {
             this.Close();

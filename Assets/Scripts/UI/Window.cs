@@ -5,11 +5,11 @@ using UnityEngine;
 public class Window : MonoBehaviour
 {
     protected static GameController gameController = null;
-    protected static ArtifactSprites artifactSprites = null;
+    protected static GameDatabase gameDatabase = null;
 
     public virtual void Init() {
-        if (artifactSprites == null) {
-            artifactSprites = FindObjectOfType<ArtifactSprites>();
+        if (gameDatabase == null) {
+            gameDatabase = FindObjectOfType<GameDatabase>();
         }
         if (gameController == null) {
             gameController = FindObjectOfType<GameController>();

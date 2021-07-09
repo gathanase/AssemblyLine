@@ -19,7 +19,7 @@ public class StarterMachineWindow : Window
 
         artifactTypes = new List<ArtifactType>()
                 { ArtifactType.IRON, ArtifactType.ALUMINUM, ArtifactType.GOLD, ArtifactType.COPPER, ArtifactType.DIAMOND };
-        typeField.options = artifactTypes.ConvertAll<Dropdown.OptionData>(type => new Dropdown.OptionData(type.ToString(), artifactSprites.GetSprite(type)));
+        typeField.options = artifactTypes.ConvertAll<Dropdown.OptionData>(type => new Dropdown.OptionData(type.ToString(), gameDatabase.GetSprite(type)));
         typeField.SetValueWithoutNotify(artifactTypes.IndexOf(starterMachine.artifactType));
         typeField.onValueChanged.RemoveAllListeners();
         typeField.onValueChanged.AddListener(ev => starterMachine.artifactType = artifactTypes[typeField.value]);

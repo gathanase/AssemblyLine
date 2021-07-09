@@ -8,7 +8,6 @@ public class CrafterMachineWindow : Window
     public Dropdown typeField;
     public Button closeButton;
     private List<Recipe> recipes;
-    private ArtifactDatabase artifactDatabase;
     private List<ArtifactType> artifactTypes;
     private CrafterMachine crafterMachine;
     public List<Transform> inputFields;
@@ -17,14 +16,13 @@ public class CrafterMachineWindow : Window
     public void Init(CrafterMachine crafterMachine) {
         Init();
         this.crafterMachine = crafterMachine;
-        this.recipes = gameController.recipeDatabase.recipes;
-        this.artifactDatabase = FindObjectOfType<ArtifactDatabase>(true);
+        this.recipes = gameDatabase.GetRecipes();
 
         typeField.options = recipes.ConvertAll<Dropdown.OptionData>(recipe => {
             ArtifactType type = recipe.output;
-            return new Dropdown.OptionData(type.ToString(), artifactSprites.GetSprite(type));
+            return new Dropdown.OptionData(type.ToString(), gameDatabase.GetSprite(type));
         });
-        typeField.SetValueWithoutNotify(gameController.recipeDatabase.recipes.IndexOf(crafterMachine.recipe));
+        typeField.SetValueWithoutNotify(gameDatabase.GetRecipes().IndexOf(crafterMachine.recipe));
         DisplayRecipe();
         typeField.onValueChanged.RemoveAllListeners();
         typeField.onValueChanged.AddListener(ev => {
@@ -37,8 +35,8 @@ public class CrafterMachineWindow : Window
 
     private void DisplayRecipeInput(Recipe recipe, int index, ArtifactType type) {
         int quantity = recipe.inputs.GetCount(type);
-        Sprite sprite = artifactSprites.GetSprite(type);
-        ArtifactDatabase.ArtifactInfo info = artifactDatabase.GetInfo(type);
+        Sprite sprite = gameDatabase.GetSprite(type);
+        ArtifactDatabase.ArtifactInfo info = gameDatabase.GetInfo(type);
         Transform field = inputFields[index];
         field.Find("Sprite").GetComponent<Image>().sprite = sprite;
         field.Find("Label").GetComponent<Text>().text = string.Format("<b>{0}</b>x {1}", quantity, info.name);
@@ -46,8 +44,8 @@ public class CrafterMachineWindow : Window
     }
 
     private void DisplayRecipeOutput(Recipe recipe) {
-        Sprite sprite = artifactSprites.GetSprite(recipe.output);
-        ArtifactDatabase.ArtifactInfo info = artifactDatabase.GetInfo(recipe.output);
+        Sprite sprite = gameDatabase.GetSprite(recipe.output);
+        ArtifactDatabase.ArtifactInfo info = gameDatabase.GetInfo(recipe.output);
         outputField.Find("Sprite").GetComponent<Image>().sprite = sprite;
         outputField.Find("Label").GetComponent<Text>().text = string.Format(info.name);
     }
