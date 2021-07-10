@@ -8,12 +8,6 @@ public class StarterMachine : Machine
     public ArtifactType artifactType = ArtifactType.IRON;
     public int quantity = 0;
 
-    public void Init(Vector2Int position, Direction direction, ArtifactType artifactType, int quantity = 0)
-    {
-        Init(position, direction);
-        this.artifactType = artifactType;
-        this.quantity = quantity;
-    }
 
     public override MachineType GetMachineType()
     {

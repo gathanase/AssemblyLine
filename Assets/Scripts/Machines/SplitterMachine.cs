@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SplitterMachine : Machine
 {
-    public int countRight = 1;
-    public int countLeft = 1;
-    public int countForward = 1;
+    public Dictionary<int, int> countsByRotate;  // key: -1, 0, 1 is the rotation of the artifact direction
     private int counter = 0;
 
     public override MachineType GetMachineType()
@@ -14,20 +13,29 @@ public class SplitterMachine : Machine
         return MachineType.SPLITTER;
     }
 
+    void Start() {
+        countsByRotate = new Dictionary<int, int>();
+        countsByRotate[-1] = 1;
+        countsByRotate[0] = 1;
+        countsByRotate[1] = 1;        
+    }
+
     public override Window CreateInfoWindow() {
-        return null;
+        SplitterMachineWindow infoWindow = FindObjectOfType<SplitterMachineWindow>(true);
+        infoWindow.Init(this);
+        return infoWindow;
     }
 
     public override void Feed(Artifact artifact) {
         if (artifact.direction == this.direction) {
             // artifact comes from behind
             int rotate;
-            if (counter >= countRight + countForward + countLeft) {
+            if (counter >= countsByRotate.Values.Sum()) {
                 counter = 0;
             }
-            if (counter < countRight) {
+            if (counter < countsByRotate[-1]) {
                 rotate = -1;
-            } else if (counter < countRight + countForward) {
+            } else if (counter < countsByRotate[-1] + countsByRotate[0]) {
                 rotate = 0;
             } else {
                 rotate = 1;
