@@ -9,7 +9,8 @@ public enum MachineType
     FURNACE,
     HYDRAULIC_PRESS,
     ROLLER,
-    WIRE_DRAWER
+    WIRE_DRAWER,
+    SPLITTER
 }
 
 public static class MachineTypeExtensions

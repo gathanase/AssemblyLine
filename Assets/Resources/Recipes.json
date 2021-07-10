@@ -1,661 +1,661 @@
 {
   "recipes": [
     {
-      "output": "ENGINE",
+      "output": "SPEAKERS", 
       "inputs": [
         {
-          "type": "IRON_GEAR",
+          "type": "CIRCUIT", 
           "quantity": 2
-        },
+        }, 
         {
-          "type": "GOLD_GEAR",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "CIRCUIT",
-      "inputs": [
+          "type": "GOLD_WIRE", 
+          "quantity": 4
+        }, 
         {
-          "type": "COPPER_WIRE",
-          "quantity": 2
-        },
-        {
-          "type": "GOLD",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "PROCESSOR",
-      "inputs": [
-        {
-          "type": "CIRCUIT",
-          "quantity": 2
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 2
-        }
-      ]
-    },
-    {
-      "output": "COMPUTER",
-      "inputs": [
-        {
-          "type": "PROCESSOR",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 6
-        },
-        {
-          "type": "POWER_SUPPLY",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "CLOCK",
-      "inputs": [
-        {
-          "type": "IRON",
-          "quantity": 2
-        },
-        {
-          "type": "GOLD",
-          "quantity": 2
-        },
-        {
-          "type": "COPPER_GEAR",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "DRILL",
-      "inputs": [
-        {
-          "type": "DIAMOND",
-          "quantity": 2
-        },
-        {
-          "type": "COPPER_GEAR",
-          "quantity": 2
-        },
-        {
-          "type": "ENGINE",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "WASHING_MACHINE",
-      "inputs": [
-        {
-          "type": "ENGINE",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 2
-        },
-        {
-          "type": "COPPER",
-          "quantity": 2
-        }
-      ]
-    },
-    {
-      "output": "HEATER_PLATE",
-      "inputs": [
-        {
-          "type": "DIAMOND",
-          "quantity": 1
-        },
-        {
-          "type": "COPPER_WIRE",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "COOLER_PLATE",
-      "inputs": [
-        {
-          "type": "DIAMOND",
-          "quantity": 1
-        },
-        {
-          "type": "GOLD_WIRE",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "TOASTER",
-      "inputs": [
-        {
-          "type": "HEATER_PLATE",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 1
-        },
-        {
-          "type": "COPPER",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "GRILL",
-      "inputs": [
-        {
-          "type": "HEATER_PLATE",
-          "quantity": 1
-        },
-        {
-          "type": "IRON",
+          "type": "DIAMOND_WIRE", 
           "quantity": 4
         }
       ]
-    },
+    }, 
     {
-      "output": "FRIDGE",
+      "output": "CIRCUIT", 
       "inputs": [
         {
-          "type": "COOLER_PLATE",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 6
-        },
-        {
-          "type": "POWER_SUPPLY",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "AIR_CONDITIONER",
-      "inputs": [
-        {
-          "type": "COOLER_PLATE",
-          "quantity": 1
-        },
-        {
-          "type": "GOLD",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "LIGHT_BULB",
-      "inputs": [
-        {
-          "type": "IRON",
+          "type": "COPPER_WIRE", 
           "quantity": 2
-        },
+        }, 
         {
-          "type": "COPPER_WIRE",
-          "quantity": 2
-        }
-      ]
-    },
-    {
-      "output": "SOLAR_PANEL",
-      "inputs": [
-        {
-          "type": "CIRCUIT",
-          "quantity": 1
-        },
-        {
-          "type": "GOLD",
-          "quantity": 2
-        },
-        {
-          "type": "DIAMOND",
+          "type": "GOLD", 
           "quantity": 1
         }
       ]
-    },
+    }, 
     {
-      "output": "BATTERY",
+      "output": "TABLET", 
       "inputs": [
         {
-          "type": "CIRCUIT",
+          "type": "PROCESSOR", 
           "quantity": 1
-        },
+        }, 
         {
-          "type": "ALUMINUM",
+          "type": "BATTERY", 
           "quantity": 1
-        },
+        }, 
         {
-          "type": "ALUMINUM_LIQUID",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "SMARTPHONE",
-      "inputs": [
-        {
-          "type": "PROCESSOR",
-          "quantity": 1
-        },
-        {
-          "type": "BATTERY",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "TABLET",
-      "inputs": [
-        {
-          "type": "PROCESSOR",
-          "quantity": 1
-        },
-        {
-          "type": "BATTERY",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
+          "type": "ALUMINUM", 
           "quantity": 4
         }
       ]
-    },
+    }, 
     {
-      "output": "ANTENNA",
+      "output": "CLOCK", 
       "inputs": [
         {
-          "type": "DIAMOND_WIRE",
-          "quantity": 4
-        },
-        {
-          "type": "IRON",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "RADIO",
-      "inputs": [
-        {
-          "type": "CIRCUIT",
-          "quantity": 1
-        },
-        {
-          "type": "ANTENNA",
-          "quantity": 1
-        },
-        {
-          "type": "BATTERY",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "TV",
-      "inputs": [
-        {
-          "type": "POWER_SUPPLY",
-          "quantity": 1
-        },
-        {
-          "type": "CIRCUIT",
-          "quantity": 1
-        },
-        {
-          "type": "ALUMINUM",
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "output": "POWER_SUPPLY",
-      "inputs": [
-        {
-          "type": "CIRCUIT",
-          "quantity": 1
-        },
-        {
-          "type": "COPPER_WIRE",
-          "quantity": 3
-        },
-        {
-          "type": "IRON_WIRE",
-          "quantity": 3
-        }
-      ]
-    },
-    {
-      "output": "HEADPHONES",
-      "inputs": [
-        {
-          "type": "CIRCUIT",
-          "quantity": 1
-        },
-        {
-          "type": "GOLD_WIRE",
-          "quantity": 1
-        },
-        {
-          "type": "DIAMOND_WIRE",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "output": "SPEAKERS",
-      "inputs": [
-        {
-          "type": "CIRCUIT",
+          "type": "IRON", 
           "quantity": 2
-        },
+        }, 
         {
-          "type": "GOLD_WIRE",
-          "quantity": 4
-        },
-        {
-          "type": "DIAMOND_WIRE",
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "output": "DRONE",
-      "inputs": [
-        {
-          "type": "BATTERY",
+          "type": "GOLD", 
           "quantity": 2
-        },
+        }, 
         {
-          "type": "PROCESSOR",
-          "quantity": 2
-        },
-        {
-          "type": "ALUMINUM_PLATE",
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "output": "SMARTWATCH",
-      "inputs": [
-        {
-          "type": "PROCESSOR",
-          "quantity": 2
-        },
-        {
-          "type": "IRON_PLATE",
+          "type": "COPPER_GEAR", 
           "quantity": 1
-        },
-        {
-          "type": "ALUMINUM_PLATE",
-          "quantity": 2
         }
       ]
-    },
+    }, 
     {
-      "output": "MICROWAVE",
+      "output": "GENERATOR", 
       "inputs": [
         {
-          "type": "HEATER_PLATE",
+          "type": "GOLD_PLATE", 
           "quantity": 5
-        },
+        }, 
         {
-          "type": "DIAMOND_PLATE",
-          "quantity": 5
-        },
-        {
-          "type": "ALUMINUM_PLATE",
+          "type": "COPPER_PLATE", 
           "quantity": 5
         }
       ]
-    },
+    }, 
     {
-      "output": "OVEN",
+      "output": "TOASTER", 
       "inputs": [
         {
-          "type": "HEATER_PLATE",
-          "quantity": 10
-        },
+          "type": "HEATER_PLATE", 
+          "quantity": 1
+        }, 
         {
-          "type": "IRON_PLATE",
-          "quantity": 10
-        },
+          "type": "ALUMINUM", 
+          "quantity": 1
+        }, 
         {
-          "type": "IRON",
-          "quantity": 10
+          "type": "COPPER", 
+          "quantity": 1
         }
       ]
-    },
+    }, 
     {
-      "output": "WATER_HEATER",
+      "output": "MICROWAVE", 
       "inputs": [
         {
-          "type": "HEATER_PLATE",
+          "type": "HEATER_PLATE", 
           "quantity": 5
-        },
+        }, 
         {
-          "type": "DIAMOND_PLATE",
+          "type": "DIAMOND_PLATE", 
           "quantity": 5
-        },
+        }, 
         {
-          "type": "ALUMINUM_PLATE",
-          "quantity": 5
-        }
-      ]
-    },
-    {
-      "output": "GENERATOR",
-      "inputs": [
-        {
-          "type": "GOLD_PLATE",
-          "quantity": 5
-        },
-        {
-          "type": "COPPER_PLATE",
+          "type": "ALUMINUM_PLATE", 
           "quantity": 5
         }
       ]
-    },
+    }, 
     {
-      "output": "JACKHAMMER",
+      "output": "SERVER_RACK", 
       "inputs": [
         {
-          "type": "CIRCUIT",
-          "quantity": 4
-        },
-        {
-          "type": "DIAMOND",
-          "quantity": 4
-        },
-        {
-          "type": "IRON_PLATE",
-          "quantity": 4
-        }
-      ]
-    },
-    {
-      "output": "ELECTRIC_BOARD",
-      "inputs": [
-        {
-          "type": "CIRCUIT",
+          "type": "ALUMINUM_PLATE", 
           "quantity": 20
-        },
+        }, 
         {
-          "type": "COPPER_PLATE",
+          "type": "ALUMINUM", 
+          "quantity": 10
+        }
+      ]
+    }, 
+    {
+      "output": "SMARTWATCH", 
+      "inputs": [
+        {
+          "type": "PROCESSOR", 
+          "quantity": 2
+        }, 
+        {
+          "type": "IRON_PLATE", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM_PLATE", 
+          "quantity": 2
+        }
+      ]
+    }, 
+    {
+      "output": "LAZER", 
+      "inputs": [
+        {
+          "type": "BATTERY", 
+          "quantity": 6
+        }, 
+        {
+          "type": "DIAMOND_PLATE", 
+          "quantity": 10
+        }, 
+        {
+          "type": "CIRCUIT", 
           "quantity": 6
         }
       ]
-    },
+    }, 
     {
-      "output": "RAILWAY",
+      "output": "SOLAR_PANEL", 
       "inputs": [
         {
-          "type": "IRON",
-          "quantity": 10
-        },
+          "type": "CIRCUIT", 
+          "quantity": 1
+        }, 
         {
-          "type": "IRON_PLATE",
-          "quantity": 10
+          "type": "GOLD", 
+          "quantity": 2
+        }, 
+        {
+          "type": "DIAMOND", 
+          "quantity": 1
         }
       ]
-    },
+    }, 
     {
-      "output": "LAZER",
+      "output": "ELECTRIC_ENGINE", 
       "inputs": [
         {
-          "type": "BATTERY",
+          "type": "ADVANCED_ENGINE", 
+          "quantity": 10
+        }, 
+        {
+          "type": "BATTERY", 
+          "quantity": 40
+        }
+      ]
+    }, 
+    {
+      "output": "ENGINE", 
+      "inputs": [
+        {
+          "type": "IRON_GEAR", 
+          "quantity": 2
+        }, 
+        {
+          "type": "GOLD_GEAR", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "SMARTPHONE", 
+      "inputs": [
+        {
+          "type": "PROCESSOR", 
+          "quantity": 1
+        }, 
+        {
+          "type": "BATTERY", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "ANTENNA", 
+      "inputs": [
+        {
+          "type": "DIAMOND_WIRE", 
+          "quantity": 4
+        }, 
+        {
+          "type": "IRON", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "WASHING_MACHINE", 
+      "inputs": [
+        {
+          "type": "ENGINE", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
+          "quantity": 2
+        }, 
+        {
+          "type": "COPPER", 
+          "quantity": 2
+        }
+      ]
+    }, 
+    {
+      "output": "TV", 
+      "inputs": [
+        {
+          "type": "POWER_SUPPLY", 
+          "quantity": 1
+        }, 
+        {
+          "type": "CIRCUIT", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
+          "quantity": 4
+        }
+      ]
+    }, 
+    {
+      "output": "FRIDGE", 
+      "inputs": [
+        {
+          "type": "COOLER_PLATE", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
           "quantity": 6
-        },
+        }, 
         {
-          "type": "DIAMOND_PLATE",
-          "quantity": 10
-        },
-        {
-          "type": "CIRCUIT",
-          "quantity": 6
+          "type": "POWER_SUPPLY", 
+          "quantity": 1
         }
       ]
-    },
+    }, 
     {
-      "output": "SERVER_RACK",
+      "output": "COOLER_PLATE", 
       "inputs": [
         {
-          "type": "ALUMINUM_PLATE",
-          "quantity": 20
-        },
+          "type": "DIAMOND", 
+          "quantity": 1
+        }, 
         {
-          "type": "ALUMINUM",
-          "quantity": 10
+          "type": "GOLD_WIRE", 
+          "quantity": 1
         }
       ]
-    },
+    }, 
     {
-      "output": "SUPER_COMPUTER",
+      "output": "AI_ROBOT", 
       "inputs": [
         {
-          "type": "COMPUTER",
+          "type": "AI_ROBOT_HEAD", 
+          "quantity": 1
+        }, 
+        {
+          "type": "AI_ROBOT_BODY", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "ADVANCED_ENGINE", 
+      "inputs": [
+        {
+          "type": "ENGINE", 
+          "quantity": 50
+        }, 
+        {
+          "type": "CIRCUIT", 
+          "quantity": 50
+        }
+      ]
+    }, 
+    {
+      "output": "WATER_HEATER", 
+      "inputs": [
+        {
+          "type": "HEATER_PLATE", 
+          "quantity": 5
+        }, 
+        {
+          "type": "DIAMOND_PLATE", 
+          "quantity": 5
+        }, 
+        {
+          "type": "ALUMINUM_PLATE", 
+          "quantity": 5
+        }
+      ]
+    }, 
+    {
+      "output": "AIR_CONDITIONER", 
+      "inputs": [
+        {
+          "type": "COOLER_PLATE", 
+          "quantity": 1
+        }, 
+        {
+          "type": "GOLD", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "LIGHT_BULB", 
+      "inputs": [
+        {
+          "type": "IRON", 
+          "quantity": 2
+        }, 
+        {
+          "type": "COPPER_WIRE", 
+          "quantity": 2
+        }
+      ]
+    }, 
+    {
+      "output": "SUPER_COMPUTER", 
+      "inputs": [
+        {
+          "type": "COMPUTER", 
           "quantity": 30
-        },
+        }, 
         {
-          "type": "SERVER_RACK",
+          "type": "SERVER_RACK", 
           "quantity": 10
         }
       ]
-    },
+    }, 
     {
-      "output": "ADVANCED_ENGINE",
+      "output": "HEATER_PLATE", 
       "inputs": [
         {
-          "type": "ENGINE",
-          "quantity": 50
-        },
-        {
-          "type": "CIRCUIT",
-          "quantity": 50
-        }
-      ]
-    },
-    {
-      "output": "ELECTRIC_ENGINE",
-      "inputs": [
-        {
-          "type": "ADVANCED_ENGINE",
-          "quantity": 10
-        },
-        {
-          "type": "BATTERY",
-          "quantity": 40
-        }
-      ]
-    },
-    {
-      "output": "ELECTRIC_GENERATOR",
-      "inputs": [
-        {
-          "type": "GENERATOR",
-          "quantity": 15
-        },
-        {
-          "type": "CIRCUIT",
-          "quantity": 50
-        },
-        {
-          "type": "BATTERY",
-          "quantity": 40
-        }
-      ]
-    },
-    {
-      "output": "AI_PROCESSOR",
-      "inputs": [
-        {
-          "type": "SUPER_COMPUTER",
-          "quantity": 4
-        },
-        {
-          "type": "CIRCUIT",
-          "quantity": 40
-        }
-      ]
-    },
-    {
-      "output": "AI_ROBOT_HEAD",
-      "inputs": [
-        {
-          "type": "AI_PROCESSOR",
+          "type": "DIAMOND", 
           "quantity": 1
-        },
+        }, 
         {
-          "type": "ALUMINUM",
+          "type": "COPPER_WIRE", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "GRILL", 
+      "inputs": [
+        {
+          "type": "HEATER_PLATE", 
+          "quantity": 1
+        }, 
+        {
+          "type": "IRON", 
+          "quantity": 4
+        }
+      ]
+    }, 
+    {
+      "output": "AI_PROCESSOR", 
+      "inputs": [
+        {
+          "type": "SUPER_COMPUTER", 
+          "quantity": 4
+        }, 
+        {
+          "type": "CIRCUIT", 
+          "quantity": 40
+        }
+      ]
+    }, 
+    {
+      "output": "ELECTRIC_BOARD", 
+      "inputs": [
+        {
+          "type": "CIRCUIT", 
+          "quantity": 20
+        }, 
+        {
+          "type": "COPPER_PLATE", 
+          "quantity": 6
+        }
+      ]
+    }, 
+    {
+      "output": "HEADPHONES", 
+      "inputs": [
+        {
+          "type": "CIRCUIT", 
+          "quantity": 1
+        }, 
+        {
+          "type": "GOLD_WIRE", 
+          "quantity": 1
+        }, 
+        {
+          "type": "DIAMOND_WIRE", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "POWER_SUPPLY", 
+      "inputs": [
+        {
+          "type": "CIRCUIT", 
+          "quantity": 1
+        }, 
+        {
+          "type": "COPPER_WIRE", 
+          "quantity": 3
+        }, 
+        {
+          "type": "IRON_WIRE", 
+          "quantity": 3
+        }
+      ]
+    }, 
+    {
+      "output": "AI_ROBOT_HEAD", 
+      "inputs": [
+        {
+          "type": "AI_PROCESSOR", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
           "quantity": 200
         }
       ]
-    },
+    }, 
     {
-      "output": "AI_ROBOT_BODY",
+      "output": "DRONE", 
       "inputs": [
         {
-          "type": "ELECTRIC_ENGINE",
-          "quantity": 1
-        },
+          "type": "BATTERY", 
+          "quantity": 2
+        }, 
         {
-          "type": "ELECTRIC_GENERATOR",
-          "quantity": 1
-        },
+          "type": "PROCESSOR", 
+          "quantity": 2
+        }, 
         {
-          "type": "ALUMINUM",
+          "type": "ALUMINUM_PLATE", 
+          "quantity": 4
+        }
+      ]
+    }, 
+    {
+      "output": "DRILL", 
+      "inputs": [
+        {
+          "type": "DIAMOND", 
+          "quantity": 2
+        }, 
+        {
+          "type": "COPPER_GEAR", 
+          "quantity": 2
+        }, 
+        {
+          "type": "ENGINE", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "AI_ROBOT_BODY", 
+      "inputs": [
+        {
+          "type": "ELECTRIC_ENGINE", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ELECTRIC_GENERATOR", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
           "quantity": 400
         }
       ]
-    },
+    }, 
     {
-      "output": "AI_ROBOT",
+      "output": "JACKHAMMER", 
       "inputs": [
         {
-          "type": "AI_ROBOT_HEAD",
-          "quantity": 1
-        },
+          "type": "CIRCUIT", 
+          "quantity": 4
+        }, 
         {
-          "type": "AI_ROBOT_BODY",
+          "type": "DIAMOND", 
+          "quantity": 4
+        }, 
+        {
+          "type": "IRON_PLATE", 
+          "quantity": 4
+        }
+      ]
+    }, 
+    {
+      "output": "RAILWAY", 
+      "inputs": [
+        {
+          "type": "IRON", 
+          "quantity": 10
+        }, 
+        {
+          "type": "IRON_PLATE", 
+          "quantity": 10
+        }
+      ]
+    }, 
+    {
+      "output": "PROCESSOR", 
+      "inputs": [
+        {
+          "type": "CIRCUIT", 
+          "quantity": 2
+        }, 
+        {
+          "type": "ALUMINUM", 
+          "quantity": 2
+        }
+      ]
+    }, 
+    {
+      "output": "BATTERY", 
+      "inputs": [
+        {
+          "type": "CIRCUIT", 
           "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM_LIQUID", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "ELECTRIC_GENERATOR", 
+      "inputs": [
+        {
+          "type": "GENERATOR", 
+          "quantity": 15
+        }, 
+        {
+          "type": "CIRCUIT", 
+          "quantity": 50
+        }, 
+        {
+          "type": "BATTERY", 
+          "quantity": 40
+        }
+      ]
+    }, 
+    {
+      "output": "COMPUTER", 
+      "inputs": [
+        {
+          "type": "PROCESSOR", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ALUMINUM", 
+          "quantity": 6
+        }, 
+        {
+          "type": "POWER_SUPPLY", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "RADIO", 
+      "inputs": [
+        {
+          "type": "CIRCUIT", 
+          "quantity": 1
+        }, 
+        {
+          "type": "ANTENNA", 
+          "quantity": 1
+        }, 
+        {
+          "type": "BATTERY", 
+          "quantity": 1
+        }
+      ]
+    }, 
+    {
+      "output": "OVEN", 
+      "inputs": [
+        {
+          "type": "HEATER_PLATE", 
+          "quantity": 10
+        }, 
+        {
+          "type": "IRON_PLATE", 
+          "quantity": 10
+        }, 
+        {
+          "type": "IRON", 
+          "quantity": 10
         }
       ]
     }

@@ -1,44 +1,49 @@
 {
   "machines": [
     {
-      "type": "CRAFTER",
-      "name": "Crafter",
-      "cost": 20000
-    },
+      "cost": 20000, 
+      "type": "CRAFTER", 
+      "name": "Crafter"
+    }, 
     {
-      "type": "CUTTER",
-      "name": "Cutter",
-      "cost": 10000
-    },
+      "cost": 100000, 
+      "type": "SPLITTER", 
+      "name": "Splitter"
+    }, 
     {
-      "type": "FURNACE",
-      "name": "Furnace",
-      "cost": 10000
-    },
+      "cost": 10000, 
+      "type": "FURNACE", 
+      "name": "Furnace"
+    }, 
     {
-      "type": "HYDRAULIC_PRESS",
-      "name": "Hydraulic Press",
-      "cost": 30000
-    },
+      "cost": 5000, 
+      "type": "SELLER", 
+      "name": "Seller"
+    }, 
     {
-      "type": "ROLLER",
-      "name": "Roller",
-      "cost": 300
-    },
+      "cost": 10000, 
+      "type": "WIRE_DRAWER", 
+      "name": "Wire Drawer"
+    }, 
     {
-      "type": "SELLER",
-      "name": "Seller",
-      "cost": 5000
-    },
+      "cost": 30000, 
+      "type": "HYDRAULIC_PRESS", 
+      "name": "Hydraulic Press"
+    }, 
     {
-      "type": "STARTER",
-      "name": "Starter",
-      "cost": 1000
-    },
+      "cost": 1000, 
+      "type": "STARTER", 
+      "name": "Starter"
+    }, 
     {
-      "type": "WIRE_DRAWER",
-      "name": "Wire Drawer",
-      "cost": 10000
+      "cost": 300, 
+      "type": "ROLLER", 
+      "name": "Roller"
+    }, 
+    {
+      "cost": 10000, 
+      "type": "CUTTER", 
+      "name": "Cutter"
     }
   ]
 }

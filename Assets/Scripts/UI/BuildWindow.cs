@@ -21,6 +21,7 @@ public class BuildWindow : Window
         Add(MachineType.FURNACE);
         Add(MachineType.HYDRAULIC_PRESS);
         Add(MachineType.WIRE_DRAWER);
+        Add(MachineType.SPLITTER);
         closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }
