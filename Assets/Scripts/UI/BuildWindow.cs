@@ -9,10 +9,12 @@ public class BuildWindow : Window
     public Button closeButton;
     public Button templateButton;
     private BuildTool buildTool;
+    private List<Button> buttons = new List<Button>();
 
     public override void Init() {
-        base.Init();        
+        base.Init();
         buildTool = FindObjectOfType<BuildTool>(true);
+        Clear();
         Add(MachineType.STARTER);
         Add(MachineType.SELLER);
         Add(MachineType.ROLLER);
@@ -26,6 +28,13 @@ public class BuildWindow : Window
         closeButton.onClick.AddListener(Close);
     }
 
+    private void Clear() {
+        foreach (Button button in buttons) {
+            Destroy(button.gameObject);
+        }
+        buttons.Clear();
+    }
+
     private void Add(MachineType machineType) {
         MachineDatabase.MachineInfo machineInfo = gameDatabase.GetInfo(machineType);
         Button button = Instantiate(templateButton, content.transform);
@@ -37,5 +46,6 @@ public class BuildWindow : Window
             gameController.SetTool(ToolType.BUILD);
         });
         button.gameObject.SetActive(true);
+        buttons.Add(button);
     }
 }
