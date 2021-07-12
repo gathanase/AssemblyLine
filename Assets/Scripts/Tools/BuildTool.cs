@@ -20,8 +20,8 @@ public class BuildTool : GameTool
 
     override protected void OnClickEmpty(Vector2Int pos) {
         Machine machine = Instantiate(machineDatabase.GetModel(machineType));
-        machine.Init(pos, Direction.SOUTH);
+        machine.Init(GetFactoryFloor(), pos, Direction.SOUTH);
         gameController.RemoveMoney(machine.GetInfo().cost);
-        gameController.Add(machine);
+        GetFactoryFloor().Add(machine);
     }
 }

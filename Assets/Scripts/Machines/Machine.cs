@@ -8,6 +8,7 @@ public abstract class Machine : MonoBehaviour
     public Direction direction;
     protected static GameController gameController = null;
     protected static GameDatabase gameDatabase = null;
+    private FactoryFloor factoryFloor = null;
 
     void Awake() {
         if (gameController == null) {
@@ -22,12 +23,13 @@ public abstract class Machine : MonoBehaviour
         return gameDatabase.GetInfo(GetMachineType());
     }
 
-    public void Init(Vector2Int position, Direction direction)
+    public void Init(FactoryFloor factoryFloor, Vector2Int position, Direction direction)
     {
         transform.position = new Vector3(position.x, position.y, 0);
         transform.rotation = Quaternion.Euler(0, 0, ((int)direction) * 90);
         this.position = position;
         this.direction = direction;
+        this.factoryFloor = factoryFloor;
     }
 
     public abstract MachineType GetMachineType();
@@ -41,10 +43,12 @@ public abstract class Machine : MonoBehaviour
     }
 
     protected void Add(ArtifactType type, Direction direction) {
-        gameController.Add(type, position, direction);
+        Artifact artifact = Instantiate(gameDatabase.GetModel(type));
+        artifact.Init(position, direction, type);
+        factoryFloor.Add(artifact);
     }
 
     protected void Remove(Artifact artifact) {
-        gameController.Remove(artifact);
+        factoryFloor.Remove(artifact);
     }
 }

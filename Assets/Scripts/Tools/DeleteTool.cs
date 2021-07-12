@@ -12,7 +12,7 @@ public class DeleteTool : GameTool
     }
 
     override protected void OnClickMachine(Machine machine) {
-        gameController.Remove(machine);
+        GetFactoryFloor().Remove(machine);
         gameController.AddMoney(machineDatabase.GetInfo(machine.GetMachineType()).cost * 80 / 100);
     }
 }

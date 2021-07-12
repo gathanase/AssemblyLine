@@ -21,11 +21,15 @@ public abstract class GameTool : MonoBehaviour, IPointerDownHandler
         Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
         Vector2Int pos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
         Machine machine;
-        if (gameController.machines.TryGetValue(pos, out machine)) {
+        if (GetFactoryFloor().machines.TryGetValue(pos, out machine)) {
             OnClickMachine(machine);
         } else {
             OnClickEmpty(pos);
         }
+    }
+
+    protected FactoryFloor GetFactoryFloor() {
+        return gameController.GetFactoryFloor();
     }
 
     protected virtual void OnClickEmpty(Vector2Int pos) {

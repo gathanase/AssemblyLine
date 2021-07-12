@@ -15,9 +15,9 @@ public class MoveTool : GameTool
     override protected void OnClickEmpty(Vector2Int pos) {
         if (machine != null) {
             Vector2Int oldPos = machine.position;
-            gameController.machines.Remove(oldPos);
-            machine.Init(pos, machine.direction);
-            gameController.machines.Add(pos, machine);
+            GetFactoryFloor().machines.Remove(oldPos);
+            machine.Init(GetFactoryFloor(), pos, machine.direction);
+            GetFactoryFloor().machines.Add(pos, machine);
             machine.GetComponentInChildren<SpriteRenderer>().color = Color.white;
             machine = null;
         }
