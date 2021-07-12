@@ -1252,25 +1252,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
-      propertyPath: infoTool
-      value: 
-      objectReference: {fileID: 206945266}
-    - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 1442782627}
     - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
-      propertyPath: rotateTool
-      value: 
-      objectReference: {fileID: 960755728}
-    - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
       propertyPath: gameDatabase
       value: 
       objectReference: {fileID: 1239157403}
-    - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
-      propertyPath: machineDatabase
-      value: 
-      objectReference: {fileID: 1572662797}
     - target: {fileID: 2438027519192905763, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -1583,17 +1571,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442782625}
   m_CullTransparentMesh: 1
---- !u!114 &1572662797 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7907348612576017543, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
-  m_PrefabInstance: {fileID: 8295449325025595303}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 504a94140948a44e6b490bab8e716282, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1599851749 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 365499124166733741, guid: c787896bec6854daebe70d85aff28b20, type: 3}
