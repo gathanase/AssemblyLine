@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FactoryFloor: MonoBehaviour
+public class FactoryFloor
 {
+    private GameController gameController;
     public Dictionary<Vector2Int, Machine> machines;
     private HashSet<Artifact> artifacts;
     private HashSet<Artifact> artifactsToCreate;
     private HashSet<Artifact> artifactsToRemove;
 
-    public FactoryFloor() {
+    public FactoryFloor(GameController gameController) {
+        this.gameController = gameController;
         machines = new Dictionary<Vector2Int, Machine>();
         artifacts = new HashSet<Artifact>();
         artifactsToCreate = new HashSet<Artifact>();
@@ -43,7 +45,7 @@ public class FactoryFloor: MonoBehaviour
 
     public void Remove(Artifact artifact) {
         artifactsToRemove.Add(artifact);
-        Destroy(artifact.gameObject);
+        gameController.ZDestroy(artifact.gameObject);
     }
 
     public void Add(Machine machine) {
@@ -52,6 +54,6 @@ public class FactoryFloor: MonoBehaviour
 
     public void Remove(Machine machine) {
         machines.Remove(machine.position);
-        Destroy(machine.gameObject);
+        gameController.ZDestroy(machine.gameObject);
     }
 }

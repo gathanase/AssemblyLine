@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public GameDatabase gameDatabase;
+    public GameState gameState;
     public Text moneyText;
-    private long money = 0;
-    public FactoryFloor factoryFloor;
 
     void Awake() {
-        factoryFloor = new FactoryFloor();
+        gameState = new GameState(this);
         SetTool(ToolType.INFO);
     }
 
@@ -33,24 +32,28 @@ public class GameController : MonoBehaviour
     }
 
     public FactoryFloor GetFactoryFloor() {
-        return factoryFloor;
+        return gameState.factoryFloor;
+    }
+
+    public void ZDestroy(GameObject go) {
+        Destroy(go);
     }
 
     void OnTick() {
-        factoryFloor.OnTick();
+        gameState.OnTick();
     }
 
     public void AddMoney(long amount) {
-        money += amount;
+        gameState.money += amount;
         RefreshMoney();
     }
 
     public void RemoveMoney(long amount) {
-        money -= amount;
+        gameState.money -= amount;
         RefreshMoney();
     }
 
     private void RefreshMoney() {
-        moneyText.text = money.ToString("C0");
+        moneyText.text = gameState.money.ToString("C0");
     }
 }
