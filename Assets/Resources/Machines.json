@@ -6,9 +6,9 @@
       "name": "Crafter"
     }, 
     {
-      "cost": 100000, 
-      "type": "SPLITTER", 
-      "name": "Splitter"
+      "cost": 10000, 
+      "type": "CUTTER", 
+      "name": "Cutter"
     }, 
     {
       "cost": 10000, 
@@ -16,24 +16,19 @@
       "name": "Furnace"
     }, 
     {
-      "cost": 5000, 
-      "type": "SELLER", 
-      "name": "Seller"
-    }, 
-    {
-      "cost": 10000, 
-      "type": "WIRE_DRAWER", 
-      "name": "Wire Drawer"
-    }, 
-    {
       "cost": 30000, 
       "type": "HYDRAULIC_PRESS", 
       "name": "Hydraulic Press"
     }, 
     {
-      "cost": 1000, 
-      "type": "STARTER", 
-      "name": "Starter"
+      "cost": 100000, 
+      "type": "LEFT_SPLITTER", 
+      "name": "Left Splitter"
+    }, 
+    {
+      "cost": 100000, 
+      "type": "RIGHT_SPLITTER", 
+      "name": "Right Splitter"
     }, 
     {
       "cost": 300, 
@@ -41,9 +36,24 @@
       "name": "Roller"
     }, 
     {
+      "cost": 5000, 
+      "type": "SELLER", 
+      "name": "Seller"
+    }, 
+    {
+      "cost": 100000, 
+      "type": "SPLITTER", 
+      "name": "Splitter"
+    }, 
+    {
+      "cost": 1000, 
+      "type": "STARTER", 
+      "name": "Starter"
+    }, 
+    {
       "cost": 10000, 
-      "type": "CUTTER", 
-      "name": "Cutter"
+      "type": "WIRE_DRAWER", 
+      "name": "Wire Drawer"
     }
   ]
 }

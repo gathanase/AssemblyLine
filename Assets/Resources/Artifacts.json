@@ -1,169 +1,9 @@
 {
   "artifacts": [
     {
-      "cost": 3300, 
-      "type": "SPEAKERS", 
-      "name": "Speakers"
-    }, 
-    {
-      "cost": 250, 
-      "type": "IRON_PLATE", 
-      "name": "Iron Plate"
-    }, 
-    {
-      "cost": 100, 
-      "type": "ALUMINUM_LIQUID", 
-      "name": "Aluminum Liquid"
-    }, 
-    {
-      "cost": 540, 
-      "type": "ANTENNA", 
-      "name": "Antenna"
-    }, 
-    {
-      "cost": 540, 
-      "type": "CLOCK", 
-      "name": "Clock"
-    }, 
-    {
-      "cost": 80, 
-      "type": "IRON", 
-      "name": "Iron"
-    }, 
-    {
-      "cost": 100, 
-      "type": "GOLD_WIRE", 
-      "name": "Gold Wire"
-    }, 
-    {
-      "cost": 550000, 
-      "type": "SUPER_COMPUTER", 
-      "name": "Super Computer"
-    }, 
-    {
-      "cost": 900, 
-      "type": "TOASTER", 
-      "name": "Toaster"
-    }, 
-    {
-      "cost": 8070, 
-      "type": "MICROWAVE", 
-      "name": "Microwave"
-    }, 
-    {
-      "cost": 10600, 
-      "type": "SERVER_RACK", 
-      "name": "Server Rack"
-    }, 
-    {
-      "cost": 250, 
-      "type": "GOLD_PLATE", 
-      "name": "Gold Plate"
-    }, 
-    {
-      "cost": 10170, 
-      "type": "SMARTWATCH", 
-      "name": "Smartwatch"
-    }, 
-    {
-      "cost": 31800, 
-      "type": "LAZER", 
-      "name": "Lazer"
-    }, 
-    {
-      "cost": 7300, 
-      "type": "SMARTPHONE", 
-      "name": "Smartphone"
-    }, 
-    {
-      "cost": 900000, 
-      "type": "ELECTRIC_ENGINE", 
-      "name": "Electric Engine"
-    }, 
-    {
-      "cost": 1170, 
-      "type": "SOLAR_PANEL", 
-      "name": "Solar Panel"
-    }, 
-    {
-      "cost": 100, 
-      "type": "GOLD_LIQUID", 
-      "name": "Gold Liquid"
-    }, 
-    {
-      "cost": 360, 
-      "type": "ENGINE", 
-      "name": "Engine"
-    }, 
-    {
-      "cost": 80, 
-      "type": "DIAMOND", 
-      "name": "Diamond"
-    }, 
-    {
-      "cost": 5670, 
-      "type": "RADIO", 
-      "name": "Radio"
-    }, 
-    {
-      "cost": 11820, 
-      "type": "GENERATOR", 
-      "name": "Generator"
-    }, 
-    {
-      "cost": 100, 
-      "type": "IRON_GEAR", 
-      "name": "Iron Gear"
-    }, 
-    {
-      "cost": 1100, 
-      "type": "WASHING_MACHINE", 
-      "name": "Washing Machine"
-    }, 
-    {
-      "cost": 7100, 
-      "type": "TV", 
-      "name": "TV"
-    }, 
-    {
-      "cost": 250, 
-      "type": "ALUMINUM_PLATE", 
-      "name": "Aluminum Plate"
-    }, 
-    {
-      "cost": 7400, 
-      "type": "FRIDGE", 
-      "name": "Fridge"
-    }, 
-    {
-      "cost": 360, 
-      "type": "COOLER_PLATE", 
-      "name": "Cooler Plate"
-    }, 
-    {
-      "cost": 1320, 
-      "type": "PROCESSOR", 
-      "name": "Processor"
-    }, 
-    {
-      "cost": 100, 
-      "type": "DIAMOND_GEAR", 
-      "name": "Diamond Gear"
-    }, 
-    {
-      "cost": 15000000, 
-      "type": "AI_ROBOT", 
-      "name": "AI Robot"
-    }, 
-    {
       "cost": 70000, 
       "type": "ADVANCED_ENGINE", 
       "name": "Advanced Engine"
-    }, 
-    {
-      "cost": 12900, 
-      "type": "WATER_HEATER", 
-      "name": "Water Heater"
     }, 
     {
       "cost": 900, 
@@ -171,89 +11,14 @@
       "name": "Air Conditioner"
     }, 
     {
-      "cost": 100, 
-      "type": "DIAMOND_LIQUID", 
-      "name": "Diamond Liquid"
+      "cost": 2500000, 
+      "type": "AI_PROCESSOR", 
+      "name": "AI Processor"
     }, 
     {
-      "cost": 360, 
-      "type": "LIGHT_BULB", 
-      "name": "Light Bulb"
-    }, 
-    {
-      "cost": 100, 
-      "type": "IRON_WIRE", 
-      "name": "Iron Wire"
-    }, 
-    {
-      "cost": 100, 
-      "type": "ALUMINUM_GEAR", 
-      "name": "Aluminum Gear"
-    }, 
-    {
-      "cost": 250, 
-      "type": "COPPER_PLATE", 
-      "name": "Copper Plate"
-    }, 
-    {
-      "cost": 600, 
-      "type": "GRILL", 
-      "name": "Grill"
-    }, 
-    {
-      "cost": 100, 
-      "type": "ALUMINUM_WIRE", 
-      "name": "Aluminum Wire"
-    }, 
-    {
-      "cost": 100, 
-      "type": "GOLD_GEAR", 
-      "name": "Gold Gear"
-    }, 
-    {
-      "cost": 80, 
-      "type": "ALUMINUM", 
-      "name": "Aluminum"
-    }, 
-    {
-      "cost": 27000, 
-      "type": "ELECTRIC_BOARD", 
-      "name": "Electric Board"
-    }, 
-    {
-      "cost": 1500, 
-      "type": "DRILL", 
-      "name": "Drill"
-    }, 
-    {
-      "cost": 1300, 
-      "type": "HEADPHONES", 
-      "name": "Headphones"
-    }, 
-    {
-      "cost": 1920, 
-      "type": "POWER_SUPPLY", 
-      "name": "Power Supply"
-    }, 
-    {
-      "cost": 100, 
-      "type": "DIAMOND_WIRE", 
-      "name": "Diamond Wire"
-    }, 
-    {
-      "cost": 5000000, 
-      "type": "AI_ROBOT_HEAD", 
-      "name": "AI Robot Head"
-    }, 
-    {
-      "cost": 17220, 
-      "type": "DRONE", 
-      "name": "Drone"
-    }, 
-    {
-      "cost": 300, 
-      "type": "CIRCUIT", 
-      "name": "Circuit"
+      "cost": 15000000, 
+      "type": "AI_ROBOT", 
+      "name": "AI Robot"
     }, 
     {
       "cost": 2800000, 
@@ -261,34 +26,69 @@
       "name": "AI Robot Body"
     }, 
     {
-      "cost": 6920, 
-      "type": "JACKHAMMER", 
-      "name": "Jackhammer"
+      "cost": 5000000, 
+      "type": "AI_ROBOT_HEAD", 
+      "name": "AI Robot Head"
     }, 
     {
-      "cost": 8400, 
-      "type": "RAILWAY", 
-      "name": "Railway"
+      "cost": 80, 
+      "type": "ALUMINUM", 
+      "name": "Aluminum"
+    }, 
+    {
+      "cost": 100, 
+      "type": "ALUMINUM_GEAR", 
+      "name": "Aluminum Gear"
+    }, 
+    {
+      "cost": 100, 
+      "type": "ALUMINUM_LIQUID", 
+      "name": "Aluminum Liquid"
     }, 
     {
       "cost": 250, 
-      "type": "DIAMOND_PLATE", 
-      "name": "Diamond Plate"
+      "type": "ALUMINUM_PLATE", 
+      "name": "Aluminum Plate"
+    }, 
+    {
+      "cost": 100, 
+      "type": "ALUMINUM_WIRE", 
+      "name": "Aluminum Wire"
+    }, 
+    {
+      "cost": 540, 
+      "type": "ANTENNA", 
+      "name": "Antenna"
+    }, 
+    {
+      "cost": 1050, 
+      "type": "BATTERY", 
+      "name": "Battery"
+    }, 
+    {
+      "cost": 300, 
+      "type": "CIRCUIT", 
+      "name": "Circuit"
+    }, 
+    {
+      "cost": 540, 
+      "type": "CLOCK", 
+      "name": "Clock"
+    }, 
+    {
+      "cost": 11000, 
+      "type": "COMPUTER", 
+      "name": "Computer"
+    }, 
+    {
+      "cost": 360, 
+      "type": "COOLER_PLATE", 
+      "name": "Cooler Plate"
     }, 
     {
       "cost": 80, 
       "type": "COPPER", 
       "name": "Copper"
-    }, 
-    {
-      "cost": 80, 
-      "type": "GOLD", 
-      "name": "Gold"
-    }, 
-    {
-      "cost": 100, 
-      "type": "COPPER_LIQUID", 
-      "name": "Copper Liquid"
     }, 
     {
       "cost": 100, 
@@ -297,18 +97,63 @@
     }, 
     {
       "cost": 100, 
+      "type": "COPPER_LIQUID", 
+      "name": "Copper Liquid"
+    }, 
+    {
+      "cost": 250, 
+      "type": "COPPER_PLATE", 
+      "name": "Copper Plate"
+    }, 
+    {
+      "cost": 100, 
       "type": "COPPER_WIRE", 
       "name": "Copper Wire"
     }, 
     {
-      "cost": 1050, 
-      "type": "BATTERY", 
-      "name": "Battery"
+      "cost": 80, 
+      "type": "DIAMOND", 
+      "name": "Diamond"
     }, 
     {
-      "cost": 11000, 
-      "type": "COMPUTER", 
-      "name": "Computer"
+      "cost": 100, 
+      "type": "DIAMOND_GEAR", 
+      "name": "Diamond Gear"
+    }, 
+    {
+      "cost": 100, 
+      "type": "DIAMOND_LIQUID", 
+      "name": "Diamond Liquid"
+    }, 
+    {
+      "cost": 250, 
+      "type": "DIAMOND_PLATE", 
+      "name": "Diamond Plate"
+    }, 
+    {
+      "cost": 100, 
+      "type": "DIAMOND_WIRE", 
+      "name": "Diamond Wire"
+    }, 
+    {
+      "cost": 1500, 
+      "type": "DRILL", 
+      "name": "Drill"
+    }, 
+    {
+      "cost": 17220, 
+      "type": "DRONE", 
+      "name": "Drone"
+    }, 
+    {
+      "cost": 27000, 
+      "type": "ELECTRIC_BOARD", 
+      "name": "Electric Board"
+    }, 
+    {
+      "cost": 900000, 
+      "type": "ELECTRIC_ENGINE", 
+      "name": "Electric Engine"
     }, 
     {
       "cost": 470000, 
@@ -316,9 +161,54 @@
       "name": "Electric Generator"
     }, 
     {
-      "cost": 2500000, 
-      "type": "AI_PROCESSOR", 
-      "name": "AI Processor"
+      "cost": 360, 
+      "type": "ENGINE", 
+      "name": "Engine"
+    }, 
+    {
+      "cost": 7400, 
+      "type": "FRIDGE", 
+      "name": "Fridge"
+    }, 
+    {
+      "cost": 11820, 
+      "type": "GENERATOR", 
+      "name": "Generator"
+    }, 
+    {
+      "cost": 80, 
+      "type": "GOLD", 
+      "name": "Gold"
+    }, 
+    {
+      "cost": 100, 
+      "type": "GOLD_GEAR", 
+      "name": "Gold Gear"
+    }, 
+    {
+      "cost": 100, 
+      "type": "GOLD_LIQUID", 
+      "name": "Gold Liquid"
+    }, 
+    {
+      "cost": 250, 
+      "type": "GOLD_PLATE", 
+      "name": "Gold Plate"
+    }, 
+    {
+      "cost": 100, 
+      "type": "GOLD_WIRE", 
+      "name": "Gold Wire"
+    }, 
+    {
+      "cost": 600, 
+      "type": "GRILL", 
+      "name": "Grill"
+    }, 
+    {
+      "cost": 1300, 
+      "type": "HEADPHONES", 
+      "name": "Headphones"
     }, 
     {
       "cost": 360, 
@@ -326,9 +216,104 @@
       "name": "Heater Plate"
     }, 
     {
+      "cost": 80, 
+      "type": "IRON", 
+      "name": "Iron"
+    }, 
+    {
+      "cost": 100, 
+      "type": "IRON_GEAR", 
+      "name": "Iron Gear"
+    }, 
+    {
+      "cost": 100, 
+      "type": "IRON_LIQUID", 
+      "name": "Iron Liquid"
+    }, 
+    {
+      "cost": 250, 
+      "type": "IRON_PLATE", 
+      "name": "Iron Plate"
+    }, 
+    {
+      "cost": 100, 
+      "type": "IRON_WIRE", 
+      "name": "Iron Wire"
+    }, 
+    {
+      "cost": 6920, 
+      "type": "JACKHAMMER", 
+      "name": "Jackhammer"
+    }, 
+    {
+      "cost": 31800, 
+      "type": "LAZER", 
+      "name": "Lazer"
+    }, 
+    {
+      "cost": 360, 
+      "type": "LIGHT_BULB", 
+      "name": "Light Bulb"
+    }, 
+    {
+      "cost": 8070, 
+      "type": "MICROWAVE", 
+      "name": "Microwave"
+    }, 
+    {
       "cost": 27300, 
       "type": "OVEN", 
       "name": "Oven"
+    }, 
+    {
+      "cost": 1920, 
+      "type": "POWER_SUPPLY", 
+      "name": "Power Supply"
+    }, 
+    {
+      "cost": 1320, 
+      "type": "PROCESSOR", 
+      "name": "Processor"
+    }, 
+    {
+      "cost": 5670, 
+      "type": "RADIO", 
+      "name": "Radio"
+    }, 
+    {
+      "cost": 8400, 
+      "type": "RAILWAY", 
+      "name": "Railway"
+    }, 
+    {
+      "cost": 10600, 
+      "type": "SERVER_RACK", 
+      "name": "Server Rack"
+    }, 
+    {
+      "cost": 7300, 
+      "type": "SMARTPHONE", 
+      "name": "Smartphone"
+    }, 
+    {
+      "cost": 10170, 
+      "type": "SMARTWATCH", 
+      "name": "Smartwatch"
+    }, 
+    {
+      "cost": 1170, 
+      "type": "SOLAR_PANEL", 
+      "name": "Solar Panel"
+    }, 
+    {
+      "cost": 3300, 
+      "type": "SPEAKERS", 
+      "name": "Speakers"
+    }, 
+    {
+      "cost": 550000, 
+      "type": "SUPER_COMPUTER", 
+      "name": "Super Computer"
     }, 
     {
       "cost": 7600, 
@@ -336,9 +321,24 @@
       "name": "Tablet"
     }, 
     {
-      "cost": 100, 
-      "type": "IRON_LIQUID", 
-      "name": "Iron Liquid"
+      "cost": 900, 
+      "type": "TOASTER", 
+      "name": "Toaster"
+    }, 
+    {
+      "cost": 7100, 
+      "type": "TV", 
+      "name": "TV"
+    }, 
+    {
+      "cost": 1100, 
+      "type": "WASHING_MACHINE", 
+      "name": "Washing Machine"
+    }, 
+    {
+      "cost": 12900, 
+      "type": "WATER_HEATER", 
+      "name": "Water Heater"
     }
   ]
 }

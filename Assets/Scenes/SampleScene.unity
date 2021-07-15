@@ -2635,6 +2635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Database
       objectReference: {fileID: 0}
+    - target: {fileID: 8005820162564500213, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d6be475d08c74783802a362b6cb5a7d, type: 3}
 --- !u!1001 &8737377048913384444
@@ -2674,11 +2678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4611044070132883397, guid: 88ca075889d1a4853a20d3effec2844a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 4611044070132883397, guid: 88ca075889d1a4853a20d3effec2844a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4611044070132883397, guid: 88ca075889d1a4853a20d3effec2844a, type: 3}
       propertyPath: m_LocalPosition.x

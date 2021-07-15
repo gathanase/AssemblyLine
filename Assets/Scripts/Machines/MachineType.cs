@@ -10,7 +10,9 @@ public enum MachineType
     HYDRAULIC_PRESS,
     ROLLER,
     WIRE_DRAWER,
-    SPLITTER
+    SPLITTER,
+    RIGHT_SPLITTER,
+    LEFT_SPLITTER
 }
 
 public static class MachineTypeExtensions

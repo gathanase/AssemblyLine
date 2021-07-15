@@ -24,6 +24,8 @@ public class BuildWindow : Window
         Add(MachineType.HYDRAULIC_PRESS);
         Add(MachineType.WIRE_DRAWER);
         Add(MachineType.SPLITTER);
+        Add(MachineType.RIGHT_SPLITTER);
+        Add(MachineType.LEFT_SPLITTER);
         closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }

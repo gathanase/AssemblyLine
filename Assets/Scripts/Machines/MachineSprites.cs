@@ -16,6 +16,8 @@ public class MachineSprites : MonoBehaviour
         Register(MachineType.CRAFTER, 0);
         Register(MachineType.CUTTER, 1);
         Register(MachineType.FURNACE, 2);
+        Register(MachineType.LEFT_SPLITTER, 4);
+        Register(MachineType.RIGHT_SPLITTER, 6);
         Register(MachineType.ROLLER, 7);
         Register(MachineType.SPLITTER, 9);
         Register(MachineType.HYDRAULIC_PRESS, 11);
