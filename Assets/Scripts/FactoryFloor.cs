@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FactoryFloor
@@ -16,6 +17,19 @@ public class FactoryFloor
         artifacts = new HashSet<Artifact>();
         artifactsToCreate = new HashSet<Artifact>();
         artifactsToRemove = new HashSet<Artifact>();
+    }
+
+    [System.Serializable]
+    public class Save {
+        public List<Machine.Save> machines;
+        public List<Artifact.Save> artifacts;
+    }
+
+    public Save ToSave() {
+        Save save = new Save();
+        save.machines = machines.Values.ToList().ConvertAll(machine => machine.ToSave());
+        save.artifacts = artifacts.ToList().ConvertAll(artifact => artifact.ToSave());
+        return save;
     }
 
     public void OnTick() {

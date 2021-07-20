@@ -8,7 +8,7 @@ public class RollerMachine : Machine
     {
         return MachineType.ROLLER;
     }
-    
+
     public override Window CreateInfoWindow() {
         return null;
     }

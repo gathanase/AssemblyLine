@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 public class GameController : MonoBehaviour
 {
@@ -55,5 +57,17 @@ public class GameController : MonoBehaviour
 
     private void RefreshMoney() {
         moneyText.text = gameState.money.ToString("C0");
+    }
+
+    public void SaveGame() {
+        Debug.Log("Save");
+        string path = Application.persistentDataPath + "/toto.save";
+        string json = JsonConvert.SerializeObject(gameState.ToSave());
+        Debug.Log(json);
+        File.WriteAllText(path, json);
+    }
+
+    public void LoadGame() {
+        Debug.Log("Load TODO");
     }
 }

@@ -10,6 +10,27 @@ public abstract class Machine : MonoBehaviour
     protected static GameDatabase gameDatabase = null;
     private FactoryFloor factoryFloor = null;
 
+    [System.Serializable]
+    public class Save {
+        public string type;
+        public int x, y;
+        public string direction;
+    }
+
+    public virtual Save ToSave() {
+        Save save = new Save();
+        WriteSave(save);
+        return save;
+    }
+
+    public virtual Save WriteSave(Save save) {
+        save.type = GetType().ToString();
+        save.x = position.x;
+        save.y = position.y;
+        save.direction = direction.ToString();
+        return save;
+    }
+
     void Awake() {
         if (gameController == null) {
             gameController = FindObjectOfType<GameController>();

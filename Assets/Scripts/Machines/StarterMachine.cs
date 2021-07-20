@@ -8,6 +8,19 @@ public class StarterMachine : Machine
     public ArtifactType artifactType = ArtifactType.IRON;
     public int quantity = 0;
 
+    public new class Save : Machine.Save {
+        public string artifactType;
+        public int quantity;
+    }
+
+    public override Machine.Save ToSave()
+    {
+        Save save = new Save();
+        base.WriteSave(save);
+        save.artifactType = artifactType.ToString();
+        save.quantity = quantity;
+        return save;
+    }
 
     public override MachineType GetMachineType()
     {

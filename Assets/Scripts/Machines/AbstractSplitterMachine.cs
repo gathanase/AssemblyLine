@@ -8,6 +8,24 @@ public abstract class AbstractSplitterMachine : Machine
     public Dictionary<int, int> countsByRotate;  // key: -1, 0, 1 is the rotation of the artifact direction
     private int counter = 0;
 
+    public new class Save : Machine.Save {
+        public int countsRight;
+        public int countsForward;
+        public int countsLeft;
+        public int counter;
+    } 
+
+    public override Machine.Save ToSave()
+    {
+        Save save = new Save();
+        base.WriteSave(save);
+        save.counter = counter;
+        save.countsRight = countsByRotate[-1];
+        save.countsForward = countsByRotate[0];
+        save.countsLeft = countsByRotate[1];
+        return save;
+    }
+
     void Start() {
         countsByRotate = new Dictionary<int, int>();
         countsByRotate[-1] = 0;

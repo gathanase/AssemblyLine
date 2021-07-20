@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CrafterMachine : Machine
@@ -16,7 +17,22 @@ public class CrafterMachine : Machine
     {
         return MachineType.CRAFTER;
     }
-    
+
+    public new class Save : Machine.Save {
+        public string output;
+        public Dictionary<string, int> stock;
+    }
+
+    public override Machine.Save ToSave()
+    {
+        Save save = new Save();
+        base.WriteSave(save);
+        save.output = recipe.output.ToString();
+        List<ArtifactType> types = stock.GetArtifactTypes();
+        save.stock = types.ToDictionary(type => type.ToString(), type => stock.GetCount(type));
+        return save;
+    }
+
     public override Window CreateInfoWindow() {
         CrafterMachineWindow infoWindow = FindObjectOfType<CrafterMachineWindow>(true);
         infoWindow.Init(this);

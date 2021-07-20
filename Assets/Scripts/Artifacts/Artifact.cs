@@ -10,6 +10,22 @@ public class Artifact : MonoBehaviour
     private static ArtifactSprites artifactSprites = null;
     private static ArtifactDatabase artifactDatabase = null;
 
+    [System.Serializable]
+    public class Save {
+        public string type;
+        public int x, y;
+        public string direction;
+    }
+
+    public Save ToSave() {
+        Save save = new Save();
+        save.type = type.ToString();
+        save.x = position.x;
+        save.y = position.y;
+        save.direction = direction.ToString();
+        return save;
+    }
+
     void Awake() {
         if (artifactSprites == null) {
             artifactSprites = FindObjectOfType<ArtifactSprites>();

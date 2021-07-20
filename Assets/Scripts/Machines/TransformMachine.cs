@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,18 @@ public abstract class TransformMachine : Machine
 
     void Awake() {
         transformMapping = BuildMapping();
+    }
+
+    public new class Save : Machine.Save {
+        public List<string> queue;
+    }
+
+    public override Machine.Save ToSave()
+    {
+        Save save = new Save();
+        base.WriteSave(save);
+        save.queue = queue.ToList().ConvertAll(type => type.ToString());
+        return save;
     }
 
     protected abstract Dictionary<ArtifactType, ArtifactType> BuildMapping();

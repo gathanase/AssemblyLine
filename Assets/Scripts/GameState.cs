@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class GameState
 {
-    private GameController gameController;
     public long money = 0;
     public FactoryFloor factoryFloor;
+
+    [System.Serializable]
+    public class Save {
+        public FactoryFloor.Save floor;
+        public long money;
+    }
 
     public GameState(GameController gameController) {
         factoryFloor = new FactoryFloor(gameController);
@@ -14,5 +18,16 @@ public class GameState
 
     public void OnTick() {
         factoryFloor.OnTick();
+    }
+
+    public Save ToSave() {
+        Save save = new Save();
+        save.money = this.money;
+        save.floor = factoryFloor.ToSave();
+        return save;
+    }
+
+    public void FromSave(Save save) {
+        this.money = save.money;
     }
 }
