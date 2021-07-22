@@ -28,5 +28,6 @@ public class GameState
 
     public void FromSave(Save save) {
         this.money = save.money;
+        this.factoryFloor.FromSave(save.floor);
     }
 }

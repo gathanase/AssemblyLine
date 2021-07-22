@@ -31,6 +31,14 @@ public class FactoryFloor
         return save;
     }
 
+    public void FromSave(Save save) {
+        machines = new Dictionary<Vector2Int, Machine>();
+        artifacts = new HashSet<Artifact>();
+        artifactsToCreate = new HashSet<Artifact>();
+        artifactsToRemove = new HashSet<Artifact>();
+        save.artifacts.ForEach(xSave => Add(xSave.Load(gameController.gameDatabase)));
+    }
+
     public void OnTick() {
         foreach (Machine machine in machines.Values) {
             machine.OnTick();

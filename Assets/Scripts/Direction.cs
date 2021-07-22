@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,11 @@ public static class DirectionExtensions
             case Direction.WEST: return Vector2Int.left;
             default: return Vector2Int.zero;
         }
+    }
+
+    public static Direction Parse(string name)
+    {
+        return (Direction) Enum.Parse(typeof(Direction), name, true);
     }
 
     public static Vector2 ToVector2(this Direction direction)

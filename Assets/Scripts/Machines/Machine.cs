@@ -10,7 +10,6 @@ public abstract class Machine : MonoBehaviour
     protected static GameDatabase gameDatabase = null;
     private FactoryFloor factoryFloor = null;
 
-    [System.Serializable]
     public class Save {
         public string type;
         public int x, y;

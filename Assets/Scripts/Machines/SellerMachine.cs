@@ -8,7 +8,7 @@ public class SellerMachine : Machine
     {
         return MachineType.SELLER;
     }
-    
+
     public override Window CreateInfoWindow() {
         return null;
     }

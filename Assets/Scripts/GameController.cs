@@ -68,6 +68,13 @@ public class GameController : MonoBehaviour
     }
 
     public void LoadGame() {
-        Debug.Log("Load TODO");
+        Debug.Log("Load");
+        // https://stackoverflow.com/questions/29528648/json-net-serialization-of-type-with-polymorphic-child-object
+        string path = Application.persistentDataPath + "/toto.save";
+        string json = File.ReadAllText(path);
+        Debug.Log(json);
+        GameState.Save save = JsonConvert.DeserializeObject<GameState.Save>(json);
+        gameState.FromSave(save);
+        RefreshMoney();
     }
 }

@@ -14,6 +14,15 @@ public class Artifact : MonoBehaviour
         public string type;
         public int x, y;
         public string direction;
+
+        public Artifact Load(GameDatabase gameDatabase) {
+            ArtifactType type = ArtifactTypeExtensions.Parse(this.type);
+            Vector2Int position = new Vector2Int(this.x, this.y);
+            Direction direction = DirectionExtensions.Parse(this.direction);
+            Artifact artifact = Instantiate(gameDatabase.GetModel(type));
+            artifact.Init(position, direction, type);
+            return artifact;
+        }
     }
 
     public Save ToSave() {
