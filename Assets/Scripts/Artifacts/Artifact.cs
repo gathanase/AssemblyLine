@@ -10,7 +10,6 @@ public class Artifact : MonoBehaviour
     private static ArtifactSprites artifactSprites = null;
     private static ArtifactDatabase artifactDatabase = null;
 
-    [System.Serializable]
     public class Save {
         public string type;
         public int x, y;

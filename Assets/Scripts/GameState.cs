@@ -6,7 +6,6 @@ public class GameState
     public long money = 0;
     public FactoryFloor factoryFloor;
 
-    [System.Serializable]
     public class Save {
         public FactoryFloor.Save floor;
         public long money;

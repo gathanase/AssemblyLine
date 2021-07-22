@@ -19,7 +19,6 @@ public class FactoryFloor
         artifactsToRemove = new HashSet<Artifact>();
     }
 
-    [System.Serializable]
     public class Save {
         public List<Machine.Save> machines;
         public List<Artifact.Save> artifacts;
