@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameDatabase : MonoBehaviour
 {
-    public Artifact artifactModel;
     public RecipeDatabase recipeDatabase;
     public MachineDatabase machineDatabase;
     public ArtifactDatabase artifactDatabase;
@@ -44,7 +43,7 @@ public class GameDatabase : MonoBehaviour
     }
 
     public Artifact GetModel(ArtifactType artifactType) {
-        return artifactModel;
+        return artifactDatabase.GetModel(artifactType);
     }
 
     public List<Recipe> GetRecipes() {

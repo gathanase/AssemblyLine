@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ArtifactDatabase : MonoBehaviour
 {
+    public Artifact artifactModel;
     private Dictionary<ArtifactType, ArtifactInfo> artifacts;
 
     public class ArtifactInfo {
@@ -39,6 +40,10 @@ public class ArtifactDatabase : MonoBehaviour
         model.name = json.name;
         model.cost = json.cost;
         return model;
+    }
+
+    public Artifact GetModel(ArtifactType type) {
+        return artifactModel;
     }
 
     public ArtifactInfo GetInfo(ArtifactType type) {

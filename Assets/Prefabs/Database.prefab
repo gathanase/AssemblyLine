@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f72ef3f0d464f759eb07bc93935d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artifactModel: {fileID: 3232427426457604143, guid: 19cffe76463d341389d4fd1cf69c724d, type: 3}
 --- !u!114 &7907348612576017543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +82,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a04fef995f2d4443a4cf4efbc264bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artifactModel: {fileID: 3232427426457604143, guid: 19cffe76463d341389d4fd1cf69c724d, type: 3}
   machineDatabase: {fileID: 7907348612576017543}
   artifactDatabase: {fileID: 6894558332356197316}
   machineSprites: {fileID: 0}
