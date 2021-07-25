@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
+using System;
 
 public abstract class Machine : MonoBehaviour
 {
@@ -14,6 +16,14 @@ public abstract class Machine : MonoBehaviour
         public string type;
         public int x, y;
         public string direction;
+
+        public Machine Load(FactoryFloor floor, GameDatabase gameDatabase) {
+            MachineType type = MachineTypeExtensions.Parse(this.type);
+            Machine machine = Instantiate(gameDatabase.GetModel(type));
+            Debug.Log(this);
+            machine.Init(this, floor, gameDatabase);
+            return machine;
+        }
     }
 
     public virtual Save ToSave() {
@@ -23,11 +33,17 @@ public abstract class Machine : MonoBehaviour
     }
 
     public virtual Save WriteSave(Save save) {
-        save.type = GetType().ToString();
+        save.type = GetMachineType().ToString();
         save.x = position.x;
         save.y = position.y;
         save.direction = direction.ToString();
         return save;
+    }
+    
+    public virtual void Init(Save save, FactoryFloor floor, GameDatabase gameDatabase) {
+        Vector2Int position = new Vector2Int(save.x, save.y);
+        Direction direction = DirectionExtensions.Parse(save.direction);
+        Init(floor, position, direction);
     }
 
     void Awake() {

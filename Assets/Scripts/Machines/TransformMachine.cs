@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 public abstract class TransformMachine : Machine
 {
-    public Queue<ArtifactType> queue = new Queue<ArtifactType>();
+    public Queue<ArtifactType> queue;
     private Dictionary<ArtifactType, ArtifactType> transformMapping;
+
+    public TransformMachine() {
+        queue = new Queue<ArtifactType>();
+    }
 
     void Awake() {
         transformMapping = BuildMapping();
@@ -23,6 +27,14 @@ public abstract class TransformMachine : Machine
         base.WriteSave(save);
         save.queue = queue.ToList().ConvertAll(type => type.ToString());
         return save;
+    }
+
+    public override void Init(Machine.Save _save, FactoryFloor floor, GameDatabase gameDatabase)
+    {
+        Save save = (Save) _save;
+        base.Init(save, floor, gameDatabase);
+        this.queue.Clear();
+        this.queue.Concat(save.queue.ConvertAll(typeStr => ArtifactTypeExtensions.Parse(typeStr)));
     }
 
     protected abstract Dictionary<ArtifactType, ArtifactType> BuildMapping();

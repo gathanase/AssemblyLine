@@ -5,8 +5,13 @@ using UnityEngine.UIElements;
 
 public class StarterMachine : Machine
 {
-    public ArtifactType artifactType = ArtifactType.IRON;
-    public int quantity = 0;
+    public ArtifactType artifactType;
+    public int quantity;
+
+    public StarterMachine() {
+        artifactType = ArtifactType.IRON;
+        quantity = 0;
+    }
 
     public new class Save : Machine.Save {
         public string artifactType;
@@ -20,6 +25,14 @@ public class StarterMachine : Machine
         save.artifactType = artifactType.ToString();
         save.quantity = quantity;
         return save;
+    }
+
+    public override void Init(Machine.Save _save, FactoryFloor floor, GameDatabase gameDatabase)
+    {
+        Save save = (Save) _save;
+        base.Init(save, floor, gameDatabase);
+        this.artifactType = ArtifactTypeExtensions.Parse(save.artifactType);
+        this.quantity = save.quantity;
     }
 
     public override MachineType GetMachineType()

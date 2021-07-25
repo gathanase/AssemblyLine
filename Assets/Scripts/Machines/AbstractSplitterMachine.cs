@@ -8,6 +8,16 @@ public abstract class AbstractSplitterMachine : Machine
     public Dictionary<int, int> countsByRotate;  // key: -1, 0, 1 is the rotation of the artifact direction
     private int counter = 0;
 
+    public AbstractSplitterMachine() {
+        countsByRotate = new Dictionary<int, int>();
+        countsByRotate[-1] = 0;
+        countsByRotate[0] = 0;
+        countsByRotate[1] = 0;
+        foreach (int rotate in GetRotates()) {
+            countsByRotate[rotate] = 1;
+        }
+    }
+
     public new class Save : Machine.Save {
         public int countsRight;
         public int countsForward;
@@ -26,14 +36,14 @@ public abstract class AbstractSplitterMachine : Machine
         return save;
     }
 
-    void Start() {
-        countsByRotate = new Dictionary<int, int>();
-        countsByRotate[-1] = 0;
-        countsByRotate[0] = 0;
-        countsByRotate[1] = 0;
-        foreach (int rotate in GetRotates()) {
-            countsByRotate[rotate] = 1;
-        }
+    public override void Init(Machine.Save _save, FactoryFloor floor, GameDatabase gameDatabase)
+    {
+        Save save = (Save) _save;
+        base.Init(save, floor, gameDatabase);
+        this.countsByRotate[-1] = save.countsRight;
+        this.countsByRotate[0] = save.countsForward;
+        this.countsByRotate[1] = save.countsLeft;
+        this.counter = save.counter;
     }
 
     public abstract HashSet<int> GetRotates();

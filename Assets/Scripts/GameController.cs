@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json;
@@ -60,20 +61,19 @@ public class GameController : MonoBehaviour
     }
 
     public void SaveGame() {
-        Debug.Log("Save");
         string path = Application.persistentDataPath + "/toto.save";
-        string json = JsonConvert.SerializeObject(gameState.ToSave());
+        var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto };
+        string json = JsonConvert.SerializeObject(gameState.ToSave(), settings);
         Debug.Log(json);
         File.WriteAllText(path, json);
     }
 
     public void LoadGame() {
-        Debug.Log("Load");
-        // https://stackoverflow.com/questions/29528648/json-net-serialization-of-type-with-polymorphic-child-object
         string path = Application.persistentDataPath + "/toto.save";
+        var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto };
         string json = File.ReadAllText(path);
         Debug.Log(json);
-        GameState.Save save = JsonConvert.DeserializeObject<GameState.Save>(json);
+        GameState.Save save = JsonConvert.DeserializeObject<GameState.Save>(json, settings);
         gameState.FromSave(save);
         RefreshMoney();
     }
