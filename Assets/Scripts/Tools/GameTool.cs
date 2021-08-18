@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class GameTool : MonoBehaviour, IPointerDownHandler
+public abstract class GameTool : MonoBehaviour, IPointerDownHandler, IScrollHandler, IDragHandler
 {
     protected GameController gameController;
     protected GameDatabase gameDatabase;
@@ -26,6 +26,14 @@ public abstract class GameTool : MonoBehaviour, IPointerDownHandler
         } else {
             OnClickEmpty(pos);
         }
+    }
+
+    public void OnScroll(PointerEventData eventData) {
+        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize + eventData.scrollDelta.y, 5, 50);
+    }
+
+    public void OnDrag(PointerEventData eventData) {
+        Camera.main.transform.position = Camera.main.transform.position - new Vector3(eventData.delta.x, eventData.delta.y, 0) * 0.1f;
     }
 
     protected FactoryFloor GetFactoryFloor() {
