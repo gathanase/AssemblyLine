@@ -119,15 +119,15 @@
         "MachineName": "Roller",
         "UnlockCost": 5000
     },
-    "Selector": {
+    "Tri Splitter": {
         "ActionTime": 3,
-        "BuildCost": 50000,
+        "BuildCost": 300000,
         "CanRotate": false,
         "ElectricityCost": 5,
         "IsUnlocked": false,
         "MachineID": 8,
-        "MachineName": "Selector",
-        "UnlockCost": 100000
+        "MachineName": "3-Way Splitter",
+        "UnlockCost": 1000000
     },
     "Seller": {
         "ActionTime": 0,

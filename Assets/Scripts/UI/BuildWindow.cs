@@ -26,6 +26,9 @@ public class BuildWindow : Window
         Add(MachineType.SPLITTER);
         Add(MachineType.RIGHT_SPLITTER);
         Add(MachineType.LEFT_SPLITTER);
+        Add(MachineType.RIGHT_SELECTOR);
+        Add(MachineType.LEFT_SELECTOR);
+        Add(MachineType.MULTI_SELECTOR);
         closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }

@@ -20,7 +20,6 @@ public abstract class Machine : MonoBehaviour
         public Machine Load(FactoryFloor floor, GameDatabase gameDatabase) {
             MachineType type = MachineTypeExtensions.Parse(this.type);
             Machine machine = Instantiate(gameDatabase.GetModel(type));
-            Debug.Log(this);
             machine.Init(this, floor, gameDatabase);
             return machine;
         }

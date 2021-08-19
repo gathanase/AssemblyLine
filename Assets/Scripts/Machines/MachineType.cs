@@ -12,7 +12,11 @@ public enum MachineType
     WIRE_DRAWER,
     SPLITTER,
     RIGHT_SPLITTER,
-    LEFT_SPLITTER
+    LEFT_SPLITTER,
+    TRI_SPLITTER,
+    RIGHT_SELECTOR,
+    LEFT_SELECTOR,
+    MULTI_SELECTOR
 }
 
 public static class MachineTypeExtensions

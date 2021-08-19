@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FurnaceMachine : TransformMachine
 {
-        public override MachineType GetMachineType()
+    public override MachineType GetMachineType()
     {
         return MachineType.FURNACE;
     }

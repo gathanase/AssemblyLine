@@ -29,7 +29,7 @@ def formatMachines():
     machines = []
     for machineType, pocketMachine in pocketData.items():
         machineType = rename(machineType)
-        if machineType in ["FILTERED_ROBOTIC_ARM", "LEFT_SELECTOR", "MULTI_SELECTOR", "RIGHT_SELECTOR", "ROBOTIC_ARM", "SELECTOR", "TRANSPORTER_INPUT", "TRANSPORTER_OUTPUT"]: continue
+        if machineType in ["FILTERED_ROBOTIC_ARM", "ROBOTIC_ARM", "TRANSPORTER_INPUT", "TRANSPORTER_OUTPUT"]: continue
         machine = {
           "type": machineType,
           "name": pocketMachine["MachineName"],

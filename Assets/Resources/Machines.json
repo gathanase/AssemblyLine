@@ -21,9 +21,24 @@
       "name": "Hydraulic Press"
     }, 
     {
+      "cost": 50000, 
+      "type": "LEFT_SELECTOR", 
+      "name": "Left Selector"
+    }, 
+    {
       "cost": 100000, 
       "type": "LEFT_SPLITTER", 
       "name": "Left Splitter"
+    }, 
+    {
+      "cost": 150000, 
+      "type": "MULTI_SELECTOR", 
+      "name": "Multi Selector"
+    }, 
+    {
+      "cost": 50000, 
+      "type": "RIGHT_SELECTOR", 
+      "name": "Right Selector"
     }, 
     {
       "cost": 100000, 
@@ -49,6 +64,11 @@
       "cost": 1000, 
       "type": "STARTER", 
       "name": "Starter"
+    }, 
+    {
+      "cost": 300000, 
+      "type": "TRI_SPLITTER", 
+      "name": "3-Way Splitter"
     }, 
     {
       "cost": 10000, 

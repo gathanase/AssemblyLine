@@ -64,6 +64,7 @@ public class GameController : MonoBehaviour
         string path = Application.persistentDataPath + "/toto.save";
         var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto };
         string json = JsonConvert.SerializeObject(gameState.ToSave(), settings);
+        Debug.Log("Saving to file " + path);
         Debug.Log(json);
         File.WriteAllText(path, json);
     }
@@ -72,6 +73,7 @@ public class GameController : MonoBehaviour
         string path = Application.persistentDataPath + "/toto.save";
         var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Auto };
         string json = File.ReadAllText(path);
+        Debug.Log("Loading file " + path);
         Debug.Log(json);
         GameState.Save save = JsonConvert.DeserializeObject<GameState.Save>(json, settings);
         gameState.FromSave(save);
