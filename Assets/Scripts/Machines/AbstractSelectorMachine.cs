@@ -36,10 +36,9 @@ public abstract class AbstractSelectorMachine : Machine
     }
 
     public override Window CreateInfoWindow() {
-        // SplitterMachineWindow infoWindow = FindObjectOfType<SplitterMachineWindow>(true);
-        // infoWindow.Init(this);
-        // return infoWindow;
-        return null;
+        SelectorMachineWindow infoWindow = FindObjectOfType<SelectorMachineWindow>(true);
+        infoWindow.Init(this);
+        return infoWindow;
     }
 
     public abstract bool isRightEnabled();
