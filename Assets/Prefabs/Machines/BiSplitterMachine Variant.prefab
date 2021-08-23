@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5344141046700774184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdb82feab37674b118d7016b6c3ea23b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2953b648d2ad94a6680e39121fe6f534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   direction: 0
-  machineType: 8
 --- !u!1001 &2614869336628545223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954432509555594735, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}
       propertyPath: m_Name
-      value: Splitter2Machine Variant
+      value: BiSplitterMachine Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}

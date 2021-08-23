@@ -23,12 +23,13 @@ public class BuildWindow : Window
         Add(MachineType.FURNACE);
         Add(MachineType.HYDRAULIC_PRESS);
         Add(MachineType.WIRE_DRAWER);
-        Add(MachineType.SPLITTER);
         Add(MachineType.RIGHT_SPLITTER);
         Add(MachineType.LEFT_SPLITTER);
+        Add(MachineType.BI_SPLITTER);
+        Add(MachineType.TRI_SPLITTER);
         Add(MachineType.RIGHT_SELECTOR);
         Add(MachineType.LEFT_SELECTOR);
-        Add(MachineType.MULTI_SELECTOR);
+        Add(MachineType.BI_SELECTOR);
         closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MultiSelectorMachine : AbstractSelectorMachine
+public class BiSelectorMachine : AbstractSelectorMachine
 {
     public override MachineType GetMachineType() {
-        return MachineType.MULTI_SELECTOR;
+        return MachineType.BI_SELECTOR;
     }
 
     public override bool isLeftEnabled()

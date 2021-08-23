@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2292716901218173885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ab72edb9f6c84bd6a1ad730f850e85f, type: 3}
+  m_Script: {fileID: 11500000, guid: 779ba179da4eb4fbb8738ea1326d3f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  position: {x: 0, y: 0}
+  direction: 0
+  leftType: 67
+  rightType: 67
 --- !u!1001 &8192768893539161682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954432509555594735, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}
       propertyPath: m_Name
-      value: MultiSelectorMachine
+      value: BiSelectorMachine Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90589eeb43c694f2a8c9720970bd47f3, type: 3}

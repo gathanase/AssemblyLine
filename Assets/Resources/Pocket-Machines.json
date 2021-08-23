@@ -69,7 +69,7 @@
         "MachineName": "Left Splitter",
         "UnlockCost": 600000
     },
-    "Multi Selector": {
+    "Bi Selector": {
         "ActionTime": 0,
         "BuildCost": 150000,
         "CanRotate": true,
@@ -139,7 +139,7 @@
         "MachineName": "Seller",
         "UnlockCost": 1000
     },
-    "Splitter": {
+    "Bi Splitter": {
         "ActionTime": 3,
         "BuildCost": 100000,
         "CanRotate": false,

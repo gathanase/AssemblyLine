@@ -21,8 +21,9 @@ public class MachineSprites : MonoBehaviour
         Register(MachineType.RIGHT_SELECTOR, 5);
         Register(MachineType.RIGHT_SPLITTER, 6);
         Register(MachineType.ROLLER, 7);
-        Register(MachineType.MULTI_SELECTOR, 8);
-        Register(MachineType.SPLITTER, 9);
+        Register(MachineType.BI_SELECTOR, 8);
+        Register(MachineType.BI_SPLITTER, 9);
+        Register(MachineType.TRI_SPLITTER, 10);
         Register(MachineType.HYDRAULIC_PRESS, 11);
         Register(MachineType.SELLER, 16);
         Register(MachineType.STARTER, 17);
