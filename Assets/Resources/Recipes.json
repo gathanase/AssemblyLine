@@ -220,6 +220,10 @@
         {
           "type": "COPPER_PLATE", 
           "quantity": 6
+        }, 
+        {
+          "type": "IRON_PLATE", 
+          "quantity": 6
         }
       ]
     }, 
