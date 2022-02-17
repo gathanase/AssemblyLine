@@ -15,7 +15,7 @@ My project aims to be somewhat different from the original game:
 * play modes: sandbox and weekly challenge
 
 ## Current status
-The project is in early development but the game is playable in sandbox mode. All artifacts and required machine are implemented.
+The project is in early development but the game is playable in sandbox mode. All artifacts and required machines are implemented.
 
 ## Thanks
 Thanks to [PocketFactory](https://github.com/MatthewStrouss/PocketFactory) for the materials and sample code
