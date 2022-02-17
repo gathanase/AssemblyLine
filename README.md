@@ -15,16 +15,7 @@ My project aims to be somewhat different from the original game:
 * play modes: sandbox and weekly challenge
 
 # Current status
-
-## Done
-* all artifacts are implemented
-* all required machines are implemented
-* the game is playable in sandbox
-
-## Todo
-* choose a file name for save&load
-* limit the floor to 16x16 grid
-* pause the game
+The project is in early development but the game is playable in sandbox mode. All artifacts and required machine are implemented.
 
 # Thanks
 Thanks to [PocketFactory](https://github.com/MatthewStrouss/PocketFactory) for the materials and sample code
