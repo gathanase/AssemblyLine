@@ -11,16 +11,18 @@ public class GameController : MonoBehaviour
     public GameDatabase gameDatabase;
     public GameState gameState;
     public Text moneyText;
+    public float gameSpeed;  // 0: pause, 1: normal
 
     void Awake() {
         gameState = new GameState(this);
+        gameSpeed = 0.5f;
         SetTool(ToolType.INFO);
     }
 
     void Start()
     {
         AddMoney(10000);
-        InvokeRepeating("OnTick", 1, 1);
+        InvokeRepeating("OnTick", 1/gameSpeed, 1/gameSpeed);
     }
 
     public void SetTool(ToolType toolType) {

@@ -7,6 +7,7 @@ public class Artifact : MonoBehaviour
     public ArtifactType type;
     public Vector2Int position;
     public Direction direction;
+    private static GameController gameController = null;
     private static ArtifactSprites artifactSprites = null;
     private static ArtifactDatabase artifactDatabase = null;
 
@@ -41,6 +42,9 @@ public class Artifact : MonoBehaviour
         if (artifactDatabase == null) {
             artifactDatabase = FindObjectOfType<ArtifactDatabase>();
         }
+        if (gameController == null) {
+            gameController = FindObjectOfType<GameController>();
+        }
     }
 
     public void Init(Vector2Int position, Direction direction, ArtifactType type)
@@ -54,7 +58,8 @@ public class Artifact : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(direction.ToVector2() * Time.deltaTime, Space.World);
+        float distance = Time.deltaTime * gameController.gameSpeed;
+        transform.Translate(direction.ToVector2() * distance, Space.World);
     }
 
     public void OnTick() {
