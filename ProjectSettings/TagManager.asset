@@ -44,6 +44,9 @@ TagManager:
   - name: Machines
     uniqueID: 1927211033
     locked: 0
+  - name: MachineDirection
+    uniqueID: 2579379033
+    locked: 0
   - name: Artifacts
     uniqueID: 4020401907
     locked: 0

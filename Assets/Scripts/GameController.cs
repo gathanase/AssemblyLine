@@ -29,9 +29,9 @@ public class GameController : MonoBehaviour
         foreach (var gameTool in gameDatabase.GetTools()) {
             if (gameTool.GetToolType() == toolType) {
                 gameTool.OnActivate();
-                gameTool.gameObject.SetActive(true);
+                gameTool.SetActive(true);
             } else {
-                gameTool.gameObject.SetActive(false);
+                gameTool.SetActive(false);
             }
         }
     }

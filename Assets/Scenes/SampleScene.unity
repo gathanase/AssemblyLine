@@ -1190,6 +1190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1be01ccf5d834fad9e500bebe96c55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowModel: {fileID: 904501114283998532, guid: 742e2ef8a05e641fbbe94ac8f1161ef1, type: 3}
 --- !u!61 &960755729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1320,6 +1321,10 @@ PrefabInstance:
     - target: {fileID: 2438027519192905761, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
+      propertyPath: gameSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2438027519192905762, guid: 71e9078ad18c64776ad2721adc493d0e, type: 3}
       propertyPath: moneyText

@@ -17,6 +17,10 @@ public abstract class GameTool : MonoBehaviour, IPointerDownHandler, IScrollHand
 
     public virtual void OnActivate() {}
 
+    public virtual void SetActive(bool active) {
+        this.gameObject.SetActive(active);
+    }
+
     public void OnPointerDown(PointerEventData eventData) {
         Vector3 pos3 = Camera.main.ScreenToWorldPoint(eventData.position);
         Vector2Int pos = new Vector2Int(Mathf.RoundToInt(pos3.x), Mathf.RoundToInt(pos3.y));
