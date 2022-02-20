@@ -9,7 +9,7 @@ public class StarterMachine : Machine
     public int quantity;
 
     public StarterMachine() {
-        artifactType = ArtifactType.IRON;
+        artifactType = ArtifactType.ALUMINUM;
         quantity = 0;
     }
 

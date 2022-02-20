@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
   direction: 0
-  artifactType: 0
+  artifactType: 1
   quantity: 0
-  infoWindowModel: {fileID: 6457227800195893229, guid: a5caeff6a90a94773a9f9916dfb73363, type: 3}
 --- !u!1001 &554172337429889636
 PrefabInstance:
   m_ObjectHideFlags: 0

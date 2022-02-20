@@ -22,6 +22,7 @@ public class CrafterMachineWindow : Window
             ArtifactType type = recipe.output;
             return new Dropdown.OptionData(type.ToString(), gameDatabase.GetSprite(type));
         });
+        typeField.options.Sort((a, b) => a.text.CompareTo(b.text));
         typeField.SetValueWithoutNotify(gameDatabase.GetRecipes().FindIndex(recipe => recipe.output == crafterMachine.output));
         DisplayRecipe();
         typeField.onValueChanged.RemoveAllListeners();
