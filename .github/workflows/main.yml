@@ -1,3 +1,6 @@
+# WebGL build does not work, need a dedicated server
+# MacOS build does not work, app needs to be signed
+
 name: CI
 on:
   workflow_dispatch:
