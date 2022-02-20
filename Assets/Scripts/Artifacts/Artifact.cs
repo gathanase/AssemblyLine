@@ -58,7 +58,7 @@ public class Artifact : MonoBehaviour
 
     void Update()
     {
-        float distance = Time.deltaTime * gameController.gameSpeed;
+        float distance = Time.deltaTime * gameController.GetSpeed();
         transform.Translate(direction.ToVector2() * distance, Space.World);
     }
 
