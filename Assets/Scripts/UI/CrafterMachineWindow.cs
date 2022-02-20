@@ -64,4 +64,9 @@ public class CrafterMachineWindow : Window
         }
         DisplayRecipeOutput(recipe);
     }
+
+    public override void OnVerticalAxis(int vAxis)
+    {
+        typeField.value -= vAxis;
+    }
 }

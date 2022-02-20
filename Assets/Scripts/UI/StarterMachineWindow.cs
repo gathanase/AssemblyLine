@@ -44,4 +44,14 @@ public class StarterMachineWindow : Window
         starterMachine.quantity = Mathf.Clamp(quantity, 0, 3);
         quantityField.SetTextWithoutNotify(starterMachine.quantity.ToString());
     }
+
+    public override void OnVerticalAxis(int vAxis)
+    {
+        typeField.value -= vAxis;
+    }
+
+    public override void OnHorizontalAxis(int hAxis)
+    {
+        SetQuantity(starterMachine.quantity + hAxis);
+    }
 }
