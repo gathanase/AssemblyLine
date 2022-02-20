@@ -33,4 +33,19 @@ public class Toolbar : MonoBehaviour
     private void AddClickListener(Toggle button, UnityAction action) {
         button.onValueChanged.AddListener(value => { if (value) action.Invoke(); });
     }
+
+    public void Update() {
+        if (Input.GetKeyDown(KeyCode.B)) {
+            buildButton.isOn = true;
+        }
+        if (Input.GetKeyDown(KeyCode.I)) {
+            infoButton.isOn = true;
+        }
+        if (Input.GetKeyDown(KeyCode.D)) {
+            deleteButton.isOn = true;
+        }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            rotateButton.isOn = true;
+        }
+    }
 }
