@@ -7,61 +7,61 @@ using UnityEngine.UI;
 public class SplitterMachineWindow : Window
 {
     public Button closeButton;
-    private Dictionary<int, InputField> countFieldByRotate;
+    private Dictionary<Rotation, InputField> countFieldByRotation;
     private AbstractSplitterMachine splitterMachine;
 
     public void Init(AbstractSplitterMachine splitterMachine) {
         Init();
         this.splitterMachine = splitterMachine;
-        this.countFieldByRotate = new Dictionary<int, InputField>();
-        InitPanel("RightPanel", -1);
-        InitPanel("ForwardPanel", 0);
-        InitPanel("LeftPanel", 1);
+        this.countFieldByRotation = new Dictionary<Rotation, InputField>();
+        InitPanel("RightPanel", Rotation.RIGHT);
+        InitPanel("ForwardPanel", Rotation.NONE);
+        InitPanel("LeftPanel", Rotation.LEFT);
         closeButton.onClick.RemoveAllListeners();
         closeButton.onClick.AddListener(Close);
     }
 
-    private void InitPanel(string panelName, int rotate) {
+    private void InitPanel(string panelName, Rotation rotation) {
         Transform panel = transform.Find("ContentPanel/" + panelName);
-        panel.gameObject.SetActive(splitterMachine.GetRotates().Contains(rotate));
+        panel.gameObject.SetActive(splitterMachine.GetRotations().Contains(rotation));
         Button lessButton = panel.Find("QuantityPanel/LessButton").GetComponent<Button>();
         Button moreButton = panel.Find("QuantityPanel/MoreButton").GetComponent<Button>();
         InputField inputField = panel.Find("QuantityPanel/QuantityField").GetComponent<InputField>();
-        countFieldByRotate[rotate] = inputField;
-        InitField(lessButton, moreButton, inputField, rotate);
+        countFieldByRotation[rotation] = inputField;
+        InitField(lessButton, moreButton, inputField, rotation);
     }
 
-    private void InitField(Button lessButton, Button moreButton, InputField countField, int rotate) {
+    private void InitField(Button lessButton, Button moreButton, InputField countField, Rotation rotation) {
         lessButton.onClick.RemoveAllListeners();
-        lessButton.onClick.AddListener(() => AddCount(-1, rotate));
+        lessButton.onClick.AddListener(() => AddCount(-1, rotation));
         moreButton.onClick.RemoveAllListeners();
-        moreButton.onClick.AddListener(() => AddCount(1, rotate));
-        countField.SetTextWithoutNotify(splitterMachine.countsByRotate[rotate].ToString());
+        moreButton.onClick.AddListener(() => AddCount(1, rotation));
+        countField.SetTextWithoutNotify(splitterMachine.countsByRotation[rotation].ToString());
         countField.onValueChanged.RemoveAllListeners();
         countField.onValueChanged.AddListener(value => {
             if (int.TryParse(value, out int count)) {
-                SetCount(count, rotate);
+                SetCount(count, rotation);
             }
         });
     }
 
-    private void SetCount(int count, int rotate) {
+    private void SetCount(int count, Rotation rotation) {
         count = Mathf.Clamp(count, 1, 64);
-        splitterMachine.countsByRotate[rotate] = count;
-        countFieldByRotate[rotate].SetTextWithoutNotify(count.ToString());
+        splitterMachine.countsByRotation[rotation] = count;
+        countFieldByRotation[rotation].SetTextWithoutNotify(count.ToString());
     }
 
-    private void AddCount(int delta, int rotate) {
-        int currentCount = splitterMachine.countsByRotate[rotate];
-        SetCount(currentCount + delta, rotate);
+    private void AddCount(int delta, Rotation rotation) {
+        int currentCount = splitterMachine.countsByRotation[rotation];
+        SetCount(currentCount + delta, rotation);
     }
 
     public override void Update()
     {
         base.Update();
         if (Input.GetKeyDown(KeyCode.Backspace)) {
-            foreach (int rotate in splitterMachine.GetRotates()) {
-                SetCount(1, rotate);
+            foreach (Rotation rotation in splitterMachine.GetRotations()) {
+                SetCount(1, rotation);
             }
         }
     }
@@ -69,15 +69,15 @@ public class SplitterMachineWindow : Window
     public override void OnVerticalAxis(int vAxis)
     {
         if (vAxis > 0) {
-            AddCount(1, 0);
+            AddCount(1, Rotation.NONE);
         }
     }
 
     public override void OnHorizontalAxis(int hAxis)
     {
-        int rotate = -hAxis;
-        if (splitterMachine.GetRotates().Contains(rotate)) {
-            AddCount(1, rotate);
+        Rotation rotation = hAxis > 0 ? Rotation.RIGHT : Rotation.LEFT;
+        if (splitterMachine.GetRotations().Contains(rotation)) {
+            AddCount(1, rotation);
         }
     }
 }

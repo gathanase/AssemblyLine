@@ -8,7 +8,7 @@ public class TriSplitterMachine : AbstractSplitterMachine
         return MachineType.TRI_SPLITTER;
     }
 
-    public override HashSet<int> GetRotates() {
-        return new HashSet<int>() { -1, 0, 1 };
+    public override HashSet<Rotation> GetRotations() {
+        return new HashSet<Rotation>() { Rotation.LEFT, Rotation.NONE, Rotation.RIGHT };
     }
 }

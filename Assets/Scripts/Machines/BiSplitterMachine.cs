@@ -9,7 +9,7 @@ public class BiSplitterMachine : AbstractSplitterMachine
         return MachineType.BI_SPLITTER;
     }
 
-    public override HashSet<int> GetRotates() {
-        return new HashSet<int>() { -1, 1 };
+    public override HashSet<Rotation> GetRotations() {
+        return new HashSet<Rotation>() { Rotation.LEFT, Rotation.RIGHT };
     }
 }

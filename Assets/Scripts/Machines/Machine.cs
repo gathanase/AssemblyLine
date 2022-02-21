@@ -72,8 +72,8 @@ public abstract class Machine : MonoBehaviour
     public abstract void Feed(Artifact artifact);
     public abstract void OnTick();
 
-    public void Rotate(int count) {
-        direction = direction.Rotate(count);
+    public void Rotate(Rotation rotation) {
+        direction = direction.Rotate(rotation);
         transform.rotation = Quaternion.Euler(0, 0, ((int)direction) * 90);
     }
 

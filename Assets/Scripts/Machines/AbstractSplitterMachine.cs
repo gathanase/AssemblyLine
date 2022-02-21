@@ -5,16 +5,16 @@ using UnityEngine;
 
 public abstract class AbstractSplitterMachine : Machine
 {
-    public Dictionary<int, int> countsByRotate;  // key: -1, 0, 1 is the rotation of the artifact direction
+    public Dictionary<Rotation, int> countsByRotation;
     private int counter = 0;
 
     public AbstractSplitterMachine() {
-        countsByRotate = new Dictionary<int, int>();
-        countsByRotate[-1] = 0;
-        countsByRotate[0] = 0;
-        countsByRotate[1] = 0;
-        foreach (int rotate in GetRotates()) {
-            countsByRotate[rotate] = 1;
+        countsByRotation = new Dictionary<Rotation, int>();
+        countsByRotation[Rotation.LEFT] = 0;
+        countsByRotation[Rotation.NONE] = 0;
+        countsByRotation[Rotation.RIGHT] = 0;
+        foreach (Rotation rotation in GetRotations()) {
+            countsByRotation[rotation] = 1;
         }
     }
 
@@ -30,9 +30,9 @@ public abstract class AbstractSplitterMachine : Machine
         Save save = new Save();
         base.WriteSave(save);
         save.counter = counter;
-        save.countsRight = countsByRotate[-1];
-        save.countsForward = countsByRotate[0];
-        save.countsLeft = countsByRotate[1];
+        save.countsRight = countsByRotation[Rotation.RIGHT];
+        save.countsForward = countsByRotation[Rotation.NONE];
+        save.countsLeft = countsByRotation[Rotation.LEFT];
         return save;
     }
 
@@ -40,13 +40,13 @@ public abstract class AbstractSplitterMachine : Machine
     {
         Save save = (Save) _save;
         base.Init(save, floor, gameDatabase);
-        this.countsByRotate[-1] = save.countsRight;
-        this.countsByRotate[0] = save.countsForward;
-        this.countsByRotate[1] = save.countsLeft;
+        this.countsByRotation[Rotation.RIGHT] = save.countsRight;
+        this.countsByRotation[Rotation.NONE] = save.countsForward;
+        this.countsByRotation[Rotation.LEFT] = save.countsLeft;
         this.counter = save.counter;
     }
 
-    public abstract HashSet<int> GetRotates();
+    public abstract HashSet<Rotation> GetRotations();
 
     public override Window CreateInfoWindow() {
         SplitterMachineWindow infoWindow = FindObjectOfType<SplitterMachineWindow>(true);
@@ -57,18 +57,18 @@ public abstract class AbstractSplitterMachine : Machine
     public override void Feed(Artifact artifact) {
         if (artifact.direction == this.direction) {
             // artifact comes from behind
-            int rotate;
-            if (counter >= countsByRotate.Values.Sum()) {
+            Rotation rotation;
+            if (counter >= countsByRotation.Values.Sum()) {
                 counter = 0;
             }
-            if (counter < countsByRotate[-1]) {
-                rotate = -1;
-            } else if (counter < countsByRotate[-1] + countsByRotate[0]) {
-                rotate = 0;
+            if (counter < countsByRotation[Rotation.RIGHT]) {
+                rotation = Rotation.RIGHT;
+            } else if (counter < countsByRotation[Rotation.RIGHT] + countsByRotation[Rotation.NONE]) {
+                rotation = Rotation.NONE;
             } else {
-                rotate = 1;
+                rotation = Rotation.LEFT;
             }
-            artifact.direction = this.direction.Rotate(rotate);
+            artifact.direction = this.direction.Rotate(rotation);
             counter ++;
         } else {
             Remove(artifact);

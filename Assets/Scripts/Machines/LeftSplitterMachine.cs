@@ -9,7 +9,7 @@ public class LeftSplitterMachine : AbstractSplitterMachine
         return MachineType.LEFT_SPLITTER;
     }
 
-    public override HashSet<int> GetRotates() {
-        return new HashSet<int>() { 0, 1 };
+    public override HashSet<Rotation> GetRotations() {
+        return new HashSet<Rotation>() { Rotation.NONE, Rotation.LEFT };
     }
 }

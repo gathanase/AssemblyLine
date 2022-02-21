@@ -31,9 +31,9 @@ public static class DirectionExtensions
         return ToVector2Int(direction);
     }
 
-    public static Direction Rotate(this Direction direction, int count)
+    public static Direction Rotate(this Direction direction, Rotation rotation)
     {
-        int newValue = Modulo((int) direction + count, 4);
+        int newValue = Modulo((int) direction + (int) rotation, 4);
         return (Direction) newValue;
     }
 

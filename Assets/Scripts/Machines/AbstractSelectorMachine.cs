@@ -47,13 +47,13 @@ public abstract class AbstractSelectorMachine : Machine
     public override void Feed(Artifact artifact) {
         if (artifact.direction == this.direction) {
             // artifact comes from behind
-            int rotate = 0;
+            Rotation rotation = Rotation.NONE;
             if (isLeftEnabled() && artifact.type == leftType) {
-                rotate = 1;
+                rotation = Rotation.LEFT;
             } else if (isRightEnabled() && artifact.type == rightType) {
-                rotate = -1;
+                rotation = Rotation.RIGHT;
             }
-            artifact.direction = this.direction.Rotate(rotate);
+            artifact.direction = this.direction.Rotate(rotation);
         } else {
             Remove(artifact);
         }

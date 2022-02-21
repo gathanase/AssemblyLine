@@ -35,7 +35,7 @@ public class RotateTool : GameTool
     }
 
     override protected void OnClickMachine(Machine machine) {
-        machine.Rotate(1);
+        machine.Rotate(Rotation.LEFT);
         arrows[machine.position].transform.rotation = machine.transform.rotation;
     }
 }
