@@ -6,15 +6,16 @@ using UnityEngine.Events;
 
 public class Toolbar : MonoBehaviour
 {
-    public Toggle exitButton;
-    public Toggle saveButton;
-    public Toggle loadButton;
-    public Toggle infoButton;
-    public Toggle buildButton;
-    public Toggle deleteButton;
-    public Toggle rotateButton;
-    public Toggle moveButton;
+    public Button exitButton;
+    public Button saveButton;
+    public Button loadButton;
+    public Button infoButton;
+    public Button buildButton;
+    public Button deleteButton;
+    public Button rotateButton;
+    public Button moveButton;
     public GameController gameController;
+    public Cursor cursor;
     private BuildWindow buildWindow;
 
     void Awake() {
@@ -23,14 +24,14 @@ public class Toolbar : MonoBehaviour
         AddClickListener(exitButton, () => Application.Quit());
         AddClickListener(saveButton, () => gameController.SaveGame());
         AddClickListener(loadButton, () => gameController.LoadGame());
-        AddClickListener(infoButton, () => gameController.SetTool(ToolType.INFO));
+        AddClickListener(infoButton, () => cursor.Info());
         AddClickListener(buildButton, () => buildWindow.Init());
-        AddClickListener(deleteButton, () => gameController.SetTool(ToolType.DELETE));
-        AddClickListener(rotateButton, () => gameController.SetTool(ToolType.ROTATE));
+        AddClickListener(deleteButton, () => cursor.Delete());
+        AddClickListener(rotateButton, () => cursor.Rotate());
         AddClickListener(moveButton, () => gameController.SetTool(ToolType.MOVE));
     }
 
-    private void AddClickListener(Toggle button, UnityAction action) {
-        button.onValueChanged.AddListener(value => { if (value) action.Invoke(); });
+    private void AddClickListener(Button button, UnityAction action) {
+        button.onClick.AddListener(() => action.Invoke());
     }
 }
