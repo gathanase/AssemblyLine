@@ -8,12 +8,11 @@ public class BuildWindow : Window
     public GameObject content;
     public Button closeButton;
     public Button templateButton;
-    private BuildTool buildTool;
+    public Cursor cursor;
     private List<Button> buttons = new List<Button>();
 
     public override void Init() {
         base.Init();
-        buildTool = FindObjectOfType<BuildTool>(true);
         Clear();
         Add(MachineType.STARTER);
         Add(MachineType.SELLER);
@@ -48,8 +47,7 @@ public class BuildWindow : Window
         button.transform.Find("Label").GetComponent<Text>().text = machineInfo.name;
         button.onClick.AddListener(() => {
             this.Close();
-            buildTool.SetMachineType(machineType);
-            gameController.SetTool(ToolType.BUILD);
+            cursor.Build(machineType);
         });
         button.gameObject.SetActive(true);
         buttons.Add(button);

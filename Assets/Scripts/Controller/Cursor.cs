@@ -7,8 +7,10 @@ public class Cursor : MonoBehaviour, AxisListener
     KeyController keyController;
     GameController gameController;
     MachineDatabase machineDatabase;
+    BuildWindow buildWindow;
 
     public void Start() {
+        buildWindow = FindObjectOfType<BuildWindow>(true);
         gameController = FindObjectOfType<GameController>();
         machineDatabase = gameController.gameDatabase.machineDatabase;
         keyController = FindObjectOfType<KeyController>();
@@ -29,13 +31,16 @@ public class Cursor : MonoBehaviour, AxisListener
     }
 
     private Machine GetMachine() {
-        FactoryFloor factoryFloor = gameController.GetFactoryFloor();
         Machine machine;
-        if (factoryFloor.machines.TryGetValue(GetPos(), out machine)) {
+        if (gameController.GetFactoryFloor().machines.TryGetValue(GetPos(), out machine)) {
             return machine;
         } else {
             return null;
         }
+    }
+
+    public bool IsFast() {
+        return Input.GetButton("Fast");
     }
 
     public void Update() {
@@ -48,12 +53,15 @@ public class Cursor : MonoBehaviour, AxisListener
         if (Input.GetButtonDown("Info")) {
             Info();
         }
+        if (Input.GetButtonDown("Build")) {
+            buildWindow.Init();
+        }
     }
 
     public void Rotate() {
         Machine machine = GetMachine();
         if (machine != null) {
-            machine.Rotate(Rotation.LEFT);
+            machine.Rotate(IsFast() ? Rotation.HALF_TURN : Rotation.LEFT);
         }
     }
 
@@ -70,5 +78,13 @@ public class Cursor : MonoBehaviour, AxisListener
         if (machine != null) {
             keyController.SetListener(machine.CreateInfoWindow());
         }
+    }
+
+    public void Build(MachineType machineType) {
+        FactoryFloor factoryFloor = gameController.GetFactoryFloor();
+        Machine machine = Instantiate(machineDatabase.GetModel(machineType));
+        machine.Init(factoryFloor, GetPos(), Direction.SOUTH);
+        gameController.RemoveMoney(machine.GetInfo().cost);
+        factoryFloor.Add(machine);
     }
 }
