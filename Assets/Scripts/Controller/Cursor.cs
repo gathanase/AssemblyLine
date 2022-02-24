@@ -54,7 +54,7 @@ public class Cursor : MonoBehaviour, AxisListener
             Info();
         }
         if (Input.GetButtonDown("Build")) {
-            buildWindow.Init();
+            Build();
         }
     }
 
@@ -80,11 +80,21 @@ public class Cursor : MonoBehaviour, AxisListener
         }
     }
 
+    public void Build() {
+        Machine machine = GetMachine();
+        if (machine == null) {
+            buildWindow.Init();
+        }
+    }
+
     public void Build(MachineType machineType) {
-        FactoryFloor factoryFloor = gameController.GetFactoryFloor();
-        Machine machine = Instantiate(machineDatabase.GetModel(machineType));
-        machine.Init(factoryFloor, GetPos(), Direction.SOUTH);
-        gameController.RemoveMoney(machine.GetInfo().cost);
-        factoryFloor.Add(machine);
+        Machine machine = GetMachine();
+        if (machine == null) {
+            FactoryFloor factoryFloor = gameController.GetFactoryFloor();
+            machine = Instantiate(machineDatabase.GetModel(machineType));
+            machine.Init(factoryFloor, GetPos(), Direction.SOUTH);
+            gameController.RemoveMoney(machine.GetInfo().cost);
+            factoryFloor.Add(machine);
+        }
     }
 }
