@@ -22,6 +22,12 @@ public class Window : MonoBehaviour, AxisListener
         FindObjectOfType<KeyController>().SetListener(FindObjectOfType<Cursor>());
     }
 
+    virtual public void Update() {
+        if (Input.GetButtonDown("Cancel")) {
+            Close();
+        }
+    }
+
     virtual public void OnVerticalAxis(int vAxis) {}
 
     virtual public void OnHorizontalAxis(int hAxis) {}

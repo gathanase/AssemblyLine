@@ -56,7 +56,7 @@ public class SplitterMachineWindow : Window
         SetCount(currentCount + delta, rotation);
     }
 
-    public void Update()
+    override public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace)) {
             foreach (Rotation rotation in splitterMachine.GetRotations()) {

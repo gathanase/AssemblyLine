@@ -20,7 +20,8 @@ public class TransformMachineWindow : Window
         closeButton.onClick.AddListener(Close);
     }
 
-    public void Update() {
+    override public void Update() {
+        base.Update();
         if (Enumerable.SequenceEqual(stock, transformMachine.queue)) {
             return;
         }
