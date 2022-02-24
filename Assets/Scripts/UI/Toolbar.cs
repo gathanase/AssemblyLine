@@ -28,7 +28,7 @@ public class Toolbar : MonoBehaviour
         AddClickListener(buildButton, () => buildWindow.Init());
         AddClickListener(deleteButton, () => cursor.Delete());
         AddClickListener(rotateButton, () => cursor.Rotate());
-        AddClickListener(moveButton, () => gameController.SetTool(ToolType.MOVE));
+        //AddClickListener(moveButton, () => gameController.SetTool(ToolType.MOVE));
     }
 
     private void AddClickListener(Button button, UnityAction action) {

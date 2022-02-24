@@ -14,7 +14,6 @@ public class GameController : MonoBehaviour
 
     void Awake() {
         gameState = new GameState(this);
-        SetTool(ToolType.INFO);
     }
 
     void Start()
@@ -25,17 +24,6 @@ public class GameController : MonoBehaviour
 
     public float GetSpeed() {
         return 0.5f;
-    }
-
-    public void SetTool(ToolType toolType) {
-        foreach (var gameTool in gameDatabase.GetTools()) {
-            if (gameTool.GetToolType() == toolType) {
-                gameTool.OnActivate();
-                gameTool.SetActive(true);
-            } else {
-                gameTool.SetActive(false);
-            }
-        }
     }
 
     public FactoryFloor GetFactoryFloor() {
