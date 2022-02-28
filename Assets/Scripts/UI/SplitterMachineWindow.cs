@@ -56,20 +56,14 @@ public class SplitterMachineWindow : Window
         SetCount(currentCount + delta, rotation);
     }
 
-    override public void Update()
-    {
-        base.Update();
-        if (Input.GetKeyDown(KeyCode.Backspace)) {
-            foreach (Rotation rotation in splitterMachine.GetRotations()) {
-                SetCount(1, rotation);
-            }
-        }
-    }
-
     public override void OnVerticalAxis(int vAxis)
     {
         if (vAxis > 0) {
             AddCount(1, Rotation.NONE);
+        } else {
+            foreach (Rotation rotation in splitterMachine.GetRotations()) {
+                SetCount(1, rotation);
+            }
         }
     }
 
