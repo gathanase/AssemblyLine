@@ -50,6 +50,13 @@ public class StarterMachine : Machine
         Remove(artifact);
     }
 
+    public override void Copy(Machine other)
+    {
+        StarterMachine other2 = (StarterMachine) other;
+        this.artifactType = other2.artifactType;
+        this.quantity = other2.quantity;
+    }
+
     public override void OnTick() {
         int cost = gameDatabase.GetInfo(artifactType).cost;
         for (int i = 0; i < quantity; i++) {

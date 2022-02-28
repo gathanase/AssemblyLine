@@ -69,6 +69,7 @@ public abstract class Machine : MonoBehaviour
 
     public abstract MachineType GetMachineType();
     public abstract Window CreateInfoWindow();
+    virtual public void Copy(Machine other) {}
     public abstract void Feed(Artifact artifact);
     public abstract void OnTick();
 

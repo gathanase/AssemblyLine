@@ -59,6 +59,13 @@ public abstract class AbstractSelectorMachine : Machine
         }
     }
 
+    public override void Copy(Machine other)
+    {
+        AbstractSelectorMachine other2 = (AbstractSelectorMachine) other;
+        this.leftType = other2.leftType;
+        this.rightType = other2.rightType;
+    }
+
     public override void OnTick() {
     }
 }

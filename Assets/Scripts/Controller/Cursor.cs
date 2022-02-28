@@ -8,6 +8,8 @@ public class Cursor : MonoBehaviour, AxisListener
     GameController gameController;
     MachineDatabase machineDatabase;
     BuildWindow buildWindow;
+    Dictionary<MachineType, Machine> lastInfoMachine;
+    MachineType lastBuiltMachine;
 
     public void Start() {
         buildWindow = FindObjectOfType<BuildWindow>(true);
@@ -15,6 +17,8 @@ public class Cursor : MonoBehaviour, AxisListener
         machineDatabase = gameController.gameDatabase.machineDatabase;
         keyController = FindObjectOfType<KeyController>();
         keyController.SetListener(this);
+        lastInfoMachine = new Dictionary<MachineType, Machine>();
+        lastBuiltMachine = MachineType.STARTER;
     }
 
     public void OnVerticalAxis(int vAxis) {
@@ -39,8 +43,8 @@ public class Cursor : MonoBehaviour, AxisListener
         }
     }
 
-    public bool IsFast() {
-        return Input.GetButton("Fast");
+    public bool IsModified() {
+        return Input.GetButton("Modified");
     }
 
     public void Update() {
@@ -61,7 +65,7 @@ public class Cursor : MonoBehaviour, AxisListener
     public void Rotate() {
         Machine machine = GetMachine();
         if (machine != null) {
-            machine.Rotate(IsFast() ? Rotation.HALF_TURN : Rotation.LEFT);
+            machine.Rotate(IsModified() ? Rotation.RIGHT : Rotation.LEFT);
         }
     }
 
@@ -76,14 +80,23 @@ public class Cursor : MonoBehaviour, AxisListener
     public void Info() {
         Machine machine = GetMachine();
         if (machine != null) {
-            keyController.SetListener(machine.CreateInfoWindow());
+            if (IsModified()) {
+                machine.Copy(lastInfoMachine[machine.GetMachineType()]);
+            } else {
+                keyController.SetListener(machine.CreateInfoWindow());
+                lastInfoMachine[machine.GetMachineType()] = machine;
+            }
         }
     }
 
     public void Build() {
         Machine machine = GetMachine();
         if (machine == null) {
-            buildWindow.Init();
+            if (IsModified()) {
+                Build(lastBuiltMachine);
+            } else {
+                buildWindow.Init();
+            }
         }
     }
 
@@ -95,6 +108,7 @@ public class Cursor : MonoBehaviour, AxisListener
             machine.Init(factoryFloor, GetPos(), Direction.SOUTH);
             gameController.RemoveMoney(machine.GetInfo().cost);
             factoryFloor.Add(machine);
+            lastBuiltMachine = machineType;
         }
     }
 }

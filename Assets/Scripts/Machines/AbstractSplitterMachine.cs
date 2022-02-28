@@ -75,6 +75,14 @@ public abstract class AbstractSplitterMachine : Machine
         }
     }
 
+    public override void Copy(Machine other)
+    {
+        AbstractSplitterMachine other2 = (AbstractSplitterMachine) other;
+        this.countsByRotation[Rotation.RIGHT] = other2.countsByRotation[Rotation.RIGHT];
+        this.countsByRotation[Rotation.NONE] = other2.countsByRotation[Rotation.NONE];
+        this.countsByRotation[Rotation.LEFT] = other2.countsByRotation[Rotation.LEFT];
+    }
+
     public override void OnTick() {
     }
 }

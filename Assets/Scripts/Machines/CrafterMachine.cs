@@ -56,6 +56,12 @@ public class CrafterMachine : Machine
         return gameDatabase.recipeDatabase.recipes.Find(recipe => recipe.output == output);
     }
 
+    public override void Copy(Machine other)
+    {
+        CrafterMachine other2 = (CrafterMachine) other;
+        this.output = other2.output;
+    }
+
     public override void OnTick() {
         Recipe recipe = GetRecipe();
         if (stock.Contains(recipe.inputs)) {

@@ -25,13 +25,13 @@ public class KeyController : MonoBehaviour
     public void Update() {
         float vAxis = Input.GetAxisRaw("Vertical");
         float hAxis = Input.GetAxisRaw("Horizontal");
-        bool fast = Input.GetButton("Fast");
+        bool modified = Input.GetButton("Modified");
         if (vAxis == 0 && hAxis == 0) {
             lastKeyTime = 0f;
         } else if (axisListener != null) {
             float now = Time.realtimeSinceStartup;
             if (now > lastKeyTime + keyDeltaTime) {
-                int distance = fast ? 4 : 1;
+                int distance = modified ? 4 : 1;
                 if (vAxis != 0) {
                     axisListener.OnVerticalAxis((int) vAxis * distance);
                 }
